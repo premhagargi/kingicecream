@@ -10,28 +10,28 @@
       "id": "product-1",
       "name": "Midnight Chocolate",
       "description": "Rich dark chocolate with a hint of mystery.",
-      "imageUrl": "https://picsum.photos/seed/prod1/800/1000",
+      "imageUrl": "https://luccianos.net/uploads/file-1605793992679.png",
       "imageHint": "dark chocolate"
     },
     {
       "id": "product-2",
       "name": "Pistachio Dream",
       "description": "Creamy pistachio gelato, a true classic.",
-      "imageUrl": "https://picsum.photos/seed/prod2/800/1000",
+      "imageUrl": "https://luccianos.net/uploads/file-1745852982525.png",
       "imageHint": "pistachio gelato"
     },
     {
       "id": "product-3",
       "name": "Strawberry Sorbet",
       "description": "A refreshing and vibrant strawberry delight.",
-      "imageUrl": "https://picsum.photos/seed/prod3/800/1000",
+      "imageUrl": "https://luccianos.net/uploads/file-1605796102869.png",
       "imageHint": "strawberry sorbet"
     },
     {
       "id": "product-4",
       "name": "Vanilla Bean",
       "description": "Pure and simple, yet exquisitely complex.",
-      "imageUrl": "https://picsum.photos/seed/prod4/800/1000",
+      "imageUrl": "https://luccianos.net/uploads/file-1605796153632.png",
       "imageHint": "vanilla icecream"
     },
     {
@@ -73,7 +73,7 @@
         "Chocolates",
         "Luxury"
       ],
-      "imageUrl": "https://picsum.photos/seed/gelato1/500/500",
+      "imageUrl": "https://luccianos.net/uploads/file-1651675957640.png",
       "imageHint": "chocolate gelato scoop"
     },
     {
@@ -84,7 +84,7 @@
       "tags": [
         "Creams"
       ],
-      "imageUrl": "https://picsum.photos/seed/gelato2/500/500",
+      "imageUrl": "https://luccianos.net/uploads/file-1610718218332.png",
       "imageHint": "pistachio gelato scoop"
     },
     {
@@ -96,7 +96,7 @@
         "Milk Caramel",
         "Creams"
       ],
-      "imageUrl": "https://picsum.photos/seed/gelato3/500/500",
+      "imageUrl": "https://luccianos.net/uploads/file-1610722888238.png",
       "imageHint": "caramel gelato scoop"
     },
     {
@@ -108,7 +108,7 @@
         "Creams",
         "Luxury"
       ],
-      "imageUrl": "https://picsum.photos/seed/gelato4/500/500",
+      "imageUrl": "https://luccianos.net/uploads/file-1723474901802.png",
       "imageHint": "vanilla gelato scoop"
     },
     {
@@ -120,7 +120,7 @@
         "Fruits",
         "Plant Based"
       ],
-      "imageUrl": "https://picsum.photos/seed/icepop1/500/500",
+      "imageUrl": "https://luccianos.net/uploads/file-1610721193651.png",
       "imageHint": "strawberry icepop"
     },
     {
