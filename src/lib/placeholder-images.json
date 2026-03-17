@@ -42,23 +42,121 @@
     },
     {
       "id": "nav-image-1",
+      "description": "An artistic scoop of gelato.",
       "imageUrl": "https://picsum.photos/seed/nav1/600/800",
       "imageHint": "icecream cone"
     },
     {
       "id": "nav-image-2",
+      "description": "Colorful and refreshing ice pops.",
       "imageUrl": "https://picsum.photos/seed/nav2/600/800",
       "imageHint": "icepop colorful"
     },
     {
       "id": "nav-image-3",
+      "description": "The creamy texture of our gelato.",
       "imageUrl": "https://picsum.photos/seed/nav3/600/800",
       "imageHint": "gelato scoop"
     },
     {
       "id": "nav-image-4",
+      "description": "Inside one of our minimalist stores.",
       "imageUrl": "https://picsum.photos/seed/nav4/600/800",
       "imageHint": "icecream shop"
+    },
+    {
+      "id": "product-gelato-1",
+      "name": "Dark Chocolate",
+      "description": "Rich & intense 70% cacao.",
+      "category": "Gelato",
+      "tags": [
+        "Chocolates",
+        "Luxury"
+      ],
+      "imageUrl": "https://picsum.photos/seed/gelato1/500/500",
+      "imageHint": "chocolate gelato scoop"
+    },
+    {
+      "id": "product-gelato-2",
+      "name": "Pistachio",
+      "description": "Sicilian pistachios, perfectly roasted.",
+      "category": "Gelato",
+      "tags": [
+        "Creams"
+      ],
+      "imageUrl": "https://picsum.photos/seed/gelato2/500/500",
+      "imageHint": "pistachio gelato scoop"
+    },
+    {
+      "id": "product-gelato-3",
+      "name": "Milk Caramel",
+      "description": "Argentinian dulce de leche.",
+      "category": "Gelato",
+      "tags": [
+        "Milk Caramel",
+        "Creams"
+      ],
+      "imageUrl": "https://picsum.photos/seed/gelato3/500/500",
+      "imageHint": "caramel gelato scoop"
+    },
+    {
+      "id": "product-gelato-4",
+      "name": "Vanilla Cream",
+      "description": "Madagascar vanilla bean.",
+      "category": "Gelato",
+      "tags": [
+        "Creams",
+        "Luxury"
+      ],
+      "imageUrl": "https://picsum.photos/seed/gelato4/500/500",
+      "imageHint": "vanilla gelato scoop"
+    },
+    {
+      "id": "product-icepop-1",
+      "name": "Strawberry Fruit",
+      "description": "Organic strawberries, nothing else.",
+      "category": "Icepops",
+      "tags": [
+        "Fruits",
+        "Plant Based"
+      ],
+      "imageUrl": "https://picsum.photos/seed/icepop1/500/500",
+      "imageHint": "strawberry icepop"
+    },
+    {
+      "id": "product-icepop-2",
+      "name": "Lemon Zest",
+      "description": "A sharp and refreshing citrus blast.",
+      "category": "Icepops",
+      "tags": [
+        "Fruits",
+        "Plant Based"
+      ],
+      "imageUrl": "https://picsum.photos/seed/icepop2/500/500",
+      "imageHint": "lemon icepop"
+    },
+    {
+      "id": "product-icepop-3",
+      "name": "Chocolate Fudge",
+      "description": "A decadent and fudgy treat.",
+      "category": "Icepops",
+      "tags": [
+        "Chocolates"
+      ],
+      "imageUrl": "https://picsum.photos/seed/icepop3/500/500",
+      "imageHint": "chocolate icepop"
+    },
+    {
+      "id": "product-icepop-4",
+      "name": "Mango Tango",
+      "description": "Exotic alphonso mangoes.",
+      "category": "Icepops",
+      "tags": [
+        "Fruits",
+        "Plant Based"
+      ],
+      "imageUrl": "https://picsum.photos/seed/icepop4/500/500",
+      "imageHint": "mango icepop"
     }
   ]
 }

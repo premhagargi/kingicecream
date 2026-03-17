@@ -5,6 +5,9 @@ export type ImagePlaceholder = {
   description: string;
   imageUrl: string;
   imageHint: string;
+  name?: string;
+  category?: 'Gelato' | 'Icepops';
+  tags?: string[];
 };
 
 export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;

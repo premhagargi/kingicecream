@@ -9,10 +9,10 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 const menuItems = [
-  { text: "Flavors", href: "#products", imageId: "nav-image-1" },
-  { text: "Our Story", href: "#story", imageId: "nav-image-3" },
-  { text: "Collections", href: "#collections", imageId: "nav-image-2" },
-  { text: "Find Us", href: "#footer", imageId: "nav-image-4" },
+  { text: "Products", href: "/products", imageId: "nav-image-1" },
+  { text: "Our Story", href: "/#story", imageId: "nav-image-3" },
+  { text: "Collections", href: "/#collections", imageId: "nav-image-2" },
+  { text: "Find Us", href: "/#footer", imageId: "nav-image-4" },
 ];
 
 export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
@@ -47,7 +47,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
               >
                 <Image
                   src={image.imageUrl}
-                  alt={image.description}
+                  alt={image.description || 'Navigation image'}
                   data-ai-hint={image.imageHint}
                   fill
                   style={{ objectFit: 'cover' }}

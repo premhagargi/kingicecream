@@ -17,16 +17,18 @@ export default {
       xl: '0px',
       '2xl': '0px',
       '3xl': '0px',
-      full: '0px',
+      full: '9999px',
     },
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Bebas Neue', 'sans-serif'],
         supplemental: ['Geist', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
         code: ['monospace'],
       },
       colors: {
+        'light-gray': '#f5f5f5',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
