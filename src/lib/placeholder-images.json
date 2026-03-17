@@ -157,6 +157,66 @@
       ],
       "imageUrl": "https://luccianos.net/uploads/file-1608313043897.png",
       "imageHint": "mango icepop"
+    },
+    {
+      "id": "product-icepop-5",
+      "name": "Strawberry Dream",
+      "description": "Fresh-picked strawberry sweetness.",
+      "category": "Icepops",
+      "tags": [
+        "Fruits",
+        "Plant Based"
+      ],
+      "imageUrl": "https://luccianos.net/uploads/file-1651673902087.png",
+      "imageHint": "strawberry icepop"
+    },
+    {
+      "id": "product-icepop-6",
+      "name": "King Mango",
+      "description": "A royal treat of tropical mango.",
+      "category": "Icepops",
+      "tags": [
+        "Fruits",
+        "Plant Based"
+      ],
+      "imageUrl": "https://luccianos.net/uploads/file-1610718793008.png",
+      "imageHint": "mango icepop"
+    },
+    {
+      "id": "product-icepop-7",
+      "name": "Passionfruit Crush",
+      "description": "An exotic passionfruit explosion.",
+      "category": "Icepops",
+      "tags": [
+        "Fruits",
+        "Plant Based"
+      ],
+      "imageUrl": "https://luccianos.net/uploads/file-1610721043266.png",
+      "imageHint": "passionfruit icepop"
+    },
+    {
+      "id": "product-icepop-8",
+      "name": "Lime Burst",
+      "description": "A zesty and invigorating lime pop.",
+      "category": "Icepops",
+      "tags": [
+        "Fruits",
+        "Plant Based"
+      ],
+      "imageUrl": "https://luccianos.net/uploads/file-1604353935248.png",
+      "imageHint": "lime icepop"
+    },
+    {
+      "id": "product-icepop-9",
+      "name": "Royal Mulberry",
+      "description": "Rich and sweet red mulberry.",
+      "category": "Icepops",
+      "tags": [
+        "Fruits",
+        "Plant Based"
+      ],
+      "imageUrl": "https://luccianos.net/uploads/file-1723475886218.png",
+      "imageHint": "mulberry icepop"
     }
   ]
 }
