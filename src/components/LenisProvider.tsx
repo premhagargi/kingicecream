@@ -6,12 +6,16 @@ import Lenis from '@studio-freight/lenis';
 export default function LenisProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.06,
-      smooth: true,
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smoothTouch: false,
-      touchMultiplier: 1.2,
+      lerp: 0.1,
+      duration: 1.2,
+      smoothWheel: true,
+      smoothTouch: true,
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      wheelMultiplier: 0.8,
+      touchMultiplier: 1.0,
+      infinite: false,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
     function raf(time: number) {
