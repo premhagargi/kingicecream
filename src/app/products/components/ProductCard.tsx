@@ -34,7 +34,7 @@ export function ProductCard({ product }: { product: ImagePlaceholder }) {
           className="drop-shadow-xl"
         />
       </motion.div>
-      <h3 className="mt-6 font-supplemental text-lg uppercase tracking-wider">{product.name}</h3>
+      <h3 className="mt-6 font-supplemental text-lg uppercase tracking-wider font-bold">{product.name}</h3>
       {product.description && (
          <p className="text-sm text-muted-foreground mt-1">{product.description}</p>
       )}

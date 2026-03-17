@@ -120,7 +120,7 @@
         "Fruits",
         "Plant Based"
       ],
-      "imageUrl": "https://luccianos.net/uploads/file-1610721193651.png",
+      "imageUrl": "https://luccianos.net/assets/img/products/icepops/multifruta.png",
       "imageHint": "strawberry icepop"
     },
     {
@@ -132,7 +132,7 @@
         "Fruits",
         "Plant Based"
       ],
-      "imageUrl": "https://picsum.photos/seed/icepop2/500/500",
+      "imageUrl": "https://luccianos.net/uploads/file-1604353935248.png",
       "imageHint": "lemon icepop"
     },
     {
@@ -143,7 +143,7 @@
       "tags": [
         "Chocolates"
       ],
-      "imageUrl": "https://picsum.photos/seed/icepop3/500/500",
+      "imageUrl": "https://luccianos.net/uploads/file-1604351795340.png",
       "imageHint": "chocolate icepop"
     },
     {
@@ -155,7 +155,7 @@
         "Fruits",
         "Plant Based"
       ],
-      "imageUrl": "https://picsum.photos/seed/icepop4/500/500",
+      "imageUrl": "https://luccianos.net/uploads/file-1608313043897.png",
       "imageHint": "mango icepop"
     }
   ]
