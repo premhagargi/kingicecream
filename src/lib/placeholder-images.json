@@ -159,64 +159,64 @@
       "imageHint": "mango icepop"
     },
     {
-      "id": "product-icepop-5",
-      "name": "Strawberry Dream",
-      "description": "Fresh-picked strawberry sweetness.",
-      "category": "Icepops",
+      "id": "product-gelato-5",
+      "name": "Strawberry",
+      "description": "Sweetness of fresh strawberries in a creamy gelato.",
+      "category": "Gelato",
       "tags": [
         "Fruits",
         "Plant Based"
       ],
       "imageUrl": "https://luccianos.net/uploads/file-1651673902087.png",
-      "imageHint": "strawberry icepop"
+      "imageHint": "strawberry gelato"
     },
     {
-      "id": "product-icepop-6",
-      "name": "King Mango",
-      "description": "A royal treat of tropical mango.",
-      "category": "Icepops",
+      "id": "product-gelato-6",
+      "name": "Mango",
+      "description": "A royal treat of tropical mango gelato.",
+      "category": "Gelato",
       "tags": [
         "Fruits",
         "Plant Based"
       ],
       "imageUrl": "https://luccianos.net/uploads/file-1610718793008.png",
-      "imageHint": "mango icepop"
+      "imageHint": "mango gelato"
     },
     {
-      "id": "product-icepop-7",
-      "name": "Passionfruit Crush",
-      "description": "An exotic passionfruit explosion.",
-      "category": "Icepops",
+      "id": "product-gelato-7",
+      "name": "Passion Fruit",
+      "description": "An exotic passionfruit explosion in a gelato.",
+      "category": "Gelato",
       "tags": [
         "Fruits",
         "Plant Based"
       ],
       "imageUrl": "https://luccianos.net/uploads/file-1610721043266.png",
-      "imageHint": "passionfruit icepop"
+      "imageHint": "passionfruit gelato"
     },
     {
-      "id": "product-icepop-8",
-      "name": "Lime Burst",
-      "description": "A zesty and invigorating lime pop.",
-      "category": "Icepops",
+      "id": "product-gelato-8",
+      "name": "Lime",
+      "description": "A zesty and invigorating lime gelato.",
+      "category": "Gelato",
       "tags": [
         "Fruits",
         "Plant Based"
       ],
-      "imageUrl": "https://luccianos.net/uploads/file-1604353935248.png",
-      "imageHint": "lime icepop"
+      "imageUrl": "https://luccianos.net/uploads/file-1610718218332.png",
+      "imageHint": "lime gelato"
     },
     {
-      "id": "product-icepop-9",
-      "name": "Royal Mulberry",
-      "description": "Rich and sweet red mulberry.",
-      "category": "Icepops",
+      "id": "product-gelato-9",
+      "name": "Red Mulberry",
+      "description": "Rich and sweet red mulberry gelato.",
+      "category": "Gelato",
       "tags": [
         "Fruits",
         "Plant Based"
       ],
       "imageUrl": "https://luccianos.net/uploads/file-1723475886218.png",
-      "imageHint": "mulberry icepop"
+      "imageHint": "mulberry gelato"
     }
   ]
 }
