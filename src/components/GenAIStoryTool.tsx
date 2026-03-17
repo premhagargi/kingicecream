@@ -1,7 +1,8 @@
 
 "use client";
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { generateStoryAction, StoryState } from '@/app/actions';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -22,7 +23,7 @@ function SubmitButton() {
 
 export function GenAIStoryTool() {
   const initialState: StoryState = { message: null, errors: {} };
-  const [state, dispatch] = useFormState(generateStoryAction, initialState);
+  const [state, dispatch] = useActionState(generateStoryAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
