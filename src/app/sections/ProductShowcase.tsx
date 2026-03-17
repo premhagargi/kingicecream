@@ -69,7 +69,7 @@ export function ProductShowcase() {
                 />
               </motion.div>
               <div className="mt-4 text-center">
-                <h3 className="font-supplemental text-lg uppercase tracking-wider font-bold">{product.name}</h3>
+                <h3 className="font-headline text-lg uppercase tracking-wider">{product.name}</h3>
                 <p className="text-sm text-muted-foreground mt-1">{product.description}</p>
               </div>
             </motion.div>
