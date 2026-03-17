@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
+import LenisProvider from '@/components/LenisProvider';
 
 export const metadata: Metadata = {
   title: 'ArtisanScoop',
@@ -21,7 +22,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist" />
       </head>
       <body className="font-body antialiased">
-        {children}
+        <LenisProvider>
+          {children}
+        </LenisProvider>
         <Toaster />
       </body>
     </html>
