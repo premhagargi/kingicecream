@@ -70,16 +70,15 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1, ease: "easeOut" }}
               onMouseEnter={() => setHoveredItem(item.imageId)}
             >
-              <Link href={item.href} passHref>
-                <a
-                  onClick={closeMenu}
-                  className="group font-headline text-5xl sm:text-7xl lg:text-8xl text-foreground inline-flex items-center"
-                >
-                  <span className="group-hover:translate-x-4 transition-transform duration-300 ease-in-out flex items-center">
-                    {item.text}
-                    <ArrowRight className="w-8 h-8 sm:w-12 sm:h-12 ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </span>
-                </a>
+              <Link
+                href={item.href}
+                onClick={closeMenu}
+                className="group font-headline text-5xl sm:text-7xl lg:text-8xl text-foreground inline-flex items-center"
+              >
+                <span className="group-hover:translate-x-4 transition-transform duration-300 ease-in-out flex items-center">
+                  {item.text}
+                  <ArrowRight className="w-8 h-8 sm:w-12 sm:h-12 ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </span>
               </Link>
             </motion.li>
           ))}
