@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "A luxurious, artistic shot of a chocolate ice cream.",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1280",
+      "imageHint": "chocolate icecream"
+    },
+    {
+      "id": "product-1",
+      "name": "Midnight Chocolate",
+      "description": "Rich dark chocolate with a hint of mystery.",
+      "imageUrl": "https://picsum.photos/seed/prod1/800/1000",
+      "imageHint": "dark chocolate"
+    },
+    {
+      "id": "product-2",
+      "name": "Pistachio Dream",
+      "description": "Creamy pistachio gelato, a true classic.",
+      "imageUrl": "https://picsum.photos/seed/prod2/800/1000",
+      "imageHint": "pistachio gelato"
+    },
+    {
+      "id": "product-3",
+      "name": "Strawberry Sorbet",
+      "description": "A refreshing and vibrant strawberry delight.",
+      "imageUrl": "https://picsum.photos/seed/prod3/800/1000",
+      "imageHint": "strawberry sorbet"
+    },
+    {
+      "id": "product-4",
+      "name": "Vanilla Bean",
+      "description": "Pure and simple, yet exquisitely complex.",
+      "imageUrl": "https://picsum.photos/seed/prod4/800/1000",
+      "imageHint": "vanilla icecream"
+    },
+    {
+      "id": "story-image",
+      "description": "Close up on fresh, high-quality ingredients.",
+      "imageUrl": "https://picsum.photos/seed/story/1000/1200",
+      "imageHint": "fresh ingredients"
+    },
+    {
+      "id": "nav-image-1",
+      "imageUrl": "https://picsum.photos/seed/nav1/600/800",
+      "imageHint": "icecream cone"
+    },
+    {
+      "id": "nav-image-2",
+      "imageUrl": "https://picsum.photos/seed/nav2/600/800",
+      "imageHint": "icepop colorful"
+    },
+    {
+      "id": "nav-image-3",
+      "imageUrl": "https://picsum.photos/seed/nav3/600/800",
+      "imageHint": "gelato scoop"
+    },
+    {
+      "id": "nav-image-4",
+      "imageUrl": "https://picsum.photos/seed/nav4/600/800",
+      "imageHint": "icecream shop"
+    }
+  ]
 }

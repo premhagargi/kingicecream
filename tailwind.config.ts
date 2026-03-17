@@ -8,10 +8,22 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    borderRadius: {
+      none: '0px',
+      sm: '0px',
+      DEFAULT: '0px',
+      md: '0px',
+      lg: '0px',
+      xl: '0px',
+      '2xl': '0px',
+      '3xl': '0px',
+      full: '0px',
+    },
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        headline: ['Bebas Neue', 'sans-serif'],
+        supplemental: ['Geist', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -65,11 +77,6 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
         'accordion-down': {
