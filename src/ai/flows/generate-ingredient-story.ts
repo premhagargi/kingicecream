@@ -41,7 +41,7 @@ const prompt = ai.definePrompt({
   name: 'generateIngredientStoryPrompt',
   input: {schema: GenerateIngredientStoryInputSchema},
   output: {schema: GenerateIngredientStoryOutputSchema},
-  prompt: `You are a master storyteller and brand copywriter for a premium, luxury ice cream brand named ArtisanScoop.
+  prompt: `You are a master storyteller and brand copywriter for a premium, luxury ice cream brand named King Ice Cream.
 Your goal is to craft a short, evocative, and luxurious narrative for a new ice cream product.
 Focus on minimal text with maximum impact, highlighting the premium quality and unique experience.
 

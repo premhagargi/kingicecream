@@ -21,7 +21,7 @@ export function Header() {
               transition={{ duration: 0.5 }}
               className="font-headline text-2xl md:text-3xl text-primary-foreground cursor-pointer"
             >
-              ArtisanScoop
+              King Ice Cream
             </motion.div>
           </Link>
           <motion.button

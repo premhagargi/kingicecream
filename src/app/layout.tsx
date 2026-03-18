@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import LenisProvider from '@/components/LenisProvider';
 
 export const metadata: Metadata = {
-  title: 'ArtisanScoop',
+  title: 'King Ice Cream',
   description: 'A premium, visually immersive ice cream brand experience.',
 };
 

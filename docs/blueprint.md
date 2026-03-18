@@ -1,4 +1,4 @@
-# **App Name**: ArtisanScoop
+# **App Name**: King Ice Cream
 
 ## Core Features:
 
