@@ -10,8 +10,9 @@ import { ArrowRight } from "lucide-react";
 
 const menuItems = [
   { text: "Products", href: "/products", imageId: "nav-image-1" },
-  { text: "Our Story", href: "/#story", imageId: "nav-image-3" },
+  { text: "Our Story", href: "/aboutus", imageId: "nav-image-3" },
   { text: "Collections", href: "/#collections", imageId: "nav-image-2" },
+  { text: "Contact Us", href: "/contact", imageId: "nav-image-4" },
   { text: "Find Us", href: "/#footer", imageId: "nav-image-4" },
 ];
 
