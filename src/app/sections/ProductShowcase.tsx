@@ -61,11 +61,12 @@ export function ProductShowcase() {
               >
                 <Image
                   src={product.imageUrl}
-                  alt={product.description || ""}
+                  alt={product.name || 'Ice cream product'}
                   data-ai-hint={product.imageHint}
                   fill
-                  style={{ objectFit: 'cover' }}
-                  className="transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  unoptimized
+                  style={{ objectFit: 'contain' }}
+                  className="drop-shadow-xl transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
               </motion.div>
               <div className="mt-4 text-center">
