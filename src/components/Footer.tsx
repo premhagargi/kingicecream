@@ -16,7 +16,7 @@ export function Footer() {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start">
-          <h2 className="font-headline text-2xl">King Ice Cream</h2>
+          <h2 className="font-headline font-bold text-2xl">King Ice Cream</h2>
           <div className="flex space-x-4 mt-4">
             <a href="#" className="text-foreground hover:text-muted-foreground transition-colors"><Instagram size={20} /></a>
             <a href="#" className="text-foreground hover:text-muted-foreground transition-colors"><Twitter size={20} /></a>

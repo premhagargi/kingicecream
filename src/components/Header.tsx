@@ -19,7 +19,7 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="font-headline text-2xl md:text-3xl text-primary-foreground cursor-pointer"
+              className="font-headline font-bold text-2xl md:text-3xl text-primary-foreground cursor-pointer"
             >
               King Ice Cream
             </motion.div>

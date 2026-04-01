@@ -16,12 +16,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist" />
+        {/* Preload all Nohemi font weights for performance */}
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-Thin-BF6438cc577ef3b.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-ExtraLight-BF6438cc581502c.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-Light-BF6438cc5702321.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-Regular-BF6438cc579d934.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-Medium-BF6438cc57ddecd.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-SemiBold-BF6438cc57db2ff.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-Bold-BF6438cc577b524.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-ExtraBold-BF6438cc5761ae2.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-Black-BF6438cc565e67b.woff" as="font" type="font/woff" crossOrigin="anonymous" />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-nohemi antialiased">
         <LenisProvider>
           {children}
         </LenisProvider>

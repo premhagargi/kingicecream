@@ -16,7 +16,7 @@ export function ProductsHero() {
         <h2 className="font-serif font-bold text-base sm:text-lg uppercase tracking-[0.3em] text-neutral-600">
           Discover Our
         </h2>
-        <h1 className="font-headline text-7xl sm:text-9xl md:text-[10rem] mt-2 text-foreground">
+        <h1 className="font-headline font-bold text-7xl sm:text-9xl md:text-[10rem] mt-2 text-foreground">
           Products
         </h1>
       </div>

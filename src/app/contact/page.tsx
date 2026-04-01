@@ -37,7 +37,7 @@ export default function ContactPage() {
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-body text-lg md:text-xl text-muted-foreground">
-            Reach out to King Ice Cream for any queries, feedback, franchise enquiries, or wholesale opportunities.
+            Reach out to King Ice Cream for <span className="font-medium">any queries</span>, <em className="italic">feedback</em>, franchise enquiries, or <strong className="font-bold">wholesale opportunities</strong>.
           </p>
         </div>
       </section>
@@ -115,10 +115,10 @@ export default function ContactPage() {
                 </h3>
                 <p className="font-body text-muted-foreground text-lg">
                   Neginhal village, Bailhongal Taluka,<br />
-                  Dist. Belagavi, Karnataka 591102
+                  <span className="italic">Dist. Belagavi, Karnataka 591102</span>
                 </p>
                 <p className="font-body text-muted-foreground mt-4">
-                  We are proudly made in Belagavi and expanding across Karnataka and other states.
+                  We are <em className="italic">proudly made in Belagavi</em> and <span className="font-medium">expanding across Karnataka</span> and other states.
                 </p>
               </div>
             </div>

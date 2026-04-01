@@ -74,7 +74,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
               <Link
                 href={item.href}
                 onClick={closeMenu}
-                className="group font-headline text-5xl sm:text-7xl lg:text-8xl text-foreground inline-flex items-center"
+                className="group font-headline font-bold text-5xl sm:text-7xl lg:text-8xl text-foreground inline-flex items-center"
               >
                 <span className="group-hover:translate-x-4 transition-transform duration-300 ease-in-out flex items-center">
                   {item.text}

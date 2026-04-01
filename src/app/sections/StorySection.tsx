@@ -35,11 +35,11 @@ export function StorySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <h2 className="font-headline text-5xl sm:text-7xl">
+            <h2 className="font-headline font-bold text-5xl sm:text-7xl">
               Craft &<br/>Curiosity
             </h2>
             <p className="mt-6 text-lg text-muted-foreground max-w-md">
-              We believe in the art of ice cream. From single-origin vanilla to hand-picked fruits, every scoop tells a story of passion and the finest ingredients.
+              We believe in <span className="italic">the art of ice cream</span>. From <strong className="font-bold">single-origin vanilla</strong> to hand-picked fruits, <em className="font-medium">every scoop tells a story</em> of passion and the finest ingredients.
             </p>
             <div className="mt-12">
               <GenAIStoryTool />

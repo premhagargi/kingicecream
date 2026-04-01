@@ -21,10 +21,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Bebas Neue', 'sans-serif'],
-        supplemental: ['Geist', 'sans-serif'],
-        serif: ['"Playfair Display"', 'serif'],
+        nohemi: ['Nohemi', 'system-ui', 'sans-serif'],
+        body: ['Nohemi', 'system-ui', 'sans-serif'],
+        headline: ['Nohemi', 'system-ui', 'sans-serif'],
+        supplemental: ['Nohemi', 'system-ui', 'sans-serif'],
+        serif: ['Nohemi', 'system-ui', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {

@@ -38,7 +38,7 @@ export function ProductShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="font-headline text-5xl sm:text-7xl text-center mb-16">
+            className="font-headline font-bold text-5xl sm:text-7xl text-center mb-16">
           Our Creations
         </motion.h2>
         <motion.div

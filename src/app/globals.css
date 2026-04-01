@@ -2,14 +2,323 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   NOHEMI FONT FACE DECLARATIONS
+   ============================================ */
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-Thin-BF6438cc577ef3b.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-Thin-BF6438cc5896c67.ttf') format('truetype'),
+       url('/fonts/Nohemi-Font/Nohemi-Thin-BF6438cc57e2011.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-ExtraLight-BF6438cc581502c.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-ExtraLight-BF6438cc58a2634.ttf') format('truetype'),
+       url('/fonts/Nohemi-Font/Nohemi-ExtraLight-BF6438cc57e06d5.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-Light-BF6438cc5702321.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-Light-BF6438cc5899919.ttf') format('truetype'),
+       url('/fonts/Nohemi-Font/Nohemi-Light-BF6438cc583f70b.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-Regular-BF6438cc579d934.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-Regular-BF6438cc4d0e493.ttf') format('truetype'),
+       url('/fonts/Nohemi-Font/Nohemi-Regular-BF6438cc58b98fc.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-Medium-BF6438cc57ddecd.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-Medium-BF6438cc5883899.ttf') format('truetype'),
+       url('/fonts/Nohemi-Font/Nohemi-Medium-BF6438cc581a509.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-SemiBold-BF6438cc57db2ff.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-SemiBold-BF6438cc588a48a.ttf') format('truetype'),
+       url('/fonts/Nohemi-Font/Nohemi-SemiBold-BF6438cc588b5e5.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-Bold-BF6438cc577b524.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-Bold-BF6438cc5812315.otf') format('opentype'),
+       url('/fonts/Nohemi-Font/Nohemi-Bold-BF6438cc587b5b5.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-ExtraBold-BF6438cc5761ae2.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-ExtraBold-BF6438cc58a4c3c.otf') format('opentype'),
+       url('/fonts/Nohemi-Font/Nohemi-ExtraBold-BF6438cc5881baf.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Font/Nohemi-Black-BF6438cc565e67b.woff') format('woff'),
+       url('/fonts/Nohemi-Font/Nohemi-Black-BF6438cc5874bd2.otf') format('opentype'),
+       url('/fonts/Nohemi-Font/Nohemi-Black-BF6438cc58744d4.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   TYPOGRAPHY CUSTOM PROPERTIES
+   ============================================ */
+@layer base {
+  :root {
+    /* Font Family */
+    --font-nohemi: 'Nohemi', system-ui, sans-serif;
+    
+    /* Font Sizes - Premium Scale */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 3rem;        /* 48px */
+    --text-6xl: 3.75rem;     /* 60px */
+    --text-7xl: 4.5rem;      /* 72px */
+    --text-8xl: 6rem;        /* 96px */
+    --text-9xl: 8rem;        /* 128px */
+    
+    /* Line Heights - Premium Tight for Headings */
+    --leading-none: 1;
+    --leading-tight: 1.1;
+    --leading-snug: 1.25;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    
+    /* Letter Spacing - Premium Feel */
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+  }
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
   }
+  
+  body {
+    font-family: var(--font-nohemi);
+    font-weight: 400;
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    letter-spacing: var(--tracking-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================
+   TYPOGRAPHY UTILITY CLASSES
+   ============================================ */
+@layer components {
+  /* Headings - Heavier Weights */
+  .font-heading {
+    font-family: var(--font-nohemi);
+  }
+  
+  .font-h1 {
+    font-family: var(--font-nohemi);
+    font-weight: 700;
+    font-size: var(--text-5xl);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  
+  .font-h2 {
+    font-family: var(--font-nohemi);
+    font-weight: 700;
+    font-size: var(--text-4xl);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  
+  .font-h3 {
+    font-family: var(--font-nohemi);
+    font-weight: 600;
+    font-size: var(--text-3xl);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-normal);
+  }
+  
+  .font-h4 {
+    font-family: var(--font-nohemi);
+    font-weight: 600;
+    font-size: var(--text-2xl);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-normal);
+  }
+  
+  .font-h5 {
+    font-family: var(--font-nohemi);
+    font-weight: 600;
+    font-size: var(--text-xl);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-wide);
+  }
+  
+  .font-h6 {
+    font-family: var(--font-nohemi);
+    font-weight: 500;
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-wide);
+  }
+  
+  /* Subheadings - Medium Weight */
+  .font-subheading {
+    font-family: var(--font-nohemi);
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+  }
+  
+  /* Body Text - Regular Weight */
+  .font-body {
+    font-family: var(--font-nohemi);
+    font-weight: 400;
+    line-height: var(--leading-relaxed);
+  }
+  
+  /* Captions / Subtle Text - Light */
+  .font-caption {
+    font-family: var(--font-nohemi);
+    font-weight: 300;
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-wide);
+  }
+  
+  /* Small Text */
+  .font-small {
+    font-family: var(--font-nohemi);
+    font-weight: 400;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+  
+  /* Italic Variants */
+  .font-italic {
+    font-style: italic;
+  }
+  
+  .font-heading-italic {
+    font-family: var(--font-nohemi);
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .font-body-italic {
+    font-family: var(--font-nohemi);
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  /* Display / Hero Text */
+  .font-display {
+    font-family: var(--font-nohemi);
+    font-weight: 800;
+    font-size: var(--text-7xl);
+    line-height: 1;
+    letter-spacing: var(--tracking-tighter);
+  }
+  
+  .font-display-xl {
+    font-family: var(--font-nohemi);
+    font-weight: 900;
+    font-size: var(--text-9xl);
+    line-height: 0.95;
+    letter-spacing: var(--tracking-tighter);
+  }
+  
+  /* Premium Label */
+  .font-label {
+    font-family: var(--font-nohemi);
+    font-weight: 500;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+  }
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+@layer utilities {
+  /* Mobile-first responsive text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  
+  /* Responsive heading sizes */
+  @media (max-width: 640px) {
+    .font-h1 {
+      font-size: var(--text-4xl);
+    }
+    .font-h2 {
+      font-size: var(--text-3xl);
+    }
+    .font-h3 {
+      font-size: var(--text-2xl);
+    }
+    .font-display {
+      font-size: var(--text-5xl);
+    }
+    .font-display-xl {
+      font-size: var(--text-6xl);
+    }
+  }
+  
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .font-display-xl {
+      font-size: var(--text-7xl);
+    }
+  }
 }
 
 @layer base {
