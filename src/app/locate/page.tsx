@@ -58,7 +58,7 @@ export default function LocatePage() {
         <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-4 block">
           15,000+ Outlets
         </span>
-        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white leading-[0.9]">
+        <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl text-white leading-[0.95]">
           Find Us
           <br />
           <span className="font-serif italic font-normal text-white/50">
@@ -95,7 +95,7 @@ export default function LocatePage() {
         <div className="space-y-16">
           {regions.map((region) => (
             <div key={region.state}>
-              <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-wider mb-6">
+              <h2 className="font-sans text-base sm:text-lg md:text-xl font-bold uppercase tracking-normal mb-4">
                 {region.state}
               </h2>
 
@@ -107,7 +107,7 @@ export default function LocatePage() {
                   >
                     <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-display text-sm uppercase tracking-wider block">
+                      <span className="font-sans text-xs sm:text-sm uppercase tracking-wider block">
                         {city.name}
                       </span>
                       <span className="font-sans text-xs text-muted-foreground">
@@ -134,19 +134,19 @@ export default function LocatePage() {
             <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-2">
               Order Online
             </span>
-            <span className="font-display text-lg uppercase tracking-wider">Zomato</span>
+            <span className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal">Zomato</span>
           </div>
           <div className="p-6 sm:p-10 border-b sm:border-b-0 sm:border-r border-border">
             <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-2">
               Retail Chains
             </span>
-            <span className="font-display text-lg uppercase tracking-wider">15,000+ Stores</span>
+            <span className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal">15,000+ Stores</span>
           </div>
           <div className="p-6 sm:p-10">
             <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-2">
               King Parlours
             </span>
-            <span className="font-display text-lg uppercase tracking-wider">Exclusive Outlets</span>
+            <span className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal">Exclusive Outlets</span>
           </div>
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function LocatePage() {
       {/* CTA */}
       <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-foreground text-background">
         <div className="max-w-2xl">
-          <h2 className="font-display font-bold text-3xl sm:text-4xl mb-4">
+          <h2 className="font-sans font-bold text-xl sm:text-2xl mb-4">
             Can&apos;t Find Us?
           </h2>
           <p className="font-serif italic text-background/50 mb-8">

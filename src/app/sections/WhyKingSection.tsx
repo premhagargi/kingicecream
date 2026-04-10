@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { number: "0%", label: "Palm Oil", detail: "Pure milk from 1,500+ villages" },
-  { number: "40K+", label: "Farmers", detail: "Families supported daily" },
-  { number: "HUL", label: "Heritage", detail: "Ex-Kwality Walls manufacturer" },
+  { number: "0%", label: "Palm Oil", detail: "Pure milk only" },
+  { number: "40K+", label: "Farmers", detail: "Supported daily" },
+  { number: "HUL", label: "Heritage", detail: "Ex-Kwality Walls" },
   { number: "15K+", label: "Outlets", detail: "Across 4 states" },
 ];
 
@@ -34,7 +34,7 @@ export function WhyKingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug max-w-3xl text-foreground/70"
+          className="font-serif italic text-lg sm:text-xl md:text-3xl lg:text-4xl leading-snug max-w-3xl text-foreground/70"
         >
           Two decades of dairy mastery.
           <br className="hidden sm:block" />
@@ -56,15 +56,15 @@ export function WhyKingSection() {
                 delay: i * 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="p-6 sm:p-8 md:p-10 border-r border-b md:border-b-0 border-foreground/10 last:border-r-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r"
+              className="p-4 sm:p-6 md:p-8 border-r border-b md:border-b-0 border-foreground/10 last:border-r-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r overflow-hidden"
             >
-              <div className="font-display text-3xl sm:text-4xl md:text-5xl text-black leading-none whitespace-nowrap">
+              <div className="font-sans text-lg sm:text-xl md:text-2xl font-bold text-black leading-none">
                 {stat.number}
               </div>
-              <div className="font-display text-sm uppercase tracking-[0.2em] mt-3 text-black">
+              <div className="font-sans text-[9px] sm:text-[10px] uppercase tracking-normal mt-1.5 text-black/70">
                 {stat.label}
               </div>
-              <p className="font-serif italic text-black/50 text-sm mt-2">
+              <p className="font-serif italic text-black/40 text-[9px] sm:text-[10px] mt-1 hidden sm:block">
                 {stat.detail}
               </p>
             </motion.div>

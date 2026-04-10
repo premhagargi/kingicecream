@@ -55,7 +55,7 @@ export function SplashScreen({ children }: { children: React.ReactNode }) {
                 {letters.map((letter, i) => (
                   <motion.span
                     key={i}
-                    className="font-display text-7xl sm:text-9xl md:text-[10rem] text-white tracking-widest"
+                    className="font-display text-4xl sm:text-6xl md:text-[10rem] text-white tracking-[0.15em] sm:tracking-widest"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{

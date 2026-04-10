@@ -66,7 +66,7 @@ export function TestimonialsSection() {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              <p className="font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug text-foreground/90 max-w-4xl">
+              <p className="font-serif italic text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-snug text-foreground/90 max-w-4xl">
                 &ldquo;{t.text}&rdquo;
               </p>
 

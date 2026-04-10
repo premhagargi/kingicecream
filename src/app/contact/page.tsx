@@ -24,7 +24,7 @@ export default function ContactPage() {
           data-ai-hint="ice cream contact"
         />
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 md:mb-6">
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 md:mb-6">
             Contact Us
           </h1>
           <p className="font-serif text-xl md:text-2xl text-white/90 max-w-2xl mx-auto italic">
@@ -52,7 +52,7 @@ export default function ContactPage() {
               <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
                 <Phone className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="font-headline text-2xl text-foreground mb-3">Customer Care</h3>
+              <h3 className="font-sans text-base sm:text-lg font-semibold text-foreground mb-2">Customer Care</h3>
               <p className="font-body text-muted-foreground mb-2">We're here to help!</p>
               <a 
                 href="tel:9900255556" 
@@ -67,7 +67,7 @@ export default function ContactPage() {
               <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
                 <Mail className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="font-headline text-2xl text-foreground mb-3">Email Us</h3>
+              <h3 className="font-sans text-base sm:text-lg font-semibold text-foreground mb-2">Email Us</h3>
               <p className="font-body text-muted-foreground mb-2">For general inquiries</p>
               <a 
                 href="mailto:info@kingicecream.com" 
@@ -82,7 +82,7 @@ export default function ContactPage() {
               <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
                 <Instagram className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="font-headline text-2xl text-foreground mb-3">Follow Us</h3>
+              <h3 className="font-sans text-base sm:text-lg font-semibold text-foreground mb-2">Follow Us</h3>
               <p className="font-body text-muted-foreground mb-2">Latest flavours & offers</p>
               <a 
                 href="https://www.instagram.com/kingicecream.india/" 
@@ -101,7 +101,7 @@ export default function ContactPage() {
       {/* Address Section */}
       <section className="py-12 md:py-16 bg-secondary">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl text-foreground mb-8 text-center">
+          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
             Manufactured & Marketed By
           </h2>
           <div className="bg-card border border-border p-6 md:p-8">
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 <MapPin className="w-6 h-6 text-foreground" />
               </div>
               <div>
-                <h3 className="font-headline text-2xl text-foreground mb-2">
+                <h3 className="font-sans text-base sm:text-lg font-semibold text-foreground mb-2">
                   Vijaykant Dairy & Food Products Ltd.
                 </h3>
                 <p className="font-body text-muted-foreground text-lg">
@@ -129,7 +129,7 @@ export default function ContactPage() {
       {/* Business Hours Section */}
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 text-center">
+          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
             Business Hours
           </h2>
           <div className="bg-card border border-border p-6 md:p-8 text-center">
@@ -146,7 +146,7 @@ export default function ContactPage() {
       {/* Find Us Section */}
       <section className="py-12 md:py-16 bg-secondary">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 text-center">
+          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
             Find a King Ice Cream Parlour Near You
           </h2>
           <div className="bg-card border border-border p-4">

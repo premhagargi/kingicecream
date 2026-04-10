@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavigationMenu } from "./NavigationMenu";
+import { TransitionLink } from "./TransitionLink";
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ export function Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
         <div className="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-24 py-5 sm:py-6">
-          <Link href="/" passHref>
+          <TransitionLink href="/">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -23,7 +23,7 @@ export function Header() {
             >
               King
             </motion.div>
-          </Link>
+          </TransitionLink>
 
           <motion.button
             onClick={toggleMenu}

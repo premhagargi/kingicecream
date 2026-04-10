@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import { TransitionLink } from "./TransitionLink";
 
 const menuItems = [
   { text: "Products", href: "/products", desc: "Browse our royal collection" },
@@ -28,7 +28,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
       animate={{ clipPath: "inset(0 0 0% 0)" }}
       exit={{ clipPath: "inset(0 0 100% 0)" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-0 bg-[#0a0a0a] z-40 flex flex-col"
+      className="fixed inset-0 bg-[#0a0a0a] z-40 flex flex-col overflow-hidden"
     >
       {/* Top spacer for header */}
       <div className="h-16 sm:h-20 shrink-0" />
@@ -51,9 +51,9 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
               >
-                <Link
+                <TransitionLink
                   href={item.href}
-                  onClick={closeMenu}
+                  onBeforeNavigate={closeMenu}
                   className="group flex items-center justify-between py-5 sm:py-6"
                 >
                   <div className="flex items-baseline gap-4 sm:gap-6">
@@ -61,7 +61,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span
-                      className={`font-display text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide transition-colors duration-300 ${
+                      className={`font-sans text-lg sm:text-xl md:text-3xl font-bold uppercase tracking-normal transition-colors duration-300 ${
                         hovered === null || hovered === i
                           ? "text-white"
                           : "text-white/20"
@@ -77,7 +77,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                     </span>
                     <span className="w-0 group-hover:w-8 h-[1px] bg-gold transition-all duration-400 overflow-hidden" />
                   </div>
-                </Link>
+                </TransitionLink>
               </motion.li>
             ))}
           </ul>

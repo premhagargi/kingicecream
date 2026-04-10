@@ -44,7 +44,7 @@ export function TimelineSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-headline text-3xl sm:text-4xl md:text-5xl text-foreground mb-12 md:mb-16 text-center"
+          className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-10 md:mb-14 text-center"
         >
           Our Journey
         </motion.h2>
@@ -74,7 +74,7 @@ export function TimelineSection() {
                 <span className="font-headline text-gold text-sm uppercase tracking-[0.2em]">
                   {milestone.year}
                 </span>
-                <h3 className="font-headline text-xl md:text-2xl text-foreground mt-1 mb-2">
+                <h3 className="font-sans text-sm sm:text-base md:text-lg font-semibold text-foreground mt-1 mb-2">
                   {milestone.title}
                 </h3>
                 <p className="font-serif text-muted-foreground leading-relaxed">

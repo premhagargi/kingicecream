@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useRef } from "react";
-import Link from "next/link";
+import { TransitionLink } from "@/components/TransitionLink";
 
 export function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
@@ -65,7 +65,7 @@ export function HeroSection() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-black text-[11vw] sm:text-[9vw] md:text-[7vw] lg:text-[6vw] text-white uppercase leading-[0.9] tracking-tight"
+            className="font-display font-black text-[9vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] text-white uppercase leading-[0.9] tracking-tight"
           >
             Reign
           </motion.h1>
@@ -75,7 +75,7 @@ export function HeroSection() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-black text-[11vw] sm:text-[9vw] md:text-[7vw] lg:text-[6vw] text-white uppercase leading-[0.9] tracking-tight"
+            className="font-display font-black text-[9vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] text-white uppercase leading-[0.9] tracking-tight"
           >
             of <span className="text-gold">Flavor</span>.
           </motion.h1>
@@ -99,14 +99,14 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 1.6 }}
           className="mt-8 sm:mt-10"
         >
-          <Link
+          <TransitionLink
             href="/products"
             className="group inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] text-white/70 hover:text-gold transition-colors duration-500"
             data-cursor-text="Explore"
           >
             <span className="h-[1px] w-8 bg-gold group-hover:w-16 transition-all duration-500" />
             Explore the collection
-          </Link>
+          </TransitionLink>
         </motion.div>
 
         {/* Scroll hint — just a thin line, not an arrow */}

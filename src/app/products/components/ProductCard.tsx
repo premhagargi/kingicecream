@@ -60,18 +60,18 @@ export function ProductCard({ product }: { product: ImagePlaceholder }) {
 
       {/* Text below card */}
       <div className="mt-3 sm:mt-4 px-1">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="font-display text-sm sm:text-base uppercase tracking-wider leading-tight">
+        <div className="flex items-start justify-between gap-1">
+          <h3 className="font-sans text-[11px] sm:text-xs font-medium uppercase tracking-normal leading-tight line-clamp-2">
             {product.name}
           </h3>
           {product.price && (
-            <span className="font-sans text-sm sm:text-base text-foreground shrink-0">
+            <span className="font-sans text-xs sm:text-sm text-foreground shrink-0">
               ₹{product.price}
             </span>
           )}
         </div>
         {product.description && (
-          <p className="text-xs text-muted-foreground mt-1 font-serif italic line-clamp-1">
+          <p className="text-[10px] sm:text-xs text-muted-foreground mt-0.5 font-serif italic line-clamp-1">
             {product.description}
           </p>
         )}

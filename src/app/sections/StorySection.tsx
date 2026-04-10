@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import Link from "next/link";
+import { TransitionLink } from "@/components/TransitionLink";
 
 export function StorySection() {
   const storyImage = PlaceHolderImages.find((img) => img.id === "story-image");
@@ -25,7 +25,7 @@ export function StorySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[0.9]"
+            className="font-sans font-black text-2xl sm:text-4xl md:text-5xl leading-[0.95]"
           >
             Farm to
             <br />
@@ -77,14 +77,14 @@ export function StorySection() {
           </p>
 
           <div className="mt-8">
-            <Link
+            <TransitionLink
               href="/aboutus"
               className="group inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground transition-colors"
               data-cursor-text="Story"
             >
               <span className="h-[1px] w-6 bg-foreground/30 group-hover:w-12 transition-all duration-500" />
               Read our full story
-            </Link>
+            </TransitionLink>
           </div>
         </motion.div>
       </div>

@@ -22,12 +22,12 @@ export default {
     extend: {
       fontFamily: {
         nohemi: ['Nohemi', 'system-ui', 'sans-serif'],
-        display: ['Nohemi', 'system-ui', 'sans-serif'],
-        headline: ['Nohemi', 'system-ui', 'sans-serif'],
+        display: ['var(--font-geist)', 'system-ui', 'sans-serif'],
+        headline: ['var(--font-geist)', 'system-ui', 'sans-serif'],
         serif: ['var(--font-playfair)', 'Georgia', 'serif'],
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        body: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        code: ['monospace'],
+        sans: ['var(--font-geist)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-geist)', 'system-ui', 'sans-serif'],
+        code: ['var(--font-geist-mono)', 'monospace'],
       },
       colors: {
         'light-gray': '#f5f5f5',

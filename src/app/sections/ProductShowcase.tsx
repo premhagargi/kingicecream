@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import Link from "next/link";
+import { TransitionLink } from "@/components/TransitionLink";
 
 const featuredIds = ["product-1", "product-2", "product-3", "product-4"];
 const products = PlaceHolderImages.filter((img) => featuredIds.includes(img.id));
@@ -36,7 +36,7 @@ export function ProductShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="font-display font-bold text-3xl sm:text-5xl md:text-6xl mt-2"
+              className="font-sans font-black text-2xl sm:text-4xl md:text-5xl mt-2"
             >
               Royal Creations
             </motion.h2>
@@ -48,19 +48,19 @@ export function ProductShowcase() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <Link
+            <TransitionLink
               href="/products"
               className="group inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground transition-colors"
               data-cursor-text="All"
             >
               View all products
               <span className="h-[1px] w-6 bg-foreground/30 group-hover:w-12 transition-all duration-500" />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
 
         {/* Asymmetric Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[280px] sm:auto-rows-[320px] md:auto-rows-[300px] gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] sm:auto-rows-[260px] md:auto-rows-[300px] gap-2 sm:gap-4">
           {products.map((product, i) => (
             <motion.div
               key={product.id}
@@ -85,21 +85,21 @@ export function ProductShowcase() {
                   style={{ objectFit: "cover" }}
                   className="transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>
 
               {/* Text overlay — bottom left, not centered */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 z-10">
-                <h3 className="font-display text-white text-lg sm:text-xl uppercase tracking-wider">
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5 z-10">
+                <h3 className="font-sans text-white text-sm sm:text-base md:text-lg font-bold leading-tight">
                   {product.name}
                 </h3>
-                <p className="font-serif italic text-white/50 text-sm mt-1 line-clamp-1">
+                <p className="font-serif italic text-white/60 text-xs sm:text-sm mt-1 line-clamp-1 hidden sm:block">
                   {product.description}
                 </p>
               </div>
 
               {/* Number overlay — top right */}
-              <span className="absolute top-4 right-4 font-display text-white/10 text-4xl sm:text-5xl select-none">
+              <span className="absolute top-2 right-2 sm:top-4 sm:right-4 font-display text-white/10 text-2xl sm:text-4xl select-none">
                 {String(i + 1).padStart(2, "0")}
               </span>
             </motion.div>

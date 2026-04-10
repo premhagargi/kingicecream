@@ -24,7 +24,7 @@ export default function AboutUsPage() {
           data-ai-hint="ice cream factory"
         />
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 md:mb-6">
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 md:mb-6">
             About Us
           </h1>
           <p className="font-serif text-xl md:text-2xl text-white/90 max-w-2xl mx-auto italic">
@@ -36,7 +36,7 @@ export default function AboutUsPage() {
       {/* Introduction Section */}
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-foreground mb-6 md:mb-8 text-center">
+          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center">
             The Makers Behind the Crown
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground">
@@ -55,19 +55,19 @@ export default function AboutUsPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
             <div className="text-center">
-              <div className="font-headline text-3xl sm:text-4xl md:text-5xl text-foreground mb-2 whitespace-nowrap">2L+</div>
+              <div className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 whitespace-nowrap">2L+</div>
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Litres of Milk Procured Daily</p>
             </div>
             <div className="text-center">
-              <div className="font-headline text-3xl sm:text-4xl md:text-5xl text-foreground mb-2">1,500+</div>
+              <div className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">1,500+</div>
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Villages in Our Network</p>
             </div>
             <div className="text-center">
-              <div className="font-headline text-3xl sm:text-4xl md:text-5xl text-foreground mb-2">40K+</div>
+              <div className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">40K+</div>
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Farmer Families Supported</p>
             </div>
             <div className="text-center">
-              <div className="font-headline text-3xl sm:text-4xl md:text-5xl text-foreground mb-2">15K+</div>
+              <div className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">15K+</div>
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Retail Outlets Served</p>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function AboutUsPage() {
       {/* Quality Promise Section */}
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-foreground mb-6 md:mb-8 text-center">
+          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center">
             Our Promise
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground mb-10">
@@ -92,25 +92,25 @@ export default function AboutUsPage() {
           {/* Promise Cards */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             <div className="bg-card border border-border p-6 md:p-8">
-              <h3 className="font-headline text-2xl md:text-3xl text-foreground mb-4">Pure Milk, No Compromise</h3>
+              <h3 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">Pure Milk, No Compromise</h3>
               <p className="text-muted-foreground font-serif">
                 Made with fresh milk from our own procurement network of 1,500+ villages. No palm oil. No vegetable fat substitutes. Just real dairy, the way it should be.
               </p>
             </div>
             <div className="bg-card border border-border p-6 md:p-8">
-              <h3 className="font-headline text-2xl md:text-3xl text-foreground mb-4">HUL-Grade Manufacturing</h3>
+              <h3 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">HUL-Grade Manufacturing</h3>
               <p className="text-muted-foreground font-serif">
                 Our facility manufactured Kwality Walls for Hindustan Unilever. The same world-class processes, cold chain infrastructure, and quality protocols now power King Ice Cream.
               </p>
             </div>
             <div className="bg-card border border-border p-6 md:p-8">
-              <h3 className="font-headline text-2xl md:text-3xl text-foreground mb-4">Farmer-First Philosophy</h3>
+              <h3 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">Farmer-First Philosophy</h3>
               <p className="text-muted-foreground font-serif">
                 We support 40,000+ farming families across Karnataka and neighbouring states. Fair prices, daily collection, six chilling centres — when farmers thrive, the milk is better, and so is your ice cream.
               </p>
             </div>
             <div className="bg-card border border-border p-6 md:p-8">
-              <h3 className="font-headline text-2xl md:text-3xl text-foreground mb-4">Rooted in Tradition, Made for Today</h3>
+              <h3 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">Rooted in Tradition, Made for Today</h3>
               <p className="text-muted-foreground font-serif">
                 From matka kulfi set in earthen pots to Gudbud inspired by Dharwad&apos;s legendary dessert, we celebrate India&apos;s rich ice cream heritage while delivering modern convenience across 15,000+ retail stores and Zomato.
               </p>
@@ -122,7 +122,7 @@ export default function AboutUsPage() {
       {/* Reach Section */}
       <section className="py-16 md:py-20 bg-secondary">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6">
             From Belagavi to Your Neighbourhood
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-serif">
@@ -134,7 +134,7 @@ export default function AboutUsPage() {
       {/* Community Section */}
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-foreground mb-6 md:mb-8 text-center">
+          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center">
             More Than Just Ice Cream
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground">

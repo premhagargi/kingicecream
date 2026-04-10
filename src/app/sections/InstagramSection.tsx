@@ -22,7 +22,7 @@ export function InstagramSection() {
             Instagram
           </span>
           <a href="https://www.instagram.com/kingicecream.india/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-            <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl">
+            <h2 className="font-sans font-bold text-base sm:text-xl md:text-3xl">
               @kingicecream.india
             </h2>
           </a>

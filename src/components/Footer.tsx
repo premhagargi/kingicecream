@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Instagram, Phone, MapPin } from "lucide-react"
+import { TransitionLink } from "./TransitionLink"
 import { Input } from "./ui/input"
 import { Button } from "./ui/button"
 
@@ -17,7 +18,7 @@ export function Footer() {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start">
-          <h2 className="font-headline font-bold text-2xl">King Ice Cream</h2>
+          <h2 className="font-sans font-bold text-base sm:text-lg">King Ice Cream</h2>
           <p className="mt-2 text-sm text-muted-foreground font-serif italic">Royalty in Every Scoop</p>
           <div className="flex space-x-4 mt-4">
             <a href="https://www.instagram.com/kingicecream.india/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors" aria-label="Instagram"><Instagram size={20} /></a>
@@ -27,18 +28,18 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-headline uppercase tracking-widest text-sm">Explore</h3>
+          <h3 className="font-sans font-semibold uppercase tracking-wider text-xs">Explore</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="/products" className="hover:text-gold transition-colors">Products</a></li>
-            <li><a href="/aboutus" className="hover:text-gold transition-colors">Our Story</a></li>
-            <li><a href="/franchise" className="hover:text-gold transition-colors">Franchise</a></li>
-            <li><a href="/locate" className="hover:text-gold transition-colors">Find a Parlour</a></li>
-            <li><a href="/contact" className="hover:text-gold transition-colors">Contact Us</a></li>
+            <li><TransitionLink href="/products" className="hover:text-gold transition-colors">Products</TransitionLink></li>
+            <li><TransitionLink href="/aboutus" className="hover:text-gold transition-colors">Our Story</TransitionLink></li>
+            <li><TransitionLink href="/franchise" className="hover:text-gold transition-colors">Franchise</TransitionLink></li>
+            <li><TransitionLink href="/locate" className="hover:text-gold transition-colors">Find a Parlour</TransitionLink></li>
+            <li><TransitionLink href="/contact" className="hover:text-gold transition-colors">Contact Us</TransitionLink></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="font-headline uppercase tracking-widest text-sm">Newsletter</h3>
+          <h3 className="font-sans font-semibold uppercase tracking-wider text-xs">Newsletter</h3>
           <p className="mt-4 text-sm text-muted-foreground">Be the first to know about new flavours, seasonal specials, and store openings.</p>
           <form className="mt-4 flex">
             <Input type="email" placeholder="Your Email" className="flex-grow" />
@@ -80,7 +81,7 @@ export function Footer() {
             aria-label="Order on Swiggy"
           >
             <Image
-              src="/images/logos/Swiggy_Lsogo_2024.webp"
+              src="/images/logos/Swiggy_Logo_2024.webp"
               alt="Order on Swiggy"
               width={250}
               height={60}

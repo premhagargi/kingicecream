@@ -38,7 +38,7 @@ export function GenAIStoryTool() {
 
   return (
     <div className="border border-border p-6 space-y-6">
-      <h3 className="font-headline text-lg uppercase tracking-wider">Craft Your Royal Flavour Story</h3>
+      <h3 className="font-sans text-sm font-semibold uppercase tracking-normal">Craft Your Royal Flavour Story</h3>
       <p className="text-sm text-muted-foreground">
         Use our AI to craft an evocative narrative for your creation. Provide some key ingredients and details.
       </p>
@@ -81,7 +81,7 @@ export function GenAIStoryTool() {
             exit={{ opacity: 0, y: -20 }}
             className="border-t border-border pt-4 mt-4"
           >
-            <h4 className="font-headline text-md uppercase tracking-wider">Your Generated Story:</h4>
+            <h4 className="font-sans text-sm font-semibold uppercase tracking-normal">Your Generated Story:</h4>
             <p className="mt-2 text-foreground italic">"{state.story}"</p>
           </motion.div>
         )}

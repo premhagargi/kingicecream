@@ -14,7 +14,7 @@ export function FranchiseForm() {
     return (
       <div className="py-12 text-center">
         <span className="font-display text-gold text-4xl block mb-4">&#10003;</span>
-        <h3 className="font-display text-xl uppercase tracking-wider mb-2">
+        <h3 className="font-sans text-base font-semibold uppercase tracking-normal mb-2">
           Thank You
         </h3>
         <p className="font-serif italic text-background/50">

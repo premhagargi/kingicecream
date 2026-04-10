@@ -138,10 +138,11 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    overflow-x: hidden;
   }
   
   body {
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 400;
     font-size: var(--text-base);
     line-height: var(--leading-relaxed);
@@ -217,7 +218,7 @@
   
   /* Body Text - Inter */
   .font-body {
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 400;
     line-height: var(--leading-relaxed);
   }
@@ -238,7 +239,7 @@
 
   /* Captions / Subtle Text - Inter */
   .font-caption {
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 300;
     font-size: var(--text-sm);
     letter-spacing: var(--tracking-wide);
@@ -246,7 +247,7 @@
 
   /* Small Text - Inter */
   .font-small {
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 400;
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
@@ -264,7 +265,7 @@
   }
 
   .font-body-italic {
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 400;
     font-style: italic;
   }
@@ -416,6 +417,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 }
 
@@ -472,7 +474,10 @@ html.lenis body {
 .grain::before {
   content: '';
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 9990;
   pointer-events: none;
   opacity: 0.035;

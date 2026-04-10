@@ -7,7 +7,7 @@ export function ProductsHero() {
         <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-3">
           The Royal Collection
         </span>
-        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl">
+        <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl">
           Featured Flavours
         </h1>
       </div>

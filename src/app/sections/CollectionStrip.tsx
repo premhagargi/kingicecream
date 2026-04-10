@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { TransitionLink } from "@/components/TransitionLink";
 
 const collections = [
   { name: "Cones", count: "06" },
@@ -25,7 +25,7 @@ export function CollectionStrip() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
             >
-              <Link
+              <TransitionLink
                 href="/products"
                 className="group block py-6 sm:py-8 pr-4 sm:pr-6 border-r border-border last:border-r-0"
                 data-cursor-text="View"
@@ -33,11 +33,11 @@ export function CollectionStrip() {
                 <span className="font-sans text-[10px] text-muted-foreground/50 block mb-2">
                   {collection.count} products
                 </span>
-                <span className="font-display text-lg sm:text-xl md:text-2xl text-foreground group-hover:text-gold transition-colors duration-300 block leading-tight">
+                <span className="font-sans text-sm sm:text-base md:text-xl font-semibold text-foreground group-hover:text-gold transition-colors duration-300 block leading-tight">
                   {collection.name}
                 </span>
                 <span className="h-[1px] w-0 group-hover:w-8 bg-gold block mt-3 transition-all duration-500" />
-              </Link>
+              </TransitionLink>
             </motion.div>
           ))}
         </div>

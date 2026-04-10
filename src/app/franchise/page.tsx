@@ -59,7 +59,7 @@ export default function FranchisePage() {
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-4 block">
             Partner With Us
           </span>
-          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl text-white leading-[0.9]">
+          <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl text-white leading-[0.95]">
             Own a King
             <br />
             <span className="font-serif italic font-normal text-white/60">
@@ -82,7 +82,7 @@ export default function FranchisePage() {
               className="p-6 sm:p-8 md:p-10 border-b sm:border-b-0 sm:border-r border-border last:border-r-0 [&:nth-child(2)]:border-r-0 sm:[&:nth-child(2)]:border-r lg:[&:nth-child(2)]:border-r"
             >
               <b.icon className="w-5 h-5 text-gold mb-5" />
-              <h3 className="font-display text-base uppercase tracking-wider mb-3">
+              <h3 className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal mb-2">
                 {b.title}
               </h3>
               <p className="font-serif text-sm text-muted-foreground leading-relaxed">
@@ -127,11 +127,11 @@ export default function FranchisePage() {
               },
             ].map((s) => (
               <div key={s.step} className="flex gap-6">
-                <span className="font-display text-3xl sm:text-4xl text-gold/30 shrink-0 leading-none">
+                <span className="font-display text-2xl sm:text-3xl text-gold/30 shrink-0 leading-none">
                   {s.step}
                 </span>
                 <div>
-                  <h3 className="font-display text-lg sm:text-xl uppercase tracking-wider mb-2">
+                  <h3 className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal mb-2">
                     {s.title}
                   </h3>
                   <p className="font-serif text-muted-foreground leading-relaxed">
@@ -154,7 +154,7 @@ export default function FranchisePage() {
             </span>
           </div>
 
-          <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-4">
+          <h2 className="font-sans font-bold text-xl sm:text-2xl md:text-3xl mb-4">
             Get Started
           </h2>
           <p className="font-serif italic text-background/50 mb-10">
