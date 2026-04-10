@@ -2,89 +2,120 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const menuItems = [
-  { text: "Products", href: "/products", imageId: "nav-image-1" },
-  { text: "Our Story", href: "/aboutus", imageId: "nav-image-3" },
-  { text: "Collections", href: "/#collections", imageId: "nav-image-2" },
-  { text: "Contact Us", href: "/contact", imageId: "nav-image-4" },
-  { text: "Find Us", href: "/#footer", imageId: "nav-image-4" },
+  { text: "Products", href: "/products", desc: "Browse our royal collection" },
+  { text: "Our Story", href: "/aboutus", desc: "The makers behind the crown" },
+  { text: "Franchise", href: "/franchise", desc: "Own a King Ice Cream parlour" },
+  { text: "Find Us", href: "/locate", desc: "15,000+ outlets across 4 states" },
+  { text: "Contact", href: "/contact", desc: "Get in touch with us" },
+];
+
+const socialLinks = [
+  { text: "Instagram", href: "https://instagram.com/kingicecream.india" },
+  { text: "Zomato", href: "https://www.zomato.com/belgaum/king-ice-cream-25-belgaum-locality/order" },
+  { text: "Email", href: "mailto:info@kingicecream.com" },
 ];
 
 export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
-  const [hoveredItem, setHoveredItem] = useState<string | null>(
-    menuItems[0].imageId
-  );
-
-  const getImage = (id: string) => PlaceHolderImages.find((img) => img.id === id);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="fixed inset-0 bg-background z-40 flex"
+      initial={{ clipPath: "inset(0 0 100% 0)" }}
+      animate={{ clipPath: "inset(0 0 0% 0)" }}
+      exit={{ clipPath: "inset(0 0 100% 0)" }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed inset-0 bg-[#0a0a0a] z-40 flex flex-col"
     >
-      <div className="w-full md:w-1/3 h-full relative overflow-hidden">
-        <AnimatePresence>
-          {menuItems.map((item) => {
-            const image = getImage(item.imageId);
-            if (!image) return null;
+      {/* Top spacer for header */}
+      <div className="h-16 sm:h-20 shrink-0" />
 
-            return hoveredItem === item.imageId ? (
-              <motion.div
-                key={item.imageId}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.1 }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute inset-0 w-full h-full"
+      {/* Main content */}
+      <div className="flex-1 flex flex-col justify-between px-6 sm:px-10 md:px-16 lg:px-24 pb-8">
+        {/* Navigation links */}
+        <nav className="flex-1 flex flex-col justify-center">
+          <ul className="space-y-0 divide-y divide-white/[0.06]">
+            {menuItems.map((item, i) => (
+              <motion.li
+                key={item.href}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2 + i * 0.06,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
               >
-                <Image
-                  src={image.imageUrl}
-                  alt={image.description || 'Navigation image'}
-                  data-ai-hint={image.imageHint}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  priority
-                />
-                <div className="absolute inset-0 bg-black/20" />
-              </motion.div>
-            ) : null;
-          })}
-        </AnimatePresence>
+                <Link
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="group flex items-center justify-between py-5 sm:py-6"
+                >
+                  <div className="flex items-baseline gap-4 sm:gap-6">
+                    <span className="font-sans text-[10px] text-white/20 tabular-nums">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span
+                      className={`font-display text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide transition-colors duration-300 ${
+                        hovered === null || hovered === i
+                          ? "text-white"
+                          : "text-white/20"
+                      }`}
+                    >
+                      {item.text}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <span className="hidden sm:block font-serif italic text-sm text-white/30 group-hover:text-white/50 transition-colors">
+                      {item.desc}
+                    </span>
+                    <span className="w-0 group-hover:w-8 h-[1px] bg-gold transition-all duration-400 overflow-hidden" />
+                  </div>
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Bottom section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pt-6 border-t border-white/[0.06]"
+        >
+          {/* Social links */}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            {socialLinks.map((link) => (
+              <a
+                key={link.text}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans text-[11px] uppercase tracking-[0.15em] text-white/30 hover:text-gold transition-colors duration-300"
+              >
+                {link.text}
+              </a>
+            ))}
+          </div>
+
+          {/* Brand mark */}
+          <div className="text-right">
+            <span className="font-display text-[11px] uppercase tracking-[0.3em] text-white/15">
+              King Ice Cream
+            </span>
+            <br />
+            <span className="font-serif italic text-[11px] text-white/10">
+              Belagavi, Karnataka
+            </span>
+          </div>
+        </motion.div>
       </div>
-
-      <nav className="w-full md:w-2/3 h-full flex flex-col justify-center items-start p-8 sm:p-16 lg:p-24">
-        <ul className="space-y-2 md:space-y-4">
-          {menuItems.map((item, index) => (
-            <motion.li
-              key={item.href}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 + index * 0.1, ease: "easeOut" }}
-              onMouseEnter={() => setHoveredItem(item.imageId)}
-            >
-              <Link
-                href={item.href}
-                onClick={closeMenu}
-                className="group font-headline font-bold text-5xl sm:text-7xl lg:text-8xl text-foreground inline-flex items-center"
-              >
-                <span className="group-hover:translate-x-4 transition-transform duration-300 ease-in-out flex items-center">
-                  {item.text}
-                  <ArrowRight className="w-8 h-8 sm:w-12 sm:h-12 ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </span>
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      </nav>
     </motion.div>
   );
 }

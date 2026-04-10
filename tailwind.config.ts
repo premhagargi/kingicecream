@@ -22,14 +22,20 @@ export default {
     extend: {
       fontFamily: {
         nohemi: ['Nohemi', 'system-ui', 'sans-serif'],
-        body: ['Nohemi', 'system-ui', 'sans-serif'],
+        display: ['Nohemi', 'system-ui', 'sans-serif'],
         headline: ['Nohemi', 'system-ui', 'sans-serif'],
-        supplemental: ['Nohemi', 'system-ui', 'sans-serif'],
-        serif: ['Nohemi', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
         'light-gray': '#f5f5f5',
+        gold: {
+          DEFAULT: 'hsl(var(--gold))',
+          light: 'hsl(var(--gold-light))',
+        },
+        cream: 'hsl(var(--cream))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

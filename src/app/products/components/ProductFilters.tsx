@@ -1,46 +1,46 @@
-
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 
-const categories = ['ICEPOPS', 'GELATO', 'ALL'];
-const filters = ['CHOCOLATES', 'MILK CARAMEL', 'CREAMS', 'FRUITS', 'LUXURY', 'PLANT BASED'];
+const categories = ['ALL', 'CONES', 'CUPS', 'KULFI', 'STICKS', 'FAMILY PACKS', 'SUNDAES'];
+const filters = ['CHOCOLATE', 'FRUIT', 'TRADITIONAL', 'PREMIUM', 'NUTTY', 'CLASSIC'];
 
 type ProductFiltersProps = {
-    activeCategory: string;
-    setActiveCategory: (category: string) => void;
-    activeFilters: string[];
-    setActiveFilters: (filters: string[]) => void;
+  activeCategory: string;
+  setActiveCategory: (category: string) => void;
+  activeFilters: string[];
+  setActiveFilters: (filters: string[]) => void;
 };
 
 export function ProductFilters({ activeCategory, setActiveCategory, activeFilters, setActiveFilters }: ProductFiltersProps) {
-  
+
   const handleSetCategory = (category: string) => {
     setActiveCategory(category);
     setActiveFilters([]);
-  }
+  };
 
   const toggleFilter = (filter: string) => {
     setActiveFilters(
-        activeFilters.includes(filter) 
+      activeFilters.includes(filter)
         ? activeFilters.filter(f => f !== filter)
         : [...activeFilters, filter]
     );
   };
 
   return (
-    <section className="py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Category Nav */}
-        <nav className="flex justify-center items-center space-x-8 sm:space-x-12">
+    <section className="pb-8 sm:pb-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
+        {/* Category tabs — horizontal scroll on mobile */}
+        <nav className="flex items-center gap-1 overflow-x-auto no-scrollbar pb-4 border-b border-border">
           {categories.map(category => (
             <button
               key={category}
               onClick={() => handleSetCategory(category)}
               className={cn(
-                "uppercase tracking-[0.2em] text-sm sm:text-base transition-colors duration-300",
-                activeCategory === category ? 'text-foreground font-medium' : 'text-neutral-400 hover:text-foreground'
+                "px-4 py-2 text-[11px] sm:text-xs font-sans uppercase tracking-[0.15em] whitespace-nowrap rounded-full transition-all duration-200",
+                activeCategory === category
+                  ? 'bg-foreground text-background'
+                  : 'text-muted-foreground hover:text-foreground'
               )}
             >
               {category}
@@ -48,15 +48,18 @@ export function ProductFilters({ activeCategory, setActiveCategory, activeFilter
           ))}
         </nav>
 
-        {/* Filter Pills */}
-        <div className="mt-8 flex justify-center items-center flex-wrap gap-2 sm:gap-3">
+        {/* Filter pills */}
+        <div className="mt-4 flex items-center gap-2 flex-wrap">
+          <span className="text-[10px] font-sans uppercase tracking-[0.3em] text-muted-foreground/50 mr-2">Filter:</span>
           {filters.map(filter => (
             <button
               key={filter}
               onClick={() => toggleFilter(filter)}
               className={cn(
-                "px-4 py-2 text-xs sm:text-sm font-medium uppercase tracking-widest border border-foreground rounded-full transition-colors duration-300 ease-in-out",
-                activeFilters.includes(filter) ? 'bg-foreground text-background' : 'bg-transparent text-foreground hover:bg-foreground hover:text-background'
+                "px-3 py-1.5 text-[10px] font-sans uppercase tracking-[0.15em] border rounded-full transition-all duration-200",
+                activeFilters.includes(filter)
+                  ? 'border-gold bg-gold/10 text-foreground'
+                  : 'border-border text-muted-foreground hover:border-foreground/30'
               )}
             >
               {filter}

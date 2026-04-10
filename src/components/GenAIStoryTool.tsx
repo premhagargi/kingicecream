@@ -38,7 +38,7 @@ export function GenAIStoryTool() {
 
   return (
     <div className="border border-border p-6 space-y-6">
-      <h3 className="font-supplemental text-lg uppercase tracking-wider">Create a Flavor Story</h3>
+      <h3 className="font-headline text-lg uppercase tracking-wider">Craft Your Royal Flavour Story</h3>
       <p className="text-sm text-muted-foreground">
         Use our AI to craft an evocative narrative for your creation. Provide some key ingredients and details.
       </p>
@@ -48,7 +48,7 @@ export function GenAIStoryTool() {
           <Input 
             id="ingredients" 
             name="ingredients" 
-            placeholder="e.g., Madagascar Vanilla, Sea Salt, Caramel"
+            placeholder="e.g., Kesar, Pista, Cardamom, Alphonso Mango"
             aria-describedby="ingredients-error"
           />
           <div id="ingredients-error" aria-live="polite" aria-atomic="true">
@@ -62,7 +62,7 @@ export function GenAIStoryTool() {
           <Textarea 
             id="productDetails" 
             name="productDetails" 
-            placeholder="e.g., A swirl of rich caramel in creamy vanilla ice cream, topped with flakes of sea salt." 
+            placeholder="e.g., A slow-churned kulfi infused with saffron strands and crushed pistachios, served in a traditional earthen pot."
             aria-describedby="product-details-error"
           />
            <div id="product-details-error" aria-live="polite" aria-atomic="true">
@@ -81,7 +81,7 @@ export function GenAIStoryTool() {
             exit={{ opacity: 0, y: -20 }}
             className="border-t border-border pt-4 mt-4"
           >
-            <h4 className="font-supplemental text-md uppercase tracking-wider">Your Generated Story:</h4>
+            <h4 className="font-headline text-md uppercase tracking-wider">Your Generated Story:</h4>
             <p className="mt-2 text-foreground italic">"{state.story}"</p>
           </motion.div>
         )}

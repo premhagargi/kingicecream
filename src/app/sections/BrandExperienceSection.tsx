@@ -1,47 +1,57 @@
-"use client"
-import { motion } from "framer-motion"
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
-const text = "Luxury. Craftsmanship. Pure Indulgence."
+const words = "Trusted by Millions. Crafted for Royalty.".split(" ");
 
-const sentence = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      staggerChildren: 0.08,
-    },
-  },
-}
+function Word({
+  word,
+  index,
+  total,
+  progress,
+}: {
+  word: string;
+  index: number;
+  total: number;
+  progress: ReturnType<typeof useTransform>;
+}) {
+  const start = index / total;
+  const end = (index + 1) / total;
+  const opacity = useTransform(progress, [start, end], [0.12, 1]);
 
-const letter = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
+  return (
+    <motion.span
+      style={{ opacity }}
+      className="inline-block mr-[0.3em]"
+    >
+      {word}
+    </motion.span>
+  );
 }
 
 export function BrandExperienceSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 0.8", "end 0.3"],
+  });
+
   return (
-    <section className="py-32 sm:py-48 px-4 bg-background">
-      <div className="max-w-4xl mx-auto text-center">
-        <motion.h2
-          className="font-supplemental text-3xl sm:text-5xl md:text-6xl"
-          variants={sentence}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {text.split("").map((char, index) => {
-            return (
-              <motion.span key={char + "-" + index} variants={letter}>
-                {char}
-              </motion.span>
-            )
-          })}
-        </motion.h2>
+    <section ref={sectionRef} className="py-32 sm:py-48 px-4 bg-background">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="font-serif italic text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+          {words.map((word, i) => (
+            <Word
+              key={`${word}-${i}`}
+              word={word}
+              index={i}
+              total={words.length}
+              progress={scrollYProgress}
+            />
+          ))}
+        </h2>
       </div>
     </section>
-  )
+  );
 }

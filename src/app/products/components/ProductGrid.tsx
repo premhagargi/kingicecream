@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -9,32 +8,30 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.06 },
   },
 };
 
 export function ProductGrid({ products }: { products: ImagePlaceholder[] }) {
   return (
-    <section className="py-16 sm:py-24">
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pb-16 sm:pb-24">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
         <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6"
         >
-            {products.map(product => (
-                <ProductCard key={product.id} product={product} />
-            ))}
+          {products.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </motion.div>
         {products.length === 0 && (
-            <div className="text-center py-16">
-                <p className="text-muted-foreground">No products found matching your selection.</p>
-            </div>
+          <div className="text-center py-20">
+            <p className="font-serif italic text-muted-foreground text-lg">No products found matching your selection.</p>
+          </div>
         )}
-       </div>
+      </div>
     </section>
   );
 }

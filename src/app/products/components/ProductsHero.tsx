@@ -1,23 +1,14 @@
-
 "use client";
 
 export function ProductsHero() {
   return (
-    <section className="bg-light-gray py-24 sm:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-        <span 
-          className="text-[30vw] sm:text-[25vw] md:text-[20vw] font-headline text-black/5 select-none leading-none"
-          style={{ textShadow: '0 0 1px transparent' }} // Anti-aliasing fix
-        >
-          ENJOY IT
+    <section className="pt-28 sm:pt-32 pb-8 sm:pb-12 px-6 sm:px-10 md:px-16 lg:px-24 bg-background">
+      <div className="max-w-7xl mx-auto text-center">
+        <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-3">
+          The Royal Collection
         </span>
-      </div>
-      <div className="relative z-10 text-center px-4">
-        <h2 className="font-serif font-bold text-base sm:text-lg uppercase tracking-[0.3em] text-neutral-600">
-          Discover Our
-        </h2>
-        <h1 className="font-headline font-bold text-7xl sm:text-9xl md:text-[10rem] mt-2 text-foreground">
-          Products
+        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl">
+          Featured Flavours
         </h1>
       </div>
     </section>

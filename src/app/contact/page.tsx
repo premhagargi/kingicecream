@@ -27,8 +27,8 @@ export default function ContactPage() {
           <h1 className="font-headline text-6xl md:text-8xl lg:text-9xl text-white mb-4 md:mb-6">
             Contact Us
           </h1>
-          <p className="font-body text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-            We'd Love to Hear From You
+          <p className="font-serif text-xl md:text-2xl text-white/90 max-w-2xl mx-auto italic">
+            Your Royal Court Awaits
           </p>
         </div>
       </section>
@@ -36,8 +36,8 @@ export default function ContactPage() {
       {/* Introduction Section */}
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-body text-lg md:text-xl text-muted-foreground">
-            Reach out to King Ice Cream for <span className="font-medium">any queries</span>, <em className="italic">feedback</em>, franchise enquiries, or <strong className="font-bold">wholesale opportunities</strong>.
+          <p className="text-lg md:text-xl text-muted-foreground font-serif">
+            Whether it&apos;s a flavour suggestion, franchise enquiry, wholesale partnership, or just a compliment about your favourite scoop — we&apos;re all ears. Reach out and become part of the King family.
           </p>
         </div>
       </section>
@@ -150,10 +150,17 @@ export default function ContactPage() {
             Find a King Ice Cream Parlour Near You
           </h2>
           <div className="bg-card border border-border p-4">
-            <div className="aspect-video bg-muted flex items-center justify-center">
-              <p className="font-body text-muted-foreground text-center px-4">
-                Google Map of the Neginhal plant or dynamic store locator coming soon.
-              </p>
+            <div className="aspect-video">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.5!2d74.73!3d15.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDQ5JzEyLjAiTiA3NMKwNDMnNDguMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="King Ice Cream - Neginhal Plant, Belagavi"
+              />
             </div>
           </div>
           <p className="font-body text-muted-foreground text-center mt-6 max-w-2xl mx-auto">

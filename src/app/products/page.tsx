@@ -9,10 +9,17 @@ import { ProductGrid } from '@/app/products/components/ProductGrid';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
 
 export default function ProductsPage() {
-  const [activeCategory, setActiveCategory] = useState('GELATO');
+  const [activeCategory, setActiveCategory] = useState('ALL');
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
-  
-  const products = PlaceHolderImages.filter(p => p.id.startsWith('product-gelato-') || p.id.startsWith('product-icepop-'));
+
+  const products = PlaceHolderImages.filter(p =>
+    p.id.startsWith('product-cone-') ||
+    p.id.startsWith('product-cup-') ||
+    p.id.startsWith('product-kulfi-') ||
+    p.id.startsWith('product-stick-') ||
+    p.id.startsWith('product-family-') ||
+    p.id.startsWith('product-sundae-')
+  );
 
   const filteredProducts = products
     .filter(product => {

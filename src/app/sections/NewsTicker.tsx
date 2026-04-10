@@ -1,35 +1,39 @@
-"use client"
-import { motion } from "framer-motion"
+"use client";
+import { motion } from "framer-motion";
 
 export function NewsTicker() {
-  const text = "NEW FLAVORS - LIMITED EDITIONS - POP-UP EVENTS - "
-  const repeatedText = Array(5).fill(text).join(" ")
+  const items = [
+    "Mango Season Specials",
+    "15,000+ Stores",
+    "Matka Kulfi Collection",
+    "Available on Zomato",
+    "Pure Milk, No Palm Oil",
+    "Now in 4 States",
+  ];
 
-  const marqueeVariants = {
-    animate: {
-      x: ["0%", "-100%"],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 40,
-          ease: "linear",
-        },
-      },
-    },
-  }
+  // Duplicate for seamless loop
+  const track = [...items, ...items];
 
   return (
-    <section className="py-8 bg-primary text-primary-foreground overflow-hidden">
-      <div className="whitespace-nowrap">
+    <section className="py-5 bg-foreground text-background overflow-hidden border-t border-background/10">
+      <div className="relative whitespace-nowrap">
         <motion.div
-          className="font-headline text-3xl sm:text-4xl uppercase"
-          variants={marqueeVariants}
-          animate="animate"
+          className="inline-flex"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            x: { repeat: Infinity, duration: 30, ease: "linear" },
+          }}
         >
-          <span>{repeatedText}</span>
+          {track.map((item, i) => (
+            <span key={i} className="inline-flex items-center">
+              <span className="font-sans text-sm sm:text-base uppercase tracking-[0.15em] px-4 sm:px-6">
+                {item}
+              </span>
+              <span className="text-gold text-xs">&#9670;</span>
+            </span>
+          ))}
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

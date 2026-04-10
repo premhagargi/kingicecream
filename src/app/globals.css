@@ -141,7 +141,7 @@
   }
   
   body {
-    font-family: var(--font-nohemi);
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-weight: 400;
     font-size: var(--text-base);
     line-height: var(--leading-relaxed);
@@ -215,42 +215,56 @@
     letter-spacing: var(--tracking-wide);
   }
   
-  /* Body Text - Regular Weight */
+  /* Body Text - Inter */
   .font-body {
-    font-family: var(--font-nohemi);
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-weight: 400;
     line-height: var(--leading-relaxed);
   }
-  
-  /* Captions / Subtle Text - Light */
+
+  /* Editorial / Luxury Text - Playfair Display */
+  .font-editorial {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-weight: 400;
+    line-height: var(--leading-relaxed);
+  }
+
+  .font-editorial-italic {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Captions / Subtle Text - Inter */
   .font-caption {
-    font-family: var(--font-nohemi);
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-weight: 300;
     font-size: var(--text-sm);
     letter-spacing: var(--tracking-wide);
   }
-  
-  /* Small Text */
+
+  /* Small Text - Inter */
   .font-small {
-    font-family: var(--font-nohemi);
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-weight: 400;
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
   }
-  
+
   /* Italic Variants */
   .font-italic {
     font-style: italic;
   }
-  
+
   .font-heading-italic {
     font-family: var(--font-nohemi);
     font-weight: 600;
     font-style: italic;
   }
-  
+
   .font-body-italic {
-    font-family: var(--font-nohemi);
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-weight: 400;
     font-style: italic;
   }
@@ -347,6 +361,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --gold: 43 96% 56%;
+    --gold-light: 43 96% 90%;
+    --cream: 40 33% 96%;
     --radius: 0rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -422,6 +439,60 @@ html.lenis body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+/* Animated Link Underlines */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: hsl(var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Selection Color */
+::selection {
+  background-color: hsl(var(--gold) / 0.3);
+  color: inherit;
+}
+
+/* Film Grain Texture Overlay */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Horizontal rule with character */
+.divider-line {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.divider-line::before,
+.divider-line::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: hsl(var(--foreground) / 0.1);
 }
 
 /* Premium Scrollbar Styling */

@@ -6,8 +6,9 @@ export type ImagePlaceholder = {
   imageUrl: string;
   imageHint: string;
   name?: string;
-  category?: 'Gelato' | 'Icepops';
+  category?: 'Cones' | 'Cups' | 'Kulfi' | 'Sticks' | 'Family Packs' | 'Sundaes';
   tags?: string[];
+  price?: number;
 };
 
 export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;

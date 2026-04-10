@@ -12,50 +12,52 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 p-4 sm:p-6 mix-blend-difference">
-        <div className="flex justify-between items-center max-w-full mx-auto">
+      <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+        <div className="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-24 py-5 sm:py-6">
           <Link href="/" passHref>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="font-headline font-bold text-2xl md:text-3xl text-primary-foreground cursor-pointer"
+              className="font-display font-bold text-sm sm:text-base uppercase tracking-[0.2em] text-white cursor-pointer"
             >
-              King Ice Cream
+              King
             </motion.div>
           </Link>
+
           <motion.button
             onClick={toggleMenu}
-            className="relative w-8 h-8 text-primary-foreground z-20"
+            className="relative w-7 h-5 text-white z-20 flex flex-col justify-between"
             aria-label="Toggle Menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <span className="sr-only">Menu</span>
             <motion.span
-              className="block absolute h-[2px] w-full bg-current transform transition-all duration-300 ease-in-out"
+              className="block h-[1px] bg-current origin-left"
               animate={{
-                top: isMenuOpen ? "50%" : "30%",
-                y: isMenuOpen ? "-50%" : "0%",
+                width: isMenuOpen ? "100%" : "100%",
                 rotate: isMenuOpen ? 45 : 0,
+                y: isMenuOpen ? -1 : 0,
               }}
+              transition={{ duration: 0.3 }}
             />
             <motion.span
-              className="block absolute h-[2px] w-full bg-current transform transition-all duration-300 ease-in-out"
+              className="block h-[1px] bg-current"
               animate={{
-                top: "50%",
-                y: "-50%",
+                width: isMenuOpen ? 0 : "60%",
                 opacity: isMenuOpen ? 0 : 1,
               }}
+              transition={{ duration: 0.2 }}
             />
             <motion.span
-              className="block absolute h-[2px] w-full bg-current transform transition-all duration-300 ease-in-out"
+              className="block h-[1px] bg-current origin-left"
               animate={{
-                top: isMenuOpen ? "50%" : "70%",
-                y: isMenuOpen ? "-50%" : "0%",
+                width: isMenuOpen ? "100%" : "80%",
                 rotate: isMenuOpen ? -45 : 0,
+                y: isMenuOpen ? 1 : 0,
               }}
+              transition={{ duration: 0.3 }}
             />
           </motion.button>
         </div>

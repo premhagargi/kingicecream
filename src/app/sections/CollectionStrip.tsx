@@ -1,48 +1,47 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import Link from "next/link";
 
-const collections = ["Gelato", "Ice Pops", "Sorbets", "Classics", "Seasonal", "Limited Edition", "Vegan"];
+const collections = [
+  { name: "Cones", count: "06" },
+  { name: "Cups", count: "06" },
+  { name: "Kulfi", count: "04" },
+  { name: "Sticks", count: "05" },
+  { name: "Family Packs", count: "04" },
+  { name: "Sundaes", count: "03" },
+];
 
 export function CollectionStrip() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   return (
-    <section id="collections" className="py-16 sm:py-24 bg-background">
-      <div className="relative">
-        <div ref={scrollRef} className="flex overflow-x-auto no-scrollbar scroll-snap-x-mandatory">
-          {collections.map((collection, index) => (
+    <section id="collections" className="py-16 sm:py-20 bg-background border-y border-border">
+      <div className="px-6 sm:px-10 md:px-16 lg:px-24">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6">
+          {collections.map((collection, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ root: scrollRef, once: false }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-64 flex items-center justify-center scroll-snap-align-center"
+              key={collection.name}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
             >
-              <h3 className="font-headline text-6xl sm:text-8xl text-foreground/10 hover:text-foreground transition-colors duration-300 cursor-pointer">
-                {collection}
-              </h3>
+              <Link
+                href="/products"
+                className="group block py-6 sm:py-8 pr-4 sm:pr-6 border-r border-border last:border-r-0"
+                data-cursor-text="View"
+              >
+                <span className="font-sans text-[10px] text-muted-foreground/50 block mb-2">
+                  {collection.count} products
+                </span>
+                <span className="font-display text-lg sm:text-xl md:text-2xl text-foreground group-hover:text-gold transition-colors duration-300 block leading-tight">
+                  {collection.name}
+                </span>
+                <span className="h-[1px] w-0 group-hover:w-8 bg-gold block mt-3 transition-all duration-500" />
+              </Link>
             </motion.div>
           ))}
         </div>
       </div>
-      <style jsx>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .scroll-snap-x-mandatory {
-          scroll-snap-type: x mandatory;
-        }
-        .scroll-snap-align-center {
-          scroll-snap-align: center;
-        }
-      `}</style>
     </section>
   );
 }
