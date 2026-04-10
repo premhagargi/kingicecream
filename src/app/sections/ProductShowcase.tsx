@@ -36,7 +36,7 @@ export function ProductShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="font-display font-bold text-4xl sm:text-6xl md:text-7xl mt-2"
+              className="font-display font-bold text-3xl sm:text-5xl md:text-6xl mt-2"
             >
               Royal Creations
             </motion.h2>

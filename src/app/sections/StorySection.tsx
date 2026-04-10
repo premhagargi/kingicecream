@@ -25,7 +25,7 @@ export function StorySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-bold text-4xl sm:text-6xl md:text-7xl leading-[0.9]"
+            className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[0.9]"
           >
             Farm to
             <br />

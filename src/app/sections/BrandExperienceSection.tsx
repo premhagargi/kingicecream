@@ -40,7 +40,7 @@ export function BrandExperienceSection() {
   return (
     <section ref={sectionRef} className="py-32 sm:py-48 px-4 bg-background">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="font-serif italic text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+        <h2 className="font-serif italic text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-snug">
           {words.map((word, i) => (
             <Word
               key={`${word}-${i}`}

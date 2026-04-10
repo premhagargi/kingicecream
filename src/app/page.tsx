@@ -15,7 +15,7 @@ import { CustomCursor } from '@/components/CustomCursor';
 export default function Home() {
   return (
     <SplashScreen>
-      <div className="bg-background">
+      <div className="bg-background overflow-x-hidden">
         <CustomCursor />
         <Header />
         <main>

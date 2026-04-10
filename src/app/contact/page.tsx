@@ -24,7 +24,7 @@ export default function ContactPage() {
           data-ai-hint="ice cream contact"
         />
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-headline text-6xl md:text-8xl lg:text-9xl text-white mb-4 md:mb-6">
+          <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 md:mb-6">
             Contact Us
           </h1>
           <p className="font-serif text-xl md:text-2xl text-white/90 max-w-2xl mx-auto italic">

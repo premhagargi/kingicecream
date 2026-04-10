@@ -33,7 +33,7 @@ export default function ProductsPage() {
     });
 
   return (
-    <div className="bg-background">
+    <div className="bg-background overflow-x-hidden">
       <Header />
       <main>
         <ProductsHero />

@@ -65,7 +65,7 @@ export function HeroSection() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-black text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw] text-white uppercase leading-[0.85] tracking-tight"
+            className="font-display font-black text-[11vw] sm:text-[9vw] md:text-[7vw] lg:text-[6vw] text-white uppercase leading-[0.9] tracking-tight"
           >
             Reign
           </motion.h1>
@@ -75,7 +75,7 @@ export function HeroSection() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-black text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw] text-white uppercase leading-[0.85] tracking-tight"
+            className="font-display font-black text-[11vw] sm:text-[9vw] md:text-[7vw] lg:text-[6vw] text-white uppercase leading-[0.9] tracking-tight"
           >
             of <span className="text-gold">Flavor</span>.
           </motion.h1>

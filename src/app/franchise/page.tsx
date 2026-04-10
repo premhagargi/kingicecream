@@ -59,7 +59,7 @@ export default function FranchisePage() {
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-4 block">
             Partner With Us
           </span>
-          <h1 className="font-display font-bold text-4xl sm:text-6xl md:text-7xl text-white leading-[0.9]">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl text-white leading-[0.9]">
             Own a King
             <br />
             <span className="font-serif italic font-normal text-white/60">
