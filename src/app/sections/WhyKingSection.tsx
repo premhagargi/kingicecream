@@ -11,7 +11,7 @@ const stats = [
 
 export function WhyKingSection() {
   return (
-    <section className="relative bg-foreground text-background overflow-hidden">
+    <section className="relative bg-[#f5f0e8] text-foreground overflow-hidden">
       {/* Top divider text */}
       <div className="px-6 sm:px-10 md:px-16 lg:px-24 pt-16 sm:pt-20 pb-6">
         <motion.div
@@ -34,7 +34,7 @@ export function WhyKingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug max-w-3xl text-background/80"
+          className="font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug max-w-3xl text-foreground/70"
         >
           Two decades of dairy mastery.
           <br className="hidden sm:block" />
@@ -43,7 +43,7 @@ export function WhyKingSection() {
       </div>
 
       {/* Stats strip — horizontal, edge-to-edge */}
-      <div className="border-t border-background/10">
+      <div className="border-t border-foreground/10">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((stat, i) => (
             <motion.div
@@ -56,15 +56,15 @@ export function WhyKingSection() {
                 delay: i * 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="p-6 sm:p-8 md:p-10 border-r border-b md:border-b-0 border-background/10 last:border-r-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r"
+              className="p-6 sm:p-8 md:p-10 border-r border-b md:border-b-0 border-foreground/10 last:border-r-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r"
             >
-              <div className="font-display text-3xl sm:text-4xl md:text-5xl text-gold leading-none whitespace-nowrap">
+              <div className="font-display text-3xl sm:text-4xl md:text-5xl text-black leading-none whitespace-nowrap">
                 {stat.number}
               </div>
-              <div className="font-display text-sm uppercase tracking-[0.2em] mt-3 text-background/90">
+              <div className="font-display text-sm uppercase tracking-[0.2em] mt-3 text-black">
                 {stat.label}
               </div>
-              <p className="font-serif italic text-background/40 text-sm mt-2">
+              <p className="font-serif italic text-black/50 text-sm mt-2">
                 {stat.detail}
               </p>
             </motion.div>

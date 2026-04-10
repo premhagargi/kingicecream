@@ -13,7 +13,8 @@ const menuItems = [
 ];
 
 const socialLinks = [
-  { text: "Instagram", href: "https://instagram.com/kingicecream.india" },
+  { text: "Instagram", href: "https://www.instagram.com/kingicecream.india/" },
+  { text: "WhatsApp", href: "https://wa.me/919900255556" },
   { text: "Zomato", href: "https://www.zomato.com/belgaum/king-ice-cream-25-belgaum-locality/order" },
   { text: "Email", href: "mailto:info@kingicecream.com" },
 ];

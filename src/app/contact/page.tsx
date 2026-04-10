@@ -85,7 +85,7 @@ export default function ContactPage() {
               <h3 className="font-headline text-2xl text-foreground mb-3">Follow Us</h3>
               <p className="font-body text-muted-foreground mb-2">Latest flavours & offers</p>
               <a 
-                href="https://instagram.com/kingicecream.india" 
+                href="https://www.instagram.com/kingicecream.india/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="font-body text-lg text-foreground hover:underline"

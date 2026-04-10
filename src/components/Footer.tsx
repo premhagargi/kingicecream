@@ -1,7 +1,8 @@
 
 "use client"
+import Image from "next/image"
 import { motion } from "framer-motion"
-import { Facebook, Instagram, Twitter } from "lucide-react"
+import { Instagram, Phone, MapPin } from "lucide-react"
 import { Input } from "./ui/input"
 import { Button } from "./ui/button"
 
@@ -19,9 +20,9 @@ export function Footer() {
           <h2 className="font-headline font-bold text-2xl">King Ice Cream</h2>
           <p className="mt-2 text-sm text-muted-foreground font-serif italic">Royalty in Every Scoop</p>
           <div className="flex space-x-4 mt-4">
-            <a href="https://instagram.com/kingicecream.india" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors"><Instagram size={20} /></a>
-            <a href="#" className="text-foreground hover:text-gold transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="text-foreground hover:text-gold transition-colors"><Facebook size={20} /></a>
+            <a href="https://www.instagram.com/kingicecream.india/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors" aria-label="Instagram"><Instagram size={20} /></a>
+            <a href="https://wa.me/919900255556" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors" aria-label="WhatsApp"><Phone size={20} /></a>
+            <a href="https://www.zomato.com/belgaum/king-ice-cream-25-belgaum-locality/order" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors" aria-label="Zomato"><MapPin size={20} /></a>
           </div>
         </div>
 
@@ -45,7 +46,51 @@ export function Footer() {
           </form>
         </div>
       </div>
-      <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+      {/* Order Now — Zomato & Swiggy logos */}
+      <div className="mt-12 border-t border-border pt-10 pb-8">
+        <p className="text-center font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground mb-6">
+          Order Online
+        </p>
+        <div className="flex items-center justify-center gap-10 sm:gap-14">
+          {/* Zomato */}
+          <a
+            href="https://www.zomato.com/belgaum/king-ice-cream-25-belgaum-locality/order"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" hover:opacity-100 transition-opacity duration-300"
+            aria-label="Order on Zomato"
+          >
+            <Image
+              src="/images/logos/Zomato-Logo-700x394.png"
+              alt="Order on Zomato"
+              width={250}
+              height={60}
+              className="h-10 sm:h-10 w-auto object-contain"
+            />
+          </a>
+
+          <span className="w-[1px] h-10 bg-border" />
+
+          {/* Swiggy */}
+          <a
+            href="https://www.swiggy.com/city/belgaum/king-ice-cream-camp-camp-area-rest1077734"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-100 transition-opacity duration-300"
+            aria-label="Order on Swiggy"
+          >
+            <Image
+              src="/images/logos/Swiggy_Lsogo_2024.webp"
+              alt="Order on Swiggy"
+              width={250}
+              height={60}
+              className="h-10 sm:h-10 w-auto object-contain"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
         <p>&copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.</p>
       </div>
     </motion.footer>

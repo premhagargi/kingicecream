@@ -21,12 +21,14 @@ export function InstagramSection() {
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-2">
             Instagram
           </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl">
-            @kingicecream.india
-          </h2>
+          <a href="https://www.instagram.com/kingicecream.india/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl">
+              @kingicecream.india
+            </h2>
+          </a>
         </div>
         <a
-          href="https://instagram.com/kingicecream.india"
+          href="https://www.instagram.com/kingicecream.india/"
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground transition-colors"
@@ -42,7 +44,7 @@ export function InstagramSection() {
         {images.map((img, i) => (
           <motion.a
             key={i}
-            href="https://instagram.com/kingicecream.india"
+            href="https://www.instagram.com/kingicecream.india/"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0 }}
