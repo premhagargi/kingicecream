@@ -21,13 +21,13 @@ export default function AboutUsPage() {
             Our Story
           </span>
           <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05]">
-            We made ice cream
+            Two decades of
             <br />
-            for <span className="font-serif italic font-normal text-white/50">Hindustan Unilever.</span>
+            <span className="font-serif italic font-normal text-white/50">dairy mastery.</span>
             <br />
-            Now we make it
+            One crown to
             <br />
-            for <span className="text-gold">you.</span>
+            <span className="text-gold">rule them all.</span>
           </h1>
         </div>
 

@@ -37,7 +37,7 @@ export function ProductFilters({ activeCategory, setActiveCategory, activeFilter
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
         {/* Category tabs — centered with dividers */}
-        <nav className="flex items-center justify-center gap-0 overflow-x-auto no-scrollbar">
+        <nav className="flex items-center sm:justify-center gap-0 overflow-x-auto no-scrollbar px-1 -mx-1">
           {categories.map((category, i) => (
             <div key={category} className="flex items-center">
               {i > 0 && (
@@ -46,7 +46,7 @@ export function ProductFilters({ activeCategory, setActiveCategory, activeFilter
               <button
                 onClick={() => handleSetCategory(category)}
                 className={cn(
-                  "font-serif italic text-sm sm:text-base md:text-lg whitespace-nowrap transition-all duration-300",
+                  "font-serif italic text-xs sm:text-sm md:text-lg whitespace-nowrap transition-all duration-300 py-2",
                   activeCategory === category
                     ? 'text-foreground font-semibold not-italic font-sans'
                     : 'text-muted-foreground/40 hover:text-muted-foreground'
