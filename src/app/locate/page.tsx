@@ -54,7 +54,7 @@ export default function LocatePage() {
       <Header />
 
       {/* Hero — minimal, map-focused */}
-      <section className="bg-black pt-24 sm:pt-28 pb-8 sm:pb-10 px-6 sm:px-10 md:px-16 lg:px-24">
+      <section className="bg-black pt-32 sm:pt-40 pb-8 sm:pb-10 px-6 sm:px-10 md:px-16 lg:px-24">
         <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-4 block">
           15,000+ Outlets
         </span>

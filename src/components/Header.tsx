@@ -8,14 +8,23 @@ import { TransitionLink } from "./TransitionLink";
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(() => {
+    if (typeof window !== "undefined") {
+      return sessionStorage.getItem("header-logo-ready") === "true";
+    }
+    return false;
+  });
   const [scrolledDown, setScrolledDown] = useState(false);
   const { scrollY } = useScroll();
 
   useEffect(() => {
-    const timer = setTimeout(() => setReady(true), 6000);
+    if (ready) return;
+    const timer = setTimeout(() => {
+      setReady(true);
+      sessionStorage.setItem("header-logo-ready", "true");
+    }, 6000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [ready]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolledDown(latest > 50);
@@ -56,7 +65,7 @@ export function Header() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <motion.span
-              className="block h-[2px] bg-black shadow-[0_0_3px_rgba(255,255,255,0.9)] origin-left"
+              className="block h-[2px] bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)] origin-left"
               animate={{
                 width: isMenuOpen ? "100%" : "100%",
                 rotate: isMenuOpen ? 45 : 0,
@@ -65,7 +74,7 @@ export function Header() {
               transition={{ duration: 0.3 }}
             />
             <motion.span
-              className="block h-[2px] bg-black shadow-[0_0_3px_rgba(255,255,255,0.9)]"
+              className="block h-[2px] bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)]"
               animate={{
                 width: isMenuOpen ? 0 : "60%",
                 opacity: isMenuOpen ? 0 : 1,
@@ -73,7 +82,7 @@ export function Header() {
               transition={{ duration: 0.2 }}
             />
             <motion.span
-              className="block h-[2px] bg-black shadow-[0_0_3px_rgba(255,255,255,0.9)] origin-left"
+              className="block h-[2px] bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)] origin-left"
               animate={{
                 width: isMenuOpen ? "100%" : "80%",
                 rotate: isMenuOpen ? -45 : 0,

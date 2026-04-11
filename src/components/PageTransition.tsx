@@ -55,7 +55,7 @@ export function PageTransition() {
       await animateCurtain(curtainScope.current, { clipPath: "inset(0 0% 0 0)" }, { duration: 0.6, ease: EASE_IN });
       animateLine(lineScope.current, { scaleX: 1 }, { duration: 0.3, ease: EASE_OUT });
       onNavigate();
-      await delay(250);
+      await delay(500);
       animateLine(lineScope.current, { scaleX: 0 }, { duration: 0 });
       await animateCurtain(curtainScope.current, { clipPath: "inset(0 0 0 100%)" }, { duration: 0.6, ease: EASE_IN });
       animateCurtain(curtainScope.current, { clipPath: "inset(0 100% 0 0)" }, { duration: 0 });
@@ -100,7 +100,7 @@ export function PageTransition() {
       show(diagScope.current);
       await animateDiag(diagScope.current, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }, { duration: 0.7, ease: EASE_IN });
       onNavigate();
-      await delay(200);
+      await delay(500);
       await animateDiag(diagScope.current, { clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" }, { duration: 0.7, ease: EASE_IN });
       animateDiag(diagScope.current, { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }, { duration: 0 });
       hide(diagScope.current);
@@ -110,7 +110,7 @@ export function PageTransition() {
       show(fadeScope.current);
       await animateFade(fadeScope.current, { opacity: 1 }, { duration: 0.5, ease: EASE_OUT });
       onNavigate();
-      await delay(200);
+      await delay(500);
       await animateFade(fadeScope.current, { opacity: 0 }, { duration: 0.5, ease: EASE_OUT });
       hide(fadeScope.current);
     }
@@ -119,7 +119,7 @@ export function PageTransition() {
       show(zoomScope.current);
       await animateZoom(zoomScope.current, { opacity: 1, scale: 1 }, { duration: 0.6, ease: EASE_IN });
       onNavigate();
-      await delay(200);
+      await delay(500);
       await animateZoom(zoomScope.current, { scale: 0.9, opacity: 0 }, { duration: 0.6, ease: EASE_IN });
       animateZoom(zoomScope.current, { scale: 1.1, opacity: 0 }, { duration: 0 });
       hide(zoomScope.current);

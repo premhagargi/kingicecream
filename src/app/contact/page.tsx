@@ -1,171 +1,160 @@
-import type {Metadata} from 'next';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
+import type { Metadata } from "next";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'Contact Us - King Ice Cream',
-  description: 'Contact King Ice Cream for queries, feedback, franchise enquiries, or wholesale opportunities.',
+  title: "Contact Us - King Ice Cream",
+  description:
+    "Contact King Ice Cream for queries, feedback, franchise enquiries, or wholesale opportunities.",
 };
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Header />
-      
-      {/* Hero Section */}
-      <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30 z-10" />
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1920&q=80")',
-          }}
-          data-ai-hint="ice cream contact"
-        />
-        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 md:mb-6">
-            Contact Us
-          </h1>
-          <p className="font-serif text-xl md:text-2xl text-white/90 max-w-2xl mx-auto italic">
-            Your Royal Court Awaits
-          </p>
-        </div>
-      </section>
 
-      {/* Introduction Section */}
-      <section className="py-12 md:py-16 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-lg md:text-xl text-muted-foreground font-serif">
-            Whether it&apos;s a flavour suggestion, franchise enquiry, wholesale partnership, or just a compliment about your favourite scoop — we&apos;re all ears. Reach out and become part of the King family.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Cards Section */}
-      <section className="py-8 md:py-12 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            
-            {/* Customer Care Card */}
-            <div className="bg-card border border-border p-6 md:p-8">
-              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                <Phone className="w-6 h-6 text-foreground" />
-              </div>
-              <h3 className="font-sans text-base sm:text-lg font-semibold text-foreground mb-2">Customer Care</h3>
-              <p className="font-body text-muted-foreground mb-2">We're here to help!</p>
-              <a 
-                href="tel:9900255556" 
-                className="font-body text-lg text-foreground hover:underline"
-              >
-                99002 55556
-              </a>
-            </div>
-
-            {/* Email Card */}
-            <div className="bg-card border border-border p-6 md:p-8">
-              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                <Mail className="w-6 h-6 text-foreground" />
-              </div>
-              <h3 className="font-sans text-base sm:text-lg font-semibold text-foreground mb-2">Email Us</h3>
-              <p className="font-body text-muted-foreground mb-2">For general inquiries</p>
-              <a 
-                href="mailto:info@kingicecream.com" 
-                className="font-body text-lg text-foreground hover:underline"
-              >
-                info@kingicecream.com
-              </a>
-            </div>
-
-            {/* Instagram Card */}
-            <div className="bg-card border border-border p-6 md:p-8">
-              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                <Instagram className="w-6 h-6 text-foreground" />
-              </div>
-              <h3 className="font-sans text-base sm:text-lg font-semibold text-foreground mb-2">Follow Us</h3>
-              <p className="font-body text-muted-foreground mb-2">Latest flavours & offers</p>
-              <a 
-                href="https://www.instagram.com/kingicecream.india/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="font-body text-lg text-foreground hover:underline"
-              >
-                @kingicecream.india
-              </a>
-            </div>
-
+      {/* Hero — split layout: left heading, right intro */}
+      <section className="min-h-[70vh] sm:min-h-[80vh] flex items-end bg-[#f5f0e8] px-6 sm:px-10 md:px-16 lg:px-24 pb-12 sm:pb-16 pt-32 sm:pt-40">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 w-full max-w-7xl">
+          <div className="md:col-span-7">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-foreground/40 block mb-4">
+              Get in Touch
+            </span>
+            <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl leading-[1.05]">
+              Let&apos;s
+              <br />
+              <span className="font-serif italic font-normal text-foreground/50">talk.</span>
+            </h1>
           </div>
-        </div>
-      </section>
-
-      {/* Address Section */}
-      <section className="py-12 md:py-16 bg-secondary">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
-            Manufactured & Marketed By
-          </h2>
-          <div className="bg-card border border-border p-6 md:p-8">
-            <div className="flex flex-col md:flex-row md:items-start gap-4">
-              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center shrink-0">
-                <MapPin className="w-6 h-6 text-foreground" />
-              </div>
-              <div>
-                <h3 className="font-sans text-base sm:text-lg font-semibold text-foreground mb-2">
-                  Vijaykant Dairy & Food Products Ltd.
-                </h3>
-                <p className="font-body text-muted-foreground text-lg">
-                  Neginhal village, Bailhongal Taluka,<br />
-                  <span className="italic">Dist. Belagavi, Karnataka 591102</span>
-                </p>
-                <p className="font-body text-muted-foreground mt-4">
-                  We are <em className="italic">proudly made in Belagavi</em> and <span className="font-medium">expanding across Karnataka</span> and other states.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Hours Section */}
-      <section className="py-12 md:py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
-            Business Hours
-          </h2>
-          <div className="bg-card border border-border p-6 md:p-8 text-center">
-            <p className="font-body text-lg md:text-xl text-muted-foreground">
-              Monday - Saturday: 9:00 AM - 7:00 PM
-            </p>
-            <p className="font-body text-muted-foreground mt-2">
-              Sunday: Closed
+          <div className="md:col-span-5 flex items-end">
+            <p className="font-serif text-base sm:text-lg text-foreground/50 leading-relaxed">
+              Whether it&apos;s a flavour suggestion, franchise enquiry, wholesale
+              partnership, or just a compliment about your favourite scoop —
+              we&apos;re all ears.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Find Us Section */}
-      <section className="py-12 md:py-16 bg-secondary">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
-            Find a King Ice Cream Parlour Near You
-          </h2>
-          <div className="bg-card border border-border p-4">
-            <div className="aspect-video">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.5!2d74.73!3d15.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDQ5JzEyLjAiTiA3NMKwNDMnNDguMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="King Ice Cream - Neginhal Plant, Belagavi"
-              />
+      {/* Contact details — horizontal strip */}
+      <section className="border-b border-border">
+        <div className="grid grid-cols-1 sm:grid-cols-3">
+          <a
+            href="tel:9900255556"
+            className="group p-6 sm:p-8 md:p-10 border-b sm:border-b-0 sm:border-r border-border hover:bg-foreground/[0.02] transition-colors"
+          >
+            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground/50 block mb-3">
+              Call
+            </span>
+            <span className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground group-hover:text-gold transition-colors">
+              99002 55556
+            </span>
+          </a>
+          <a
+            href="mailto:info@kingicecream.com"
+            className="group p-6 sm:p-8 md:p-10 border-b sm:border-b-0 sm:border-r border-border hover:bg-foreground/[0.02] transition-colors"
+          >
+            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground/50 block mb-3">
+              Email
+            </span>
+            <span className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground group-hover:text-gold transition-colors">
+              info@kingicecream.com
+            </span>
+          </a>
+          <a
+            href="https://www.instagram.com/kingicecream.india/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group p-6 sm:p-8 md:p-10 hover:bg-foreground/[0.02] transition-colors"
+          >
+            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground/50 block mb-3">
+              Instagram
+            </span>
+            <span className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground group-hover:text-gold transition-colors">
+              @kingicecream.india
+            </span>
+          </a>
+        </div>
+      </section>
+
+      {/* Address + Hours — two column */}
+      <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 max-w-7xl">
+          {/* Address */}
+          <div className="md:col-span-7">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground/50 block mb-4">
+              Manufactured &amp; Marketed By
+            </span>
+            <h2 className="font-sans font-bold text-base sm:text-lg text-foreground mb-3">
+              Vijaykant Dairy &amp; Food Products Ltd.
+            </h2>
+            <p className="font-serif text-muted-foreground leading-relaxed">
+              Neginhal Village, Bailhongal Taluka,
+              <br />
+              Dist. Belagavi, Karnataka 591102
+            </p>
+            <p className="font-serif text-muted-foreground/60 mt-4 text-sm">
+              Proudly made in Belagavi. Expanding across four states.
+            </p>
+          </div>
+
+          {/* Hours */}
+          <div className="md:col-span-4 md:col-start-9">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground/50 block mb-4">
+              Business Hours
+            </span>
+            <div className="space-y-3">
+              <div className="flex justify-between items-baseline">
+                <span className="font-sans text-sm text-foreground">Monday — Saturday</span>
+                <span className="font-sans text-sm text-muted-foreground">9:00 AM — 7:00 PM</span>
+              </div>
+              <div className="h-[1px] bg-border" />
+              <div className="flex justify-between items-baseline">
+                <span className="font-sans text-sm text-foreground">Sunday</span>
+                <span className="font-sans text-sm text-muted-foreground">Closed</span>
+              </div>
             </div>
           </div>
-          <p className="font-body text-muted-foreground text-center mt-6 max-w-2xl mx-auto">
-            Whether you're a happy customer, a farmer partner, or a potential retailer, your message matters to us.
+        </div>
+      </section>
+
+      {/* Map — full bleed */}
+      <section className="bg-black">
+        <div className="aspect-[21/9] sm:aspect-[21/7] w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245615.67498339!2d74.4!3d15.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65f1e1c0a7e5%3A0x4b1e3e1c2e3f2b2!2sBelagavi%2C+Karnataka!5e0!3m2!1sen!2sin!4v1700000000000"
+            width="100%"
+            height="100%"
+            style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) grayscale(20%)" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="King Ice Cream - Belagavi"
+          />
+        </div>
+      </section>
+
+      {/* WhatsApp CTA */}
+      <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-foreground text-background">
+        <div className="max-w-3xl">
+          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-6">
+            Quick Connect
+          </span>
+          <h2 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl mb-4">
+            Prefer WhatsApp?
+          </h2>
+          <p className="font-serif text-background/40 mb-8">
+            Drop us a message for franchise enquiries, bulk orders, or just to say hello.
           </p>
+          <a
+            href="https://wa.me/919900255556"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] px-8 py-4 border border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300"
+          >
+            Message us on WhatsApp
+            <span className="h-[1px] w-6 bg-current" />
+          </a>
         </div>
       </section>
 

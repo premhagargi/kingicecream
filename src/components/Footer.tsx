@@ -25,7 +25,7 @@ export function Footer() {
             height={180}
             className="h-16 sm:h-20 w-auto object-contain"
           />
-          <p className="mt-2 text-sm text-muted-foreground font-serif italic">Royalty in Every Scoop</p>
+          <p className="mt-2 text-sm text-muted-foreground font-serif italic">Taste of Royalty</p>
           <div className="flex space-x-4 mt-4">
             <a href="https://www.instagram.com/kingicecream.india/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors" aria-label="Instagram"><Instagram size={20} /></a>
             <a href="https://wa.me/919900255556" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors" aria-label="WhatsApp"><Phone size={20} /></a>

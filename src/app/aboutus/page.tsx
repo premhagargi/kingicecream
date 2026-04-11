@@ -1,150 +1,201 @@
-import type {Metadata} from 'next';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { TimelineSection } from '@/app/sections/TimelineSection';
+import type { Metadata } from "next";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { TimelineSection } from "@/app/sections/TimelineSection";
 
 export const metadata: Metadata = {
-  title: 'About Us - King Ice Cream',
-  description: 'Learn about King Ice Cream, a premium ice cream brand from Vijaykant Dairy & Food Products Ltd., bringing royal indulgence to every scoop.',
+  title: "About Us - King Ice Cream",
+  description:
+    "Learn about King Ice Cream, a premium ice cream brand from Vijaykant Dairy & Food Products Ltd.",
 };
 
 export default function AboutUsPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Header />
-      
-      {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30 z-10" />
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1497034825429-c343d7c6a68d?w=1920&q=80")',
-          }}
-          data-ai-hint="ice cream factory"
-        />
-        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 md:mb-6">
-            About Us
+
+      {/* Hero — full height, just text, no image */}
+      <section className="min-h-screen flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-24 bg-black relative">
+        <div className="max-w-5xl">
+          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-6">
+            Our Story
+          </span>
+          <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05]">
+            We made ice cream
+            <br />
+            for <span className="font-serif italic font-normal text-white/50">Hindustan Unilever.</span>
+            <br />
+            Now we make it
+            <br />
+            for <span className="text-gold">you.</span>
           </h1>
-          <p className="font-serif text-xl md:text-2xl text-white/90 max-w-2xl mx-auto italic">
-            The Royal Story Behind Every Scoop
+        </div>
+
+        {/* Scroll line */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-16 bg-white/20" />
+      </section>
+
+      {/* Opening statement */}
+      <section className="py-20 sm:py-28 px-6 sm:px-10 md:px-16 lg:px-24">
+        <div className="max-w-3xl">
+          <p className="font-serif text-xl sm:text-2xl md:text-3xl leading-relaxed text-foreground/70">
+            Before King Ice Cream ever reached your hands, we spent years perfecting
+            the craft for someone else — producing millions of litres to the exacting
+            standards of India&apos;s largest FMCG company. When we launched our own
+            brand in August 2024, we didn&apos;t start from scratch.
+            <span className="text-foreground font-medium"> We started from mastery.</span>
           </p>
         </div>
       </section>
 
-      {/* Introduction Section */}
-      <section className="py-16 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center">
-            The Makers Behind the Crown
+      {/* Stats strip — edge to edge */}
+      <section className="border-y border-border">
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {[
+            { num: "2L+", label: "Litres procured daily" },
+            { num: "1,500+", label: "Villages in network" },
+            { num: "40K+", label: "Farmer families" },
+            { num: "15K+", label: "Retail outlets" },
+          ].map((stat, i) => (
+            <div
+              key={stat.label}
+              className="p-6 sm:p-8 md:p-10 border-r border-b md:border-b-0 border-border last:border-r-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r"
+            >
+              <div className="font-sans text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
+                {stat.num}
+              </div>
+              <p className="font-sans text-xs sm:text-sm text-muted-foreground mt-2">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Origin story — asymmetric layout */}
+      <section className="py-20 sm:py-28 px-6 sm:px-10 md:px-16 lg:px-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
+          {/* Left — label + heading */}
+          <div className="md:col-span-4">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-4">
+              Origin
+            </span>
+            <h2 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl leading-tight">
+              Rooted in
+              <br />
+              <span className="font-serif italic font-normal text-foreground/50">Belagavi</span>
+            </h2>
+          </div>
+
+          {/* Right — body text */}
+          <div className="md:col-span-7 md:col-start-6">
+            <p className="font-serif text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
+              Our 12-acre campus sits in Neginhal, Bailhongal, beside the fertile banks
+              of the Malaprabha river. What began as a modest 5,000 litres per day
+              operation in 2004 has grown into a dairy network spanning 1,500+ villages
+              across Karnataka, Maharashtra, Goa, and Kerala.
+            </p>
+            <p className="font-serif text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Our sister brand Adityaa Milk is a household name across North Karnataka
+              and Goa. With a revenue of Rs. 304 Crore in FY25, King Ice Cream is the
+              crown jewel of the Vijaykant Dairy empire.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Promise — dark section */}
+      <section className="bg-foreground text-background py-20 sm:py-28 px-6 sm:px-10 md:px-16 lg:px-24">
+        <div className="max-w-5xl">
+          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-6">
+            Our Promise
+          </span>
+          <h2 className="font-serif italic text-xl sm:text-2xl md:text-3xl text-background/60 leading-relaxed max-w-3xl mb-16">
+            The same discipline that satisfied Hindustan Unilever now goes
+            exclusively into King Ice Cream.
           </h2>
-          <div className="prose prose-lg max-w-none text-muted-foreground">
-            <p className="text-lg md:text-xl leading-relaxed mb-6 font-serif">
-              Before King Ice Cream ever reached your hands, we spent years perfecting the craft for someone else. <strong className="font-semibold">Vijaykant Dairy & Food Products Ltd.</strong> was the trusted manufacturing partner behind <span className="italic">Hindustan Unilever&apos;s Kwality Walls</span> in the region — producing millions of litres of ice cream to the exacting standards of India&apos;s largest FMCG company. When we decided to launch our own brand in August 2024, we did not start from scratch. We started from mastery.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed font-serif">
-              Rooted in a 12-acre campus in Neginhal, Bailhongal, beside the fertile banks of the Malaprabha river in Belagavi, Vijaykant Dairy has grown from <span className="font-medium">a modest 5,000 litres per day operation in 2004</span> to procuring <strong className="font-bold">2,00,000 litres of milk daily</strong> from over <strong className="font-bold">1,500 villages</strong>. Our sister brand <span className="italic">Adityaa Milk</span> is a household name across North Karnataka and Goa. With a revenue of Rs. 304 Crore in FY25, King Ice Cream is the crown jewel of this dairy empire.
-            </p>
-          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border-t border-background/10">
+          {[
+            {
+              num: "01",
+              title: "Pure Milk, No Compromise",
+              desc: "Fresh milk from 1,500+ villages. No palm oil. No vegetable fat. Just real dairy.",
+            },
+            {
+              num: "02",
+              title: "HUL-Grade Manufacturing",
+              desc: "World-class cold chain, FSSAI compliance, and 1 lakh litres per day capacity.",
+            },
+            {
+              num: "03",
+              title: "Farmer-First Philosophy",
+              desc: "40,000+ farming families supported. Fair prices. Daily collection. Six chilling centres.",
+            },
+            {
+              num: "04",
+              title: "Tradition Meets Today",
+              desc: "From matka kulfi to Gudbud — India's ice cream heritage, delivered across 15,000+ stores.",
+            },
+          ].map((item) => (
+            <div
+              key={item.num}
+              className="p-6 sm:p-8 md:p-10 border-b border-r border-background/10 last:border-r-0 [&:nth-child(odd):last-child]:col-span-2 sm:[&:nth-child(odd):last-child]:col-span-1"
+            >
+              <span className="font-sans text-[10px] text-gold block mb-4">
+                {item.num}
+              </span>
+              <h3 className="font-sans font-semibold text-sm sm:text-base text-background mb-3">
+                {item.title}
+              </h3>
+              <p className="font-serif text-sm text-background/40 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 md:py-20 bg-secondary">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
-            <div className="text-center">
-              <div className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 whitespace-nowrap">2L+</div>
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Litres of Milk Procured Daily</p>
-            </div>
-            <div className="text-center">
-              <div className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">1,500+</div>
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Villages in Our Network</p>
-            </div>
-            <div className="text-center">
-              <div className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">40K+</div>
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Farmer Families Supported</p>
-            </div>
-            <div className="text-center">
-              <div className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">15K+</div>
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Retail Outlets Served</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
+      {/* Timeline */}
       <TimelineSection />
 
-      {/* Quality Promise Section */}
-      <section className="py-16 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center">
-            Our Promise
-          </h2>
-          <div className="prose prose-lg max-w-none text-muted-foreground mb-10">
-            <p className="text-lg md:text-xl leading-relaxed font-serif">
-              Having manufactured ice cream for Hindustan Unilever, we know what world-class quality demands. That same discipline — <span className="font-medium">rigorous cold chain management, FSSAI compliance, zero palm oil</span>, and 1,00,000 litres per day ice cream capacity — now goes exclusively into King Ice Cream. <strong className="font-bold">Every scoop is a taste of royalty</strong>, backed by institutional-grade processes.
-            </p>
-          </div>
-
-          {/* Promise Cards */}
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            <div className="bg-card border border-border p-6 md:p-8">
-              <h3 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">Pure Milk, No Compromise</h3>
-              <p className="text-muted-foreground font-serif">
-                Made with fresh milk from our own procurement network of 1,500+ villages. No palm oil. No vegetable fat substitutes. Just real dairy, the way it should be.
-              </p>
-            </div>
-            <div className="bg-card border border-border p-6 md:p-8">
-              <h3 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">HUL-Grade Manufacturing</h3>
-              <p className="text-muted-foreground font-serif">
-                Our facility manufactured Kwality Walls for Hindustan Unilever. The same world-class processes, cold chain infrastructure, and quality protocols now power King Ice Cream.
-              </p>
-            </div>
-            <div className="bg-card border border-border p-6 md:p-8">
-              <h3 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">Farmer-First Philosophy</h3>
-              <p className="text-muted-foreground font-serif">
-                We support 40,000+ farming families across Karnataka and neighbouring states. Fair prices, daily collection, six chilling centres — when farmers thrive, the milk is better, and so is your ice cream.
-              </p>
-            </div>
-            <div className="bg-card border border-border p-6 md:p-8">
-              <h3 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">Rooted in Tradition, Made for Today</h3>
-              <p className="text-muted-foreground font-serif">
-                From matka kulfi set in earthen pots to Gudbud inspired by Dharwad&apos;s legendary dessert, we celebrate India&apos;s rich ice cream heritage while delivering modern convenience across 15,000+ retail stores and Zomato.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Reach Section */}
-      <section className="py-16 md:py-20 bg-secondary">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6">
-            From Belagavi to Your Neighbourhood
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-serif">
-            King Ice Cream is available across Karnataka, Maharashtra, Goa, and Kerala through 15,000+ retail outlets, exclusive King parlours, and food delivery platforms including Zomato. Our new manufacturing plant ensures we can bring royal flavours to even more families, every day.
+      {/* Reach — simple statement */}
+      <section className="py-20 sm:py-28 px-6 sm:px-10 md:px-16 lg:px-24 bg-[#f5f0e8]">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-6">
+            Reach
+          </span>
+          <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-foreground/70 leading-relaxed">
+            Karnataka. Maharashtra. Goa. Kerala.
+            <br />
+            <span className="text-foreground not-italic font-sans font-black">
+              15,000+ outlets and growing.
+            </span>
           </p>
         </div>
       </section>
 
-      {/* Community Section */}
-      <section className="py-16 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center">
-            More Than Just Ice Cream
+      {/* Community — closing statement */}
+      <section className="py-20 sm:py-28 px-6 sm:px-10 md:px-16 lg:px-24">
+        <div className="max-w-3xl">
+          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-6">
+            Community
+          </span>
+          <h2 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl leading-tight mb-8">
+            More than
+            <br />
+            <span className="font-serif italic font-normal text-foreground/50">just ice cream.</span>
           </h2>
-          <div className="prose prose-lg max-w-none text-muted-foreground">
-            <p className="text-lg md:text-xl leading-relaxed font-serif">
-              Every King Ice Cream you enjoy supports a network of <strong className="font-bold">40,000+ farming families</strong>. Our daily milk procurement of 2,00,000 litres flows through six chilling centres, creating thousands of rural livelihoods. When you choose King, you choose a brand that puts farmers at the heart of everything.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed mt-6 font-serif">
-              Proudly made in Belagavi since 2004, expanding across four states and counting. Whether you are a customer craving something royal, a farmer looking for a reliable dairy partner, or a retailer wanting to stock the region&apos;s fastest-growing ice cream brand — <strong className="font-semibold">you are part of the King family</strong>.
-            </p>
-          </div>
+          <p className="font-serif text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
+            Every King Ice Cream you enjoy supports 40,000+ farming families. Our daily
+            procurement of 2,00,000 litres flows through six chilling centres, creating
+            thousands of rural livelihoods.
+          </p>
+          <p className="font-serif text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Proudly made in Belagavi since 2004. Whether you&apos;re a customer, a farmer
+            partner, or a retailer — you are part of the King family.
+          </p>
         </div>
       </section>
 

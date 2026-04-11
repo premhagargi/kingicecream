@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function ProductsHero() {
   return (
-    <section className="pt-28 sm:pt-36 pb-10 sm:pb-14 px-6 sm:px-10 md:px-16 lg:px-24 bg-background relative overflow-hidden">
+    <section className="pt-32 sm:pt-40 pb-10 sm:pb-14 px-6 sm:px-10 md:px-16 lg:px-24 bg-background relative overflow-hidden">
       {/* Large background watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
         <span className="font-sans font-black text-[30vw] sm:text-[22vw] text-foreground/[0.03] uppercase leading-none">

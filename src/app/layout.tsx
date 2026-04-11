@@ -26,7 +26,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'King Ice Cream | Royalty in Every Scoop',
+    default: 'King Ice Cream | Taste of Royalty',
     template: '%s | King Ice Cream',
   },
   description: 'Premium ice cream from Vijaykant Dairy, Belagavi. Pure milk, no palm oil. Cones, Cups, Kulfi, and Family Packs across Karnataka, Goa, Maharashtra & Kerala.',
