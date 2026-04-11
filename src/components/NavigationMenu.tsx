@@ -115,7 +115,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
               height={80}
               className="h-14 w-auto object-contain"
             />
-            <span className="font-serif italic text-[11px] text-white/10">
+            <span className="font-serif italic text-[11px] text-white">
               Belagavi, Karnataka
             </span>
           </div>
