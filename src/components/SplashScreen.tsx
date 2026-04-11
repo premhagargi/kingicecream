@@ -16,7 +16,7 @@ export function SplashScreen({ children }: { children: React.ReactNode }) {
         sessionStorage.setItem("king-splash-shown", "true");
         const timer = setTimeout(() => {
           setShowSplash(false);
-        }, 3000);
+        }, 1800);
         return () => clearTimeout(timer);
       } else {
         setIsComplete(true);
