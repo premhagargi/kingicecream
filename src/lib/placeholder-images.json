@@ -10,28 +10,28 @@
       "id": "product-1",
       "name": "Kesar Pista",
       "description": "Royal saffron and Afghani pistachios — our signature creation.",
-      "imageUrl": "https://images.unsplash.com/photo-1633933358116-a27b902fad35?w=800&q=80",
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Kesar Pista.png",
       "imageHint": "kesar pista ice cream"
     },
     {
       "id": "product-2",
-      "name": "Belgian Chocolate",
+      "name": "Majesto",
       "description": "Intense, velvety 70% cocoa Belgian chocolate.",
-      "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80",
+      "imageUrl": "/images/Product Images copy/Belgian Chocolate_70ml_311224.png",
       "imageHint": "dark chocolate ice cream"
     },
     {
       "id": "product-3",
       "name": "Alphonso Mango",
       "description": "Pure Ratnagiri Alphonso in every golden spoonful.",
-      "imageUrl": "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=800&q=80",
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Alphonso Mango.png",
       "imageHint": "mango ice cream scoop"
     },
     {
       "id": "product-4",
       "name": "Matka Kulfi",
       "description": "Slow-set in earthen pots. Dense. Creamy. Timeless.",
-      "imageUrl": "https://images.unsplash.com/photo-1615478503562-ec2d8aa0a24d?w=800&q=80",
+      "imageUrl": "/images/Product Images copy/Matka Kulfi_Render.png",
       "imageHint": "kulfi earthen pot"
     },
     {
@@ -64,16 +64,14 @@
       "imageUrl": "https://images.unsplash.com/photo-1516559828984-fb3b99548b21?w=600&q=80",
       "imageHint": "ice cream shop storefront"
     },
+
     {
       "id": "product-cone-1",
       "name": "Chocolate Cone",
-      "description": "Rich Belgian chocolate ice cream in a crispy waffle cone.",
+      "description": "Rich chocolate ice cream in a crispy waffle cone.",
       "category": "Cones",
-      "tags": [
-        "Chocolate",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1560008581-09826d1de69e?w=800&q=80",
+      "tags": ["Chocolate", "Classic"],
+      "imageUrl": "/images/Product Images copy/Chocolate-110ml.png",
       "imageHint": "chocolate ice cream cone",
       "price": 35
     },
@@ -82,11 +80,8 @@
       "name": "Black Currant Cone",
       "description": "Tangy-sweet black currant ice cream in a crunchy sugar cone.",
       "category": "Cones",
-      "tags": [
-        "Fruit",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800&q=80",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Black Currant-110ml.png",
       "imageHint": "berry ice cream cone",
       "price": 30
     },
@@ -95,10 +90,8 @@
       "name": "Cotton Candy Cone",
       "description": "Whimsical cotton candy flavoured ice cream — a carnival in every bite.",
       "category": "Cones",
-      "tags": [
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1633933358116-a27b902fad35?w=800&q=80",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/Cotton Candy-110ml.png",
       "imageHint": "pink ice cream cone",
       "price": 30
     },
@@ -107,49 +100,69 @@
       "name": "Butterscotch Cone",
       "description": "Crunchy butterscotch bits folded into creamy caramel ice cream.",
       "category": "Cones",
-      "tags": [
-        "Nutty",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=800&q=80",
+      "tags": ["Nutty", "Classic"],
+      "imageUrl": "/images/Product Images copy/Butterscotch-110ml.png",
       "imageHint": "butterscotch ice cream cone",
       "price": 35
     },
     {
       "id": "product-cone-5",
-      "name": "Dry Fruit Royale Cone",
-      "description": "A regal blend of almonds, cashews, and pistachios in rich cream.",
+      "name": "Almond Pista Cone",
+      "description": "A regal blend of almonds and pistachios in rich cream.",
       "category": "Cones",
-      "tags": [
-        "Nutty",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=800&q=80",
-      "imageHint": "dry fruit ice cream cone",
+      "tags": ["Nutty", "Premium"],
+      "imageUrl": "/images/Product Images copy/Almond Pista-110ml.png",
+      "imageHint": "almond pista ice cream cone",
       "price": 50
     },
     {
       "id": "product-cone-6",
       "name": "Vanilla Cone",
-      "description": "Pure Madagascar vanilla bean ice cream — timeless and elegant.",
+      "description": "Pure vanilla bean ice cream — timeless and elegant.",
       "category": "Cones",
-      "tags": [
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=800&q=80",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/Vanilla-110ml.png",
       "imageHint": "vanilla ice cream cone",
       "price": 25
     },
+    {
+      "id": "product-cone-7",
+      "name": "Tiramisu Cone",
+      "description": "Italian coffee-mascarpone indulgence in a crispy cone.",
+      "category": "Cones",
+      "tags": ["Premium"],
+      "imageUrl": "/images/Product Images copy/120 ml Cone_Tiramisu_Final (1).png",
+      "imageHint": "tiramisu ice cream cone",
+      "price": 55
+    },
+    {
+      "id": "product-cone-8",
+      "name": "Mango Cone",
+      "description": "Creamy Alphonso mango ice cream in a waffle cone.",
+      "category": "Cones",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Mango_70ml Cone.png",
+      "imageHint": "mango ice cream cone",
+      "price": 30
+    },
+    {
+      "id": "product-cone-9",
+      "name": "Strawberry Cone",
+      "description": "Sweet strawberry ice cream in a crispy cone.",
+      "category": "Cones",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Strawberry_70ml Cone.png",
+      "imageHint": "strawberry ice cream cone",
+      "price": 30
+    },
+
     {
       "id": "product-cup-1",
       "name": "Kesar Pista Cup",
       "description": "Fragrant saffron meets Afghani pistachios in this royal indulgence.",
       "category": "Cups",
-      "tags": [
-        "Traditional",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1557142046-c704a3adf364?w=800&q=80",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Kesar Pista.png",
       "imageHint": "kesar pista ice cream cup",
       "price": 60
     },
@@ -158,11 +171,8 @@
       "name": "Rajbhog Cup",
       "description": "Cardamom-infused cream with saffron strands — inspired by the festive sweet.",
       "category": "Cups",
-      "tags": [
-        "Traditional",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&q=80",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Rajbhog.png",
       "imageHint": "saffron cardamom ice cream",
       "price": 60
     },
@@ -171,24 +181,18 @@
       "name": "Gudbud Cup",
       "description": "Karnataka's beloved dessert turned ice cream — tutti frutti, nuts, and more.",
       "category": "Cups",
-      "tags": [
-        "Traditional",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80",
+      "tags": ["Traditional", "Classic"],
+      "imageUrl": "/images/Product Images copy/Gudbud 100ml.png",
       "imageHint": "gudbud ice cream colorful",
       "price": 50
     },
     {
       "id": "product-cup-4",
-      "name": "Belgian Chocolate Cup",
+      "name": "Majesto - Belgian Chocolate",
       "description": "Intense, velvety Belgian chocolate with cocoa nibs — pure decadence.",
       "category": "Cups",
-      "tags": [
-        "Chocolate",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=800&q=80",
+      "tags": ["Chocolate", "Premium"],
+      "imageUrl": "/images/Product Images copy/Belgian Chocolate_70ml_311224.png",
       "imageHint": "dark chocolate ice cream cup",
       "price": 70
     },
@@ -197,89 +201,220 @@
       "name": "Alphonso Mango Cup",
       "description": "The king of fruits meets the King of ice cream — pure Alphonso goodness.",
       "category": "Cups",
-      "tags": [
-        "Fruit",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=800&q=80",
+      "tags": ["Fruit", "Premium"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Alphonso Mango.png",
       "imageHint": "mango ice cream cup",
       "price": 60
     },
     {
       "id": "product-cup-6",
+      "name": "French Vanilla Cup",
+      "description": "Classic French vanilla — rich, creamy, and aromatic.",
+      "category": "Cups",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/French Vanilla_70ml_311224.png",
+      "imageHint": "vanilla ice cream cup",
+      "price": 45
+    },
+    {
+      "id": "product-cup-7",
+      "name": "Kaju Draksh Cup",
+      "description": "Cashews and raisins in a smooth creamy base — festive favourite.",
+      "category": "Cups",
+      "tags": ["Traditional", "Nutty"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Kaju Draksh.png",
+      "imageHint": "kaju draksh ice cream cup",
+      "price": 55
+    },
+    {
+      "id": "product-cup-8",
+      "name": "Kaju Malai Cup",
+      "description": "Rich malai cream loaded with premium cashews.",
+      "category": "Cups",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Kaju Malai.png",
+      "imageHint": "kaju malai ice cream cup",
+      "price": 55
+    },
+    {
+      "id": "product-cup-9",
+      "name": "Blueberry Cheese Cup",
+      "description": "Tangy blueberry cheesecake swirled into smooth ice cream.",
+      "category": "Cups",
+      "tags": ["Fruit", "Premium"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Blueberry Cheese.png",
+      "imageHint": "blueberry cheese ice cream cup",
+      "price": 60
+    },
+    {
+      "id": "product-cup-10",
+      "name": "Pink Guava Cup",
+      "description": "Tropical pink guava ice cream — fresh, fruity, and vibrant.",
+      "category": "Cups",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Pink Guava.png",
+      "imageHint": "pink guava ice cream cup",
+      "price": 50
+    },
+    {
+      "id": "product-cup-11",
+      "name": "Shahi Anjeer Cup",
+      "description": "Premium figs in a creamy, aromatic saffron base.",
+      "category": "Cups",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Shahi Anjeer.png",
+      "imageHint": "shahi anjeer ice cream cup",
+      "price": 60
+    },
+    {
+      "id": "product-cup-12",
+      "name": "Chikoo Cup",
+      "description": "Sweet sapodilla ice cream — a desi classic everyone loves.",
+      "category": "Cups",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Chikoo.png",
+      "imageHint": "chikoo ice cream cup",
+      "price": 45
+    },
+    {
+      "id": "product-cup-13",
+      "name": "Cotton Candy Cup",
+      "description": "Fun, colourful cotton candy flavour in a premium cup.",
+      "category": "Cups",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Cotton Candy.png",
+      "imageHint": "cotton candy ice cream cup",
+      "price": 45
+    },
+    {
+      "id": "product-cup-14",
+      "name": "American Dry Nuts Cup",
+      "description": "A medley of premium American dry fruits in a rich cream base.",
+      "category": "Cups",
+      "tags": ["Nutty", "Premium"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup American Dry Nuts.png",
+      "imageHint": "dry nuts ice cream cup",
+      "price": 65
+    },
+    {
+      "id": "product-cup-15",
+      "name": "Spanish Delight Cup",
+      "description": "A luxurious Spanish-inspired flavour blend.",
+      "category": "Cups",
+      "tags": ["Premium"],
+      "imageUrl": "/images/Product Images copy/100 ml Premium cup Spaish Delight.png",
+      "imageHint": "spanish delight ice cream cup",
+      "price": 55
+    },
+    {
+      "id": "product-cup-16",
+      "name": "Butterscotch Cup",
+      "description": "Crunchy butterscotch crumble in smooth caramel cream.",
+      "category": "Cups",
+      "tags": ["Nutty", "Classic"],
+      "imageUrl": "/images/Product Images copy/Butterscotch-70ml.png",
+      "imageHint": "butterscotch ice cream cup",
+      "price": 40
+    },
+    {
+      "id": "product-cup-17",
+      "name": "Royal Mango Bliss",
+      "description": "A royal mango experience — pure Alphonso perfection.",
+      "category": "Cups",
+      "tags": ["Fruit", "Premium"],
+      "imageUrl": "/images/Product Images copy/Royal Mango Bliss_70ml.png",
+      "imageHint": "royal mango ice cream",
+      "price": 50
+    },
+    {
+      "id": "product-cup-18",
       "name": "Strawberry Cup",
       "description": "Real strawberry pieces in a fresh, creamy strawberry base.",
       "category": "Cups",
-      "tags": [
-        "Fruit",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68d?w=800&q=80",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Strawberry_100ml.png",
       "imageHint": "strawberry ice cream cup",
       "price": 45
     },
     {
+      "id": "product-cup-19",
+      "name": "Vanilla Cup",
+      "description": "Classic vanilla — simple, pure, and perfectly creamy.",
+      "category": "Cups",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/Vanilla_100ml.png",
+      "imageHint": "vanilla ice cream cup",
+      "price": 35
+    },
+    {
+      "id": "product-cup-20",
+      "name": "Chocolate Cup",
+      "description": "Rich, indulgent chocolate ice cream in a handy cup.",
+      "category": "Cups",
+      "tags": ["Chocolate", "Classic"],
+      "imageUrl": "/images/Product Images copy/Chocolate_40ml.png",
+      "imageHint": "chocolate ice cream cup",
+      "price": 25
+    },
+
+    {
       "id": "product-kulfi-1",
-      "name": "Matka Malai Kulfi",
+      "name": "Matka Kulfi",
       "description": "Slow-set in earthen pots the traditional way — dense, creamy, unforgettable.",
       "category": "Kulfi",
-      "tags": [
-        "Traditional",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1615478503562-ec2d8aa0a24d?w=800&q=80",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/Matka Kulfi_Render.png",
       "imageHint": "matka kulfi earthen pot",
       "price": 50
     },
     {
       "id": "product-kulfi-2",
-      "name": "Kesar Badam Kulfi",
-      "description": "Saffron-soaked almonds in thick, reduced milk — a Mughal-era recipe.",
+      "name": "Mawa Kulfi",
+      "description": "Rich, dense mawa kulfi — the original frozen Indian dessert.",
       "category": "Kulfi",
-      "tags": [
-        "Traditional",
-        "Nutty",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1557142046-c704a3adf364?w=800&q=80",
-      "imageHint": "kesar badam kulfi saffron",
-      "price": 55
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/Mawa_Kulfi_35ml_311224.png",
+      "imageHint": "mawa kulfi traditional",
+      "price": 35
     },
     {
       "id": "product-kulfi-3",
-      "name": "Paan Kulfi",
-      "description": "The after-dinner classic reimagined — betel leaf, gulkand, and fennel.",
+      "name": "Gulkand Kulfi",
+      "description": "Rose petal preserve in thick, slow-set kulfi — floral and divine.",
       "category": "Kulfi",
-      "tags": [
-        "Traditional"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=800&q=80",
-      "imageHint": "paan kulfi green",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/Gulkand_Kulfi_220125.png",
+      "imageHint": "gulkand kulfi rose",
       "price": 45
     },
     {
       "id": "product-kulfi-4",
-      "name": "Mango Kulfi",
-      "description": "Dense, intensely flavoured mango kulfi made with real Alphonso pulp.",
+      "name": "Rajbhog Kulfi",
+      "description": "The beloved Bengali sweet reimagined as dense, frozen kulfi.",
       "category": "Kulfi",
-      "tags": [
-        "Fruit",
-        "Traditional"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=800&q=80",
-      "imageHint": "mango kulfi orange",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/Rajbhog_Kulfi_220125.png",
+      "imageHint": "rajbhog kulfi",
+      "price": 45
+    },
+    {
+      "id": "product-kulfi-5",
+      "name": "Rabdi Kulfi",
+      "description": "Thick rabdi reduced to perfection and frozen into creamy kulfi.",
+      "category": "Kulfi",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/Rabdi Kulfi_50ml.png",
+      "imageHint": "rabdi kulfi",
       "price": 50
     },
+
     {
       "id": "product-stick-1",
       "name": "Mango Dolly",
       "description": "A childhood favourite — creamy mango ice cream on a stick.",
       "category": "Sticks",
-      "tags": [
-        "Fruit",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=800&q=80",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Mango Dolly_50ml_311224.png",
       "imageHint": "mango ice cream bar",
       "price": 20
     },
@@ -288,11 +423,8 @@
       "name": "Chocobar",
       "description": "Thick chocolate ice cream coated in a crunchy chocolate shell.",
       "category": "Sticks",
-      "tags": [
-        "Chocolate",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1560008581-09826d1de69e?w=800&q=80",
+      "tags": ["Chocolate", "Classic"],
+      "imageUrl": "/images/Product Images copy/Chocobar 65ml_311224.png",
       "imageHint": "chocolate ice cream bar",
       "price": 25
     },
@@ -301,130 +433,473 @@
       "name": "Orange Candy",
       "description": "Tangy orange ice on a stick — the refreshing summer staple.",
       "category": "Sticks",
-      "tags": [
-        "Fruit",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=800&q=80",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Orange Candy 50 ml.png",
       "imageHint": "orange popsicle bar",
       "price": 15
     },
     {
       "id": "product-stick-4",
-      "name": "Cassata Stick",
-      "description": "Layers of vanilla, strawberry, and pistachio ice cream in every bite.",
+      "name": "Pineapple Cassata",
+      "description": "Layers of pineapple, vanilla, and pistachio ice cream in every bite.",
       "category": "Sticks",
-      "tags": [
-        "Traditional",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800&q=80",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Pineapple_Cassata_Mockup.png",
       "imageHint": "cassata ice cream layered",
       "price": 30
     },
     {
       "id": "product-stick-5",
-      "name": "Sitaphal Stick",
-      "description": "Custard apple ice cream made with real sitaphal pulp — seasonal delight.",
+      "name": "Mango Candy",
+      "description": "Zesty mango ice candy — tangy, sweet, and refreshing.",
       "category": "Sticks",
-      "tags": [
-        "Fruit",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&q=80",
-      "imageHint": "custard apple ice cream",
-      "price": 30
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Mango Candy 50 ml.png",
+      "imageHint": "mango candy ice cream",
+      "price": 15
     },
     {
+      "id": "product-stick-6",
+      "name": "Triple Crown",
+      "description": "Three layers of flavour in one royal bar — our signature creation.",
+      "category": "Sticks",
+      "tags": ["Premium"],
+      "imageUrl": "/images/Product Images copy/Triple Crown_65ml_Render.png",
+      "imageHint": "triple crown ice cream bar",
+      "price": 35
+    },
+    {
+      "id": "product-stick-7",
+      "name": "Mini Chocobar",
+      "description": "All the chocobar love in a fun, bite-sized bar.",
+      "category": "Sticks",
+      "tags": ["Chocolate", "Classic"],
+      "imageUrl": "/images/Product Images copy/Mini Chocobar_35ml_Render.png",
+      "imageHint": "mini chocobar ice cream",
+      "price": 15
+    },
+    {
+      "id": "product-stick-8",
+      "name": "Nutty Bar",
+      "description": "Crunchy roasted nuts coating a creamy ice cream core.",
+      "category": "Sticks",
+      "tags": ["Nutty", "Premium"],
+      "imageUrl": "/images/Product Images copy/Nutty Bar_35ml.png",
+      "imageHint": "nutty ice cream bar",
+      "price": 20
+    },
+    {
+      "id": "product-stick-9",
+      "name": "Raspberry Dolly",
+      "description": "Sweet and tangy raspberry ice cream on a stick.",
+      "category": "Sticks",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Raspberry Dolly_50ml_Render.png",
+      "imageHint": "raspberry ice cream bar",
+      "price": 20
+    },
+    {
+      "id": "product-stick-10",
+      "name": "Pineapple Candy",
+      "description": "Tropical pineapple ice candy — sweet and refreshing.",
+      "category": "Sticks",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Pineapple Candy_35ml_Render.png",
+      "imageHint": "pineapple candy ice cream",
+      "price": 10
+    },
+    {
+      "id": "product-stick-11",
+      "name": "Watermelon Candy",
+      "description": "Cool watermelon ice candy — the ultimate summer refresher.",
+      "category": "Sticks",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Watermelon Candy_50ml_Render.png",
+      "imageHint": "watermelon candy ice cream",
+      "price": 15
+    },
+    {
+      "id": "product-stick-12",
+      "name": "Black Currant Twist",
+      "description": "A twisted swirl of tangy black currant ice cream.",
+      "category": "Sticks",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/black currant twist.png",
+      "imageHint": "black currant twist ice cream",
+      "price": 20
+    },
+    {
+      "id": "product-stick-13",
+      "name": "Chocolate Twist",
+      "description": "Swirled chocolate ice cream on a stick — fun and indulgent.",
+      "category": "Sticks",
+      "tags": ["Chocolate", "Classic"],
+      "imageUrl": "/images/Product Images copy/chocolate twist.png",
+      "imageHint": "chocolate twist ice cream",
+      "price": 20
+    },
+    {
+      "id": "product-stick-14",
+      "name": "Mango Twist",
+      "description": "Twisted mango ice cream — fruity and fun.",
+      "category": "Sticks",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/mango twist.png",
+      "imageHint": "mango twist ice cream",
+      "price": 20
+    },
+
+    {
       "id": "product-family-1",
-      "name": "Cassata Family Pack",
-      "description": "The classic tri-colour layers to share with the whole family. 700ml.",
+      "name": "Vanilla 700ml Tub",
+      "description": "Classic vanilla for the whole family. 700ml.",
       "category": "Family Packs",
-      "tags": [
-        "Traditional",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80",
-      "imageHint": "cassata ice cream tub",
-      "price": 249
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/700ml_Vanilla.png",
+      "imageHint": "vanilla ice cream tub",
+      "price": 229
     },
     {
       "id": "product-family-2",
-      "name": "Kesar Pista Family Pack",
-      "description": "A generous tub of our signature saffron-pistachio creation. 700ml.",
+      "name": "Kesar Pista 700ml Tub",
+      "description": "Our signature saffron-pistachio in a generous family tub. 700ml.",
       "category": "Family Packs",
-      "tags": [
-        "Traditional",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1557142046-c704a3adf364?w=800&q=80",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/700ml_Kesar Pista.png",
       "imageHint": "kesar pista ice cream tub",
       "price": 299
     },
     {
       "id": "product-family-3",
-      "name": "Butterscotch Family Pack",
+      "name": "Butterscotch 700ml Tub",
       "description": "Crunchy butterscotch indulgence for the entire family. 700ml.",
       "category": "Family Packs",
-      "tags": [
-        "Nutty",
-        "Classic"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=800&q=80",
+      "tags": ["Nutty", "Classic"],
+      "imageUrl": "/images/Product Images copy/700ml_Butterscotch.png",
       "imageHint": "butterscotch ice cream tub",
       "price": 249
     },
     {
       "id": "product-family-4",
-      "name": "Chocolate Fantasy Family Pack",
-      "description": "Triple chocolate madness — fudge swirls, cocoa nibs, chocolate chips. 700ml.",
+      "name": "Chocolate 700ml Tub",
+      "description": "Rich chocolate ice cream to share with everyone. 700ml.",
       "category": "Family Packs",
-      "tags": [
-        "Chocolate",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=800&q=80",
+      "tags": ["Chocolate", "Classic"],
+      "imageUrl": "/images/Product Images copy/700ml_Chocolate.png",
       "imageHint": "chocolate ice cream tub",
+      "price": 249
+    },
+    {
+      "id": "product-family-5",
+      "name": "Alphonso Mango 700ml Tub",
+      "description": "Pure Alphonso mango ice cream for the whole family. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Premium"],
+      "imageUrl": "/images/Product Images copy/700ml_Alphonso Mango.png",
+      "imageHint": "mango ice cream tub",
+      "price": 279
+    },
+    {
+      "id": "product-family-6",
+      "name": "Strawberry 700ml Tub",
+      "description": "Fresh strawberry ice cream for family gatherings. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/700ml_Strawberry.png",
+      "imageHint": "strawberry ice cream tub",
+      "price": 249
+    },
+    {
+      "id": "product-family-7",
+      "name": "Rajbhog 700ml Tub",
+      "description": "Festive rajbhog flavour for the whole family. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/700ml_Rajbhog.png",
+      "imageHint": "rajbhog ice cream tub",
+      "price": 279
+    },
+    {
+      "id": "product-family-8",
+      "name": "King Fantasy 700ml Tub",
+      "description": "Our signature fantasy blend — a royal mix of flavours. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Premium"],
+      "imageUrl": "/images/Product Images copy/700ml_King Fantacy.png",
+      "imageHint": "king fantasy ice cream tub",
+      "price": 279
+    },
+    {
+      "id": "product-family-9",
+      "name": "Black Currant 700ml Tub",
+      "description": "Tangy-sweet black currant for family sharing. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/700ml_Black Currant.png",
+      "imageHint": "black currant ice cream tub",
+      "price": 249
+    },
+    {
+      "id": "product-family-10",
+      "name": "Rabdi Kulfi 700ml Tub",
+      "description": "Traditional rabdi kulfi in a family-sized tub. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Traditional", "Premium"],
+      "imageUrl": "/images/Product Images copy/700ml_Rabdi Kulfi.png",
+      "imageHint": "rabdi kulfi ice cream tub",
       "price": 299
     },
     {
+      "id": "product-family-11",
+      "name": "Spanish Delight 700ml Tub",
+      "description": "Luxurious Spanish-inspired flavour for sharing. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Premium"],
+      "imageUrl": "/images/Product Images copy/700ml_Spanish Delight.png",
+      "imageHint": "spanish delight ice cream tub",
+      "price": 269
+    },
+    {
+      "id": "product-family-12",
+      "name": "Tutti Fruity 700ml Tub",
+      "description": "Colourful tutti fruity ice cream the whole family will love. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/700ml_Tutti Fruity.png",
+      "imageHint": "tutti fruity ice cream tub",
+      "price": 249
+    },
+    {
+      "id": "product-family-13",
+      "name": "Kaju Draksha 700ml Tub",
+      "description": "Cashew and raisin ice cream in a family pack. 700ml.",
+      "category": "Family Packs",
+      "tags": ["Traditional", "Nutty"],
+      "imageUrl": "/images/Product Images copy/700ml_Kaju Draksha.png",
+      "imageHint": "kaju draksh ice cream tub",
+      "price": 269
+    },
+    {
+      "id": "product-family-14",
+      "name": "Vanilla & Chocolate 2-in-1",
+      "description": "Two classics in one tub — vanilla meets chocolate. 1250ml.",
+      "category": "Family Packs",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/2in1_1250 ml_ Vanilla & Chocolate Render.png",
+      "imageHint": "vanilla chocolate 2in1 tub",
+      "price": 349
+    },
+    {
+      "id": "product-family-15",
+      "name": "Vanilla & Mango 2-in-1",
+      "description": "Vanilla and Alphonso mango — the perfect duo. 1250ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/2in1_1250 ml_ Vanilla & Mango Render.png",
+      "imageHint": "vanilla mango 2in1 tub",
+      "price": 349
+    },
+    {
+      "id": "product-family-16",
+      "name": "Vanilla & Strawberry 2-in-1",
+      "description": "Vanilla and fresh strawberry together. 1250ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/2in1_1250 ml_ Vanilla & Strawberry Render.png",
+      "imageHint": "vanilla strawberry 2in1 tub",
+      "price": 349
+    },
+    {
+      "id": "product-family-17",
+      "name": "American Dry Nuts 1000ml Oval Tub",
+      "description": "Premium American dry fruits ice cream. 1000ml.",
+      "category": "Family Packs",
+      "tags": ["Nutty", "Premium"],
+      "imageUrl": "/images/Product Images copy/1000ml_Oval Tub_American Dry Nuts_Mockup.png",
+      "imageHint": "dry nuts ice cream oval tub",
+      "price": 399
+    },
+    {
+      "id": "product-family-18",
+      "name": "Butterscotch 1000ml Oval Tub",
+      "description": "Butterscotch crunch in a generous oval tub. 1000ml.",
+      "category": "Family Packs",
+      "tags": ["Nutty", "Classic"],
+      "imageUrl": "/images/Product Images copy/1000ml_Oval Tub_Butterscotch_Mockup.png",
+      "imageHint": "butterscotch ice cream oval tub",
+      "price": 369
+    },
+    {
+      "id": "product-family-19",
+      "name": "Chocolate Hazelnut 1000ml Oval Tub",
+      "description": "Chocolate and hazelnut — a Nutella-lover's dream. 1000ml.",
+      "category": "Family Packs",
+      "tags": ["Chocolate", "Nutty", "Premium"],
+      "imageUrl": "/images/Product Images copy/1000ml_Oval Tub_Chocolate Hazelnut_Mockup.png",
+      "imageHint": "chocolate hazelnut ice cream oval tub",
+      "price": 419
+    },
+    {
+      "id": "product-family-20",
+      "name": "Vanilla 1000ml Oval Tub",
+      "description": "Classic vanilla in a premium oval tub. 1000ml.",
+      "category": "Family Packs",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/1000ml_Oval Tub_Vanilla_Mockup.png",
+      "imageHint": "vanilla ice cream oval tub",
+      "price": 349
+    },
+    {
+      "id": "product-family-21",
+      "name": "Vanilla 500ml Tub",
+      "description": "Classic vanilla in a medium tub. 500ml.",
+      "category": "Family Packs",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/500ML_TUB Render_Vanilla.png",
+      "imageHint": "vanilla ice cream 500ml tub",
+      "price": 179
+    },
+    {
+      "id": "product-family-22",
+      "name": "Mango 500ml Tub",
+      "description": "Alphonso mango goodness in a medium tub. 500ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/500ML_TUB Render_Mango.png",
+      "imageHint": "mango ice cream 500ml tub",
+      "price": 199
+    },
+    {
+      "id": "product-family-23",
+      "name": "Strawberry 500ml Tub",
+      "description": "Fresh strawberry in a medium tub. 500ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/500ML_TUB Render_Strawberry.png",
+      "imageHint": "strawberry ice cream 500ml tub",
+      "price": 179
+    },
+    {
+      "id": "product-family-24",
+      "name": "Cotton Candy 500ml Tub",
+      "description": "Fun cotton candy flavour in a medium tub. 500ml.",
+      "category": "Family Packs",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/500ML_TUB Render_Cotton Candy.png",
+      "imageHint": "cotton candy ice cream 500ml tub",
+      "price": 179
+    },
+    {
+      "id": "product-family-25",
+      "name": "Irish Coffee 500ml Tub",
+      "description": "Rich coffee ice cream with an Irish twist. 500ml.",
+      "category": "Family Packs",
+      "tags": ["Premium"],
+      "imageUrl": "/images/Product Images copy/500ML_TUB Render_Irish Coffee.png",
+      "imageHint": "irish coffee ice cream 500ml tub",
+      "price": 199
+    },
+    {
+      "id": "product-family-26",
+      "name": "Pista 500ml Tub",
+      "description": "Pure pistachio ice cream in a medium tub. 500ml.",
+      "category": "Family Packs",
+      "tags": ["Nutty", "Premium"],
+      "imageUrl": "/images/Product Images copy/500ML_TUB Render_Pista.png",
+      "imageHint": "pista ice cream 500ml tub",
+      "price": 209
+    },
+    {
+      "id": "product-family-27",
+      "name": "Blueberry Cheese 500ml Tub",
+      "description": "Tangy blueberry cheesecake in a medium tub. 500ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Premium"],
+      "imageUrl": "/images/Product Images copy/500ML_TUB Render_Blueberry Cheese.png",
+      "imageHint": "blueberry cheese ice cream 500ml tub",
+      "price": 209
+    },
+    {
+      "id": "product-family-28",
+      "name": "Chikoo 500ml Tub",
+      "description": "Sweet sapodilla ice cream in a medium tub. 500ml.",
+      "category": "Family Packs",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/500ML_TUB Render_Chikoo.png",
+      "imageHint": "chikoo ice cream 500ml tub",
+      "price": 179
+    },
+
+    {
       "id": "product-sundae-1",
-      "name": "Hot Fudge Sundae",
-      "description": "Vanilla ice cream drowned in warm Belgian chocolate fudge and roasted almonds.",
+      "name": "Mini Chocolate Sundae",
+      "description": "Chocolate ice cream with fudge drizzle in a mini sundae cup.",
       "category": "Sundaes",
-      "tags": [
-        "Chocolate",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80",
-      "imageHint": "hot fudge sundae",
-      "price": 149
+      "tags": ["Chocolate", "Classic"],
+      "imageUrl": "/images/Product Images copy/80ml_Mini Sundae_Chocolate.png",
+      "imageHint": "chocolate sundae",
+      "price": 49
     },
     {
       "id": "product-sundae-2",
-      "name": "Gudbud Sundae",
-      "description": "Our take on Dharwad's legendary dessert — layers of fruit, nuts, and ice cream.",
+      "name": "Mini Strawberry Sundae",
+      "description": "Strawberry ice cream with berry swirl in a mini sundae cup.",
       "category": "Sundaes",
-      "tags": [
-        "Traditional",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&q=80",
-      "imageHint": "gudbud sundae colorful",
-      "price": 159
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/80ml_Mini Sundae_Strawberry.png",
+      "imageHint": "strawberry sundae",
+      "price": 49
     },
     {
       "id": "product-sundae-3",
-      "name": "Mango Royale Sundae",
-      "description": "Alphonso mango ice cream with mango coulis, whipped cream, and pistachios.",
+      "name": "Royal Sundae",
+      "description": "Our grand, multi-flavour sundae — fit for royalty. 180ml.",
       "category": "Sundaes",
-      "tags": [
-        "Fruit",
-        "Premium"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=800&q=80",
-      "imageHint": "mango sundae dessert",
-      "price": 169
+      "tags": ["Premium"],
+      "imageUrl": "/images/Product Images copy/Royal Sundae_180 ml.png",
+      "imageHint": "royal sundae dessert",
+      "price": 99
+    },
+    {
+      "id": "product-sundae-4",
+      "name": "Ripple Sundae",
+      "description": "Swirled ripples of flavour in every spoonful.",
+      "category": "Sundaes",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/ripple sundae.png",
+      "imageHint": "ripple sundae ice cream",
+      "price": 69
+    },
+
+    {
+      "id": "product-sipup-1",
+      "name": "Chocolate Sip Up",
+      "description": "Drinkable chocolate ice cream — shake it, sip it, love it.",
+      "category": "Sip Ups",
+      "tags": ["Chocolate", "Classic"],
+      "imageUrl": "/images/Product Images copy/Chocolate Sip Up_Mockup.png",
+      "imageHint": "chocolate sip up shake",
+      "price": 35
+    },
+    {
+      "id": "product-sipup-2",
+      "name": "Mango Sip Up",
+      "description": "Drinkable mango ice cream — refreshing and fruity.",
+      "category": "Sip Ups",
+      "tags": ["Fruit", "Classic"],
+      "imageUrl": "/images/Product Images copy/Mango Sip Up_Mockup.png",
+      "imageHint": "mango sip up shake",
+      "price": 35
+    },
+    {
+      "id": "product-sipup-3",
+      "name": "Vanilla Sip Up",
+      "description": "Drinkable vanilla ice cream — smooth and creamy on the go.",
+      "category": "Sip Ups",
+      "tags": ["Classic"],
+      "imageUrl": "/images/Product Images copy/Vanilla Sip Up_Mockup.png",
+      "imageHint": "vanilla sip up shake",
+      "price": 35
     }
   ]
 }

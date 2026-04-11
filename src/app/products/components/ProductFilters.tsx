@@ -1,8 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
-const categories = ['ALL', 'CONES', 'CUPS', 'KULFI', 'STICKS', 'FAMILY PACKS', 'SUNDAES'];
+const categories = ['CONES', 'CUPS', 'KULFI', 'STICKS', 'FAMILY PACKS', 'SUNDAES', 'SIP UPS', 'ALL'];
 const filters = ['CHOCOLATE', 'FRUIT', 'TRADITIONAL', 'PREMIUM', 'NUTTY', 'CLASSIC'];
 
 type ProductFiltersProps = {
@@ -28,38 +29,46 @@ export function ProductFilters({ activeCategory, setActiveCategory, activeFilter
   };
 
   return (
-    <section className="pb-8 sm:pb-10">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="pb-10 sm:pb-14"
+    >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-        {/* Category tabs — horizontal scroll on mobile */}
-        <nav className="flex items-center gap-1 overflow-x-auto no-scrollbar pb-4 border-b border-border">
-          {categories.map(category => (
-            <button
-              key={category}
-              onClick={() => handleSetCategory(category)}
-              className={cn(
-                "px-4 py-2 text-[11px] sm:text-xs font-sans uppercase tracking-[0.15em] whitespace-nowrap rounded-full transition-all duration-200",
-                activeCategory === category
-                  ? 'bg-foreground text-background'
-                  : 'text-muted-foreground hover:text-foreground'
+        {/* Category tabs — centered with dividers */}
+        <nav className="flex items-center justify-center gap-0 overflow-x-auto no-scrollbar">
+          {categories.map((category, i) => (
+            <div key={category} className="flex items-center">
+              {i > 0 && (
+                <span className="w-[1px] h-4 bg-foreground/15 mx-3 sm:mx-5 shrink-0" />
               )}
-            >
-              {category}
-            </button>
+              <button
+                onClick={() => handleSetCategory(category)}
+                className={cn(
+                  "font-serif italic text-sm sm:text-base md:text-lg whitespace-nowrap transition-all duration-300",
+                  activeCategory === category
+                    ? 'text-foreground font-semibold not-italic font-sans'
+                    : 'text-muted-foreground/40 hover:text-muted-foreground'
+                )}
+              >
+                {category}
+              </button>
+            </div>
           ))}
         </nav>
 
-        {/* Filter pills */}
-        <div className="mt-4 flex items-center gap-2 flex-wrap">
-          <span className="text-[10px] font-sans uppercase tracking-[0.3em] text-muted-foreground/50 mr-2">Filter:</span>
+        {/* Filter pills — smaller, below */}
+        <div className="mt-6 flex items-center justify-center gap-2 flex-wrap">
           {filters.map(filter => (
             <button
               key={filter}
               onClick={() => toggleFilter(filter)}
               className={cn(
-                "px-3 py-1.5 text-[10px] font-sans uppercase tracking-[0.15em] border rounded-full transition-all duration-200",
+                "px-3 py-1 text-[9px] sm:text-[10px] font-sans uppercase tracking-[0.1em] border rounded-full transition-all duration-200",
                 activeFilters.includes(filter)
-                  ? 'border-gold bg-gold/10 text-foreground'
-                  : 'border-border text-muted-foreground hover:border-foreground/30'
+                  ? 'border-foreground bg-foreground text-background'
+                  : 'border-foreground/15 text-muted-foreground/50 hover:border-foreground/40 hover:text-foreground'
               )}
             >
               {filter}
@@ -67,6 +76,6 @@ export function ProductFilters({ activeCategory, setActiveCategory, activeFilter
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

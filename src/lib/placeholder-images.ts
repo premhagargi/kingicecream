@@ -6,7 +6,7 @@ export type ImagePlaceholder = {
   imageUrl: string;
   imageHint: string;
   name?: string;
-  category?: 'Cones' | 'Cups' | 'Kulfi' | 'Sticks' | 'Family Packs' | 'Sundaes';
+  category?: 'Cones' | 'Cups' | 'Kulfi' | 'Sticks' | 'Family Packs' | 'Sundaes' | 'Sip Ups';
   tags?: string[];
   price?: number;
 };

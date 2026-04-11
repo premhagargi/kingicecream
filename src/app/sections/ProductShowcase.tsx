@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { TransitionLink } from "@/components/TransitionLink";
 
-const featuredIds = ["product-1", "product-2", "product-3", "product-4"];
-const products = PlaceHolderImages.filter((img) => featuredIds.includes(img.id));
+const featuredIds = ["product-2", "product-1", "product-3", "product-4"];
+const products = featuredIds.map((id) => PlaceHolderImages.find((img) => img.id === id)!).filter(Boolean);
 
 // Asymmetric grid positions — each product gets a unique layout personality
 const layouts = [
@@ -76,17 +76,19 @@ export function ProductShowcase() {
               data-cursor-text="View"
             >
               {/* Image */}
-              <div className="absolute inset-0">
-                <Image
-                  src={product.imageUrl}
-                  alt={product.name || "Ice cream product"}
-                  data-ai-hint={product.imageHint}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 p-6 sm:p-10 pb-16 sm:pb-20">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={product.imageUrl}
+                    alt={product.name || "Ice cream product"}
+                    data-ai-hint={product.imageHint}
+                    fill
+                    style={{ objectFit: "contain" }}
+                    className="transition-transform duration-700 ease-out group-hover:scale-105 drop-shadow-lg"
+                  />
+                </div>
               </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
 
               {/* Text overlay — bottom left, not centered */}
               <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5 z-10">

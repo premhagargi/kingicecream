@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export function SplashScreen({ children }: { children: React.ReactNode }) {
   const [showSplash, setShowSplash] = useState(false);
@@ -15,7 +16,7 @@ export function SplashScreen({ children }: { children: React.ReactNode }) {
         sessionStorage.setItem("king-splash-shown", "true");
         const timer = setTimeout(() => {
           setShowSplash(false);
-        }, 2800);
+        }, 3000);
         return () => clearTimeout(timer);
       } else {
         setIsComplete(true);
@@ -25,68 +26,74 @@ export function SplashScreen({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!showSplash && !isComplete) {
-      const timer = setTimeout(() => setIsComplete(true), 600);
+      const timer = setTimeout(() => setIsComplete(true), 700);
       return () => clearTimeout(timer);
     }
   }, [showSplash, isComplete]);
-
-  const letters = "KING".split("");
 
   return (
     <>
       <AnimatePresence>
         {showSplash && (
           <motion.div
-            className="fixed inset-0 z-[100] bg-black flex items-center justify-center"
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-[100] bg-black flex items-center justify-center overflow-hidden"
+            exit={{ y: "-100%" }}
+            transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
           >
-            {/* Gold line above text */}
-            <div className="flex flex-col items-center">
-              <motion.div
-                className="h-[2px] bg-gold mb-6"
-                initial={{ width: 0 }}
-                animate={{ width: 120 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            {/* Horizontal lines — top */}
+            <motion.div
+              className="absolute top-[30%] left-0 right-0 h-[1px] bg-white/[0.06]"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            />
+            <motion.div
+              className="absolute bottom-[30%] left-0 right-0 h-[1px] bg-white/[0.06]"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            />
+
+            {/* Vertical lines */}
+            <motion.div
+              className="absolute top-0 bottom-0 left-[20%] w-[1px] bg-white/[0.04]"
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            />
+            <motion.div
+              className="absolute top-0 bottom-0 right-[20%] w-[1px] bg-white/[0.04]"
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            />
+
+            {/* Gold accent line — center */}
+            <motion.div
+              className="absolute top-1/2 left-[15%] right-[15%] h-[1px] -translate-y-1/2 origin-left"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 1.4, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="w-full h-full bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+            </motion.div>
+
+            {/* Logo */}
+            <motion.div
+              className="relative z-10"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Image
+                src="/images/logos/king logo.png"
+                alt="King Ice Cream"
+                width={400}
+                height={160}
+                className="h-16 sm:h-24 md:h-28 w-auto object-contain"
+                priority
               />
-
-              {/* KING letters */}
-              <div className="flex">
-                {letters.map((letter, i) => (
-                  <motion.span
-                    key={i}
-                    className="font-display text-4xl sm:text-6xl md:text-[10rem] text-white tracking-[0.15em] sm:tracking-widest"
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.6,
-                      delay: 0.4 + i * 0.15,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-              </div>
-
-              {/* Subtitle */}
-              <motion.p
-                className="font-serif italic text-gold text-lg sm:text-xl mt-4 tracking-[0.3em]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.4 }}
-              >
-                ICE CREAM
-              </motion.p>
-
-              {/* Bottom gold line */}
-              <motion.div
-                className="h-[2px] bg-gold mt-6"
-                initial={{ width: 0 }}
-                animate={{ width: 80 }}
-                transition={{ duration: 0.6, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
-              />
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -94,7 +101,7 @@ export function SplashScreen({ children }: { children: React.ReactNode }) {
       <motion.div
         initial={!isComplete ? { opacity: 0 } : false}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
+        transition={{ duration: 0.4 }}
       >
         {children}
       </motion.div>

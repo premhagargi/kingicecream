@@ -39,7 +39,7 @@ export function TestimonialsSection() {
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(next, 5000);
+    const timer = setInterval(next, 3000);
     return () => clearInterval(timer);
   }, [next]);
 
@@ -52,7 +52,7 @@ export function TestimonialsSection() {
         <div className="flex items-center gap-4 mb-10 sm:mb-14">
           <span className="h-[1px] w-8 bg-foreground/20" />
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
-            Voices from the kingdom
+            What our customers say
           </span>
         </div>
 
@@ -90,7 +90,7 @@ export function TestimonialsSection() {
               className="absolute inset-y-0 left-0 bg-gold"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
-              transition={{ duration: 5, ease: "linear" }}
+              transition={{ duration: 3, ease: "linear" }}
               key={current}
             />
           </div>

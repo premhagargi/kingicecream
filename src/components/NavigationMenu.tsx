@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { TransitionLink } from "./TransitionLink";
 
 const menuItems = [
@@ -106,11 +107,14 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
           </div>
 
           {/* Brand mark */}
-          <div className="text-right">
-            <span className="font-display text-[11px] uppercase tracking-[0.3em] text-white/15">
-              King Ice Cream
-            </span>
-            <br />
+          <div className="flex flex-col items-end gap-1">
+            <Image
+              src="/images/logos/king logo.png"
+              alt="King Ice Cream"
+              width={250}
+              height={80}
+              className="h-14 w-auto object-contain"
+            />
             <span className="font-serif italic text-[11px] text-white/10">
               Belagavi, Karnataka
             </span>

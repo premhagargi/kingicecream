@@ -4,12 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
-  { url: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&q=80", alt: "Saffron ice cream" },
-  { url: "https://images.unsplash.com/photo-1560008581-09826d1de69e?w=600&q=80", alt: "Chocolate cone" },
-  { url: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=600&q=80", alt: "Mango ice cream" },
-  { url: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80", alt: "Ice cream scoop" },
-  { url: "https://images.unsplash.com/photo-1615478503562-ec2d8aa0a24d?w=600&q=80", alt: "Kulfi" },
-  { url: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68d?w=600&q=80", alt: "Ice cream cone" },
+  { url: "/images/Product Images copy/Royal Sundae_180 ml.png", alt: "Royal Sundae" },
+  { url: "/images/Product Images copy/Chocobar 65ml_311224.png", alt: "Chocobar" },
+  { url: "/images/Product Images copy/Matka Kulfi_Render.png", alt: "Matka Kulfi" },
+  { url: "/images/Product Images copy/100 ml Premium cup Kesar Pista.png", alt: "Kesar Pista Cup" },
+  { url: "/images/Product Images copy/Triple Crown_65ml_Render.png", alt: "Triple Crown" },
+  { url: "/images/Product Images copy/Mango Dolly_50ml_311224.png", alt: "Mango Dolly" },
 ];
 
 export function InstagramSection() {
@@ -56,12 +56,13 @@ export function InstagramSection() {
             } md:aspect-square`}
             data-cursor-text="Insta"
           >
+            <div className="absolute inset-0 bg-[#f5f0e8]" />
             <Image
               src={img.url}
               alt={img.alt}
               fill
-              style={{ objectFit: "cover" }}
-              className="transition-transform duration-700 ease-out group-hover:scale-110 grayscale-[0.15] group-hover:grayscale-0"
+              style={{ objectFit: "contain" }}
+              className="transition-transform duration-700 ease-out group-hover:scale-110 p-4"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500" />
           </motion.a>

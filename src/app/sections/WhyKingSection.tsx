@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const stats = [
   { number: "0%", label: "Palm Oil", detail: "Pure milk only" },
   { number: "40K+", label: "Farmers", detail: "Supported daily" },
-  { number: "HUL", label: "Heritage", detail: "Ex-Kwality Walls" },
+  { number: "20+", label: "Years", detail: "Of dairy mastery" },
   { number: "15K+", label: "Outlets", detail: "Across 4 states" },
 ];
 
@@ -58,10 +58,10 @@ export function WhyKingSection() {
               }}
               className="p-4 sm:p-6 md:p-8 border-r border-b md:border-b-0 border-foreground/10 last:border-r-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r overflow-hidden"
             >
-              <div className="font-sans text-lg sm:text-xl md:text-2xl font-bold text-black leading-none">
+              <div className="font-sans text-lg sm:text-xl md:text-2xl lg:text-5xl xl:text-6xl font-black text-black leading-none">
                 {stat.number}
               </div>
-              <div className="font-sans text-[9px] sm:text-[10px] uppercase tracking-normal mt-1.5 text-black/70">
+              <div className="font-sans text-[9px] sm:text-[10px] lg:text-sm xl:text-base uppercase tracking-normal mt-1.5 lg:mt-3 text-black/70">
                 {stat.label}
               </div>
               <p className="font-serif italic text-black/40 text-[9px] sm:text-[10px] mt-1 hidden sm:block">

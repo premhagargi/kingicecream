@@ -1,40 +1,62 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import Image from "next/image";
 import { NavigationMenu } from "./NavigationMenu";
 import { TransitionLink } from "./TransitionLink";
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [ready, setReady] = useState(false);
+  const [scrolledDown, setScrolledDown] = useState(false);
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    const timer = setTimeout(() => setReady(true), 6000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolledDown(latest > 50);
+  });
+
+  const showLogo = ready && !scrolledDown && !isMenuOpen;
 
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+      <header className="fixed top-0 left-0 right-0 z-50">
         <div className="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-24 py-5 sm:py-6">
-          <TransitionLink href="/">
+          <TransitionLink href="/" className="relative z-10">
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="font-display font-bold text-sm sm:text-base uppercase tracking-[0.2em] text-white cursor-pointer"
+              animate={{ opacity: showLogo ? 1 : 0, y: showLogo ? 0 : -10 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="cursor-pointer drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]"
+              style={{ pointerEvents: showLogo ? "auto" : "none" }}
             >
-              King
+              <Image
+                src="/images/logos/king logo.png"
+                alt="King Ice Cream"
+                width={250}
+                height={100}
+                className="h-20 sm:h-24 md:h-28 w-auto object-contain"
+                priority
+              />
             </motion.div>
           </TransitionLink>
 
           <motion.button
             onClick={toggleMenu}
-            className="relative w-7 h-5 text-white z-20 flex flex-col justify-between"
+            className="relative w-8 h-5 z-20 flex flex-col justify-between"
             aria-label="Toggle Menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <motion.span
-              className="block h-[1px] bg-current origin-left"
+              className="block h-[2px] bg-black shadow-[0_0_3px_rgba(255,255,255,0.9)] origin-left"
               animate={{
                 width: isMenuOpen ? "100%" : "100%",
                 rotate: isMenuOpen ? 45 : 0,
@@ -43,7 +65,7 @@ export function Header() {
               transition={{ duration: 0.3 }}
             />
             <motion.span
-              className="block h-[1px] bg-current"
+              className="block h-[2px] bg-black shadow-[0_0_3px_rgba(255,255,255,0.9)]"
               animate={{
                 width: isMenuOpen ? 0 : "60%",
                 opacity: isMenuOpen ? 0 : 1,
@@ -51,7 +73,7 @@ export function Header() {
               transition={{ duration: 0.2 }}
             />
             <motion.span
-              className="block h-[1px] bg-current origin-left"
+              className="block h-[2px] bg-black shadow-[0_0_3px_rgba(255,255,255,0.9)] origin-left"
               animate={{
                 width: isMenuOpen ? "100%" : "80%",
                 rotate: isMenuOpen ? -45 : 0,

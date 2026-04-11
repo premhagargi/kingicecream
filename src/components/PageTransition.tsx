@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useAnimate } from "framer-motion";
-import { useTransitionContext, TransitionType } from "@/context/TransitionContext";
+import { useTransitionContext } from "@/context/TransitionContext";
 
 const EASE_IN = [0.76, 0, 0.24, 1] as const;
 const EASE_OUT = [0.22, 1, 0.36, 1] as const;
@@ -12,7 +12,6 @@ export function PageTransition() {
     useTransitionContext();
   const isAnimating = useRef(false);
 
-  // Refs for different transition elements
   const [curtainScope, animateCurtain] = useAnimate();
   const [lineScope, animateLine] = useAnimate();
   const [col1, animateCol1] = useAnimate();
@@ -50,18 +49,20 @@ export function PageTransition() {
       complete();
     };
 
-    // --- CURTAIN WIPE (Franchise, Contact) ---
     async function curtainWipe() {
-      await animateCurtain(curtainScope.current, { clipPath: "inset(0 0% 0 0)" }, { duration: 0.4, ease: EASE_IN });
+      show(curtainScope.current);
+      show(lineScope.current);
+      await animateCurtain(curtainScope.current, { clipPath: "inset(0 0% 0 0)" }, { duration: 0.6, ease: EASE_IN });
       animateLine(lineScope.current, { scaleX: 1 }, { duration: 0.3, ease: EASE_OUT });
       onNavigate();
-      await delay(350);
+      await delay(250);
       animateLine(lineScope.current, { scaleX: 0 }, { duration: 0 });
-      await animateCurtain(curtainScope.current, { clipPath: "inset(0 0 0 100%)" }, { duration: 0.4, ease: EASE_IN });
+      await animateCurtain(curtainScope.current, { clipPath: "inset(0 0 0 100%)" }, { duration: 0.6, ease: EASE_IN });
       animateCurtain(curtainScope.current, { clipPath: "inset(0 100% 0 0)" }, { duration: 0 });
+      hide(curtainScope.current);
+      hide(lineScope.current);
     }
 
-    // --- COLUMN REVEAL (Products) ---
     async function columnReveal() {
       const cols = [
         [col1, animateCol1],
@@ -71,52 +72,57 @@ export function PageTransition() {
         [col5, animateCol5],
       ] as const;
 
-      // Columns grow up from bottom
+      for (const [scope] of cols) show(scope.current);
+
+      // Columns grow up — slower, more stagger
       for (let i = 0; i < cols.length; i++) {
         const [scope, animate] = cols[i];
-        animate(scope.current, { scaleY: 1 }, { duration: 0.3, ease: EASE_IN, delay: i * 0.05 });
+        animate(scope.current, { scaleY: 1 }, { duration: 0.5, ease: EASE_IN, delay: i * 0.08 });
       }
-      await delay(500);
+      await delay(700);
       onNavigate();
-      await delay(300);
-
-      // Columns shrink up
-      for (let i = 0; i < cols.length; i++) {
-        const [scope, animate] = cols[i];
-        animate(scope.current, { scaleY: 0 }, { duration: 0.3, ease: EASE_IN, delay: i * 0.05 });
-      }
       await delay(500);
 
-      // Reset origin for next time
+      // Columns retract — match the slow pace
+      for (let i = 0; i < cols.length; i++) {
+        const [scope, animate] = cols[i];
+        animate(scope.current, { scaleY: 0 }, { duration: 0.5, ease: EASE_IN, delay: i * 0.08 });
+      }
+      await delay(700);
+
       for (const [scope, animate] of cols) {
         animate(scope.current, { scaleY: 0 }, { duration: 0 });
+        hide(scope.current);
       }
     }
 
-    // --- DIAGONAL WIPE (About) ---
     async function diagonalWipe() {
-      await animateDiag(diagScope.current, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }, { duration: 0.5, ease: EASE_IN });
+      show(diagScope.current);
+      await animateDiag(diagScope.current, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }, { duration: 0.7, ease: EASE_IN });
       onNavigate();
-      await delay(300);
-      await animateDiag(diagScope.current, { clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" }, { duration: 0.5, ease: EASE_IN });
+      await delay(200);
+      await animateDiag(diagScope.current, { clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" }, { duration: 0.7, ease: EASE_IN });
       animateDiag(diagScope.current, { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }, { duration: 0 });
+      hide(diagScope.current);
     }
 
-    // --- FADE THROUGH BLACK (Locate) ---
     async function fadeThroughBlack() {
-      await animateFade(fadeScope.current, { opacity: 1 }, { duration: 0.35, ease: EASE_OUT });
+      show(fadeScope.current);
+      await animateFade(fadeScope.current, { opacity: 1 }, { duration: 0.5, ease: EASE_OUT });
       onNavigate();
-      await delay(300);
-      await animateFade(fadeScope.current, { opacity: 0 }, { duration: 0.35, ease: EASE_OUT });
+      await delay(200);
+      await animateFade(fadeScope.current, { opacity: 0 }, { duration: 0.5, ease: EASE_OUT });
+      hide(fadeScope.current);
     }
 
-    // --- ZOOM OUT (Home) ---
     async function zoomOut() {
-      await animateZoom(zoomScope.current, { opacity: 1, scale: 1 }, { duration: 0.4, ease: EASE_IN });
+      show(zoomScope.current);
+      await animateZoom(zoomScope.current, { opacity: 1, scale: 1 }, { duration: 0.6, ease: EASE_IN });
       onNavigate();
-      await delay(300);
-      await animateZoom(zoomScope.current, { scale: 0.9, opacity: 0 }, { duration: 0.4, ease: EASE_IN });
+      await delay(200);
+      await animateZoom(zoomScope.current, { scale: 0.9, opacity: 0 }, { duration: 0.6, ease: EASE_IN });
       animateZoom(zoomScope.current, { scale: 1.1, opacity: 0 }, { duration: 0 });
+      hide(zoomScope.current);
     }
 
     run();
@@ -128,60 +134,36 @@ export function PageTransition() {
   ]);
 
   return (
-    <div
-      className="fixed inset-0 z-[55]"
-      style={{ pointerEvents: isTransitioning ? "all" : "none" }}
-    >
-      {/* CURTAIN — horizontal wipe */}
-      <div
-        ref={curtainScope}
-        className="absolute inset-0 bg-black"
-        style={{ clipPath: "inset(0 100% 0 0)" }}
-      />
+    <div className="fixed inset-0 z-[55] pointer-events-none">
+      {/* CURTAIN */}
+      <div ref={curtainScope} className="absolute inset-0 bg-black invisible" style={{ clipPath: "inset(0 100% 0 0)" }} />
 
-      {/* GOLD LINE — accent for curtain */}
-      <div
-        ref={lineScope}
-        className="absolute top-1/2 left-0 right-0 h-[2px] bg-gold -translate-y-1/2 origin-left"
-        style={{ scaleX: 0 }}
-      />
+      {/* GOLD LINE */}
+      <div ref={lineScope} className="absolute top-1/2 left-0 right-0 h-[2px] bg-gold -translate-y-1/2 origin-left invisible" style={{ scaleX: 0 }} />
 
-      {/* COLUMNS — 5 vertical bars */}
+      {/* COLUMNS */}
       {[col1, col2, col3, col4, col5].map((ref, i) => (
-        <div
-          key={i}
-          ref={ref}
-          className="absolute top-0 bottom-0 bg-black origin-bottom"
-          style={{
-            left: `${i * 20}%`,
-            width: "20.5%",
-            scaleY: 0,
-          }}
-        />
+        <div key={i} ref={ref} className="absolute top-0 bottom-0 bg-black origin-bottom invisible" style={{ left: `${i * 20}%`, width: "20.5%", scaleY: 0 }} />
       ))}
 
-      {/* DIAGONAL — polygon wipe */}
-      <div
-        ref={diagScope}
-        className="absolute inset-0 bg-black"
-        style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
-      />
+      {/* DIAGONAL */}
+      <div ref={diagScope} className="absolute inset-0 bg-black invisible" style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }} />
 
-      {/* FADE — simple opacity */}
-      <div
-        ref={fadeScope}
-        className="absolute inset-0 bg-black"
-        style={{ opacity: 0 }}
-      />
+      {/* FADE */}
+      <div ref={fadeScope} className="absolute inset-0 bg-black invisible" style={{ opacity: 0 }} />
 
-      {/* ZOOM — scale + fade */}
-      <div
-        ref={zoomScope}
-        className="absolute inset-0 bg-black"
-        style={{ opacity: 0, scale: 1.1 }}
-      />
+      {/* ZOOM */}
+      <div ref={zoomScope} className="absolute inset-0 bg-black invisible" style={{ opacity: 0, scale: 1.1 }} />
     </div>
   );
+}
+
+function show(el: HTMLElement) {
+  el.style.visibility = "visible";
+}
+
+function hide(el: HTMLElement) {
+  el.style.visibility = "hidden";
 }
 
 function delay(ms: number) {
