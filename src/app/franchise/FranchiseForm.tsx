@@ -131,11 +131,11 @@ export function FranchiseForm() {
           onChange={(e) => setBudget(e.target.value)}
           className={`${inputCls} appearance-none cursor-pointer`}
         >
-          <option value="" className="bg-black">Select range</option>
-          <option value="Rs. 5 – 10 Lakhs" className="bg-black">Rs. 5 – 10 Lakhs</option>
-          <option value="Rs. 10 – 25 Lakhs" className="bg-black">Rs. 10 – 25 Lakhs</option>
-          <option value="Rs. 25 – 50 Lakhs" className="bg-black">Rs. 25 – 50 Lakhs</option>
-          <option value="Rs. 50 Lakhs+" className="bg-black">Rs. 50 Lakhs+</option>
+          <option value="" className="bg-[#1B4D89] text-background">Select range</option>
+          <option value="Rs. 5 – 10 Lakhs" className="bg-[#1B4D89] text-background">Rs. 5 – 10 Lakhs</option>
+          <option value="Rs. 10 – 25 Lakhs" className="bg-[#1B4D89] text-background">Rs. 10 – 25 Lakhs</option>
+          <option value="Rs. 25 – 50 Lakhs" className="bg-[#1B4D89] text-background">Rs. 25 – 50 Lakhs</option>
+          <option value="Rs. 50 Lakhs+" className="bg-[#1B4D89] text-background">Rs. 50 Lakhs+</option>
         </select>
       </div>
 

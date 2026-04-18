@@ -68,7 +68,7 @@ export default function LocatePage() {
       <Header />
 
       {/* Hero — minimal, map-focused */}
-      <section className="bg-gradient-to-r from-[#1B4D89] to-[#D4A017] pt-28 sm:pt-32 pb-10 sm:pb-14 px-6 sm:px-10 md:px-16 lg:px-24">
+      <section className="bg-gradient-to-r from-[#1B4D89] to-[#D4A017] pt-36 sm:pt-44 md:pt-48 pb-10 sm:pb-14 px-6 sm:px-10 md:px-16 lg:px-24">
         <div className="flex items-center gap-4 mb-5">
           <span className="h-[1px] w-8 bg-gold" />
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
@@ -129,28 +129,30 @@ export default function LocatePage() {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-                  {region.cities.map((city) => (
-                    <div
-                      key={city.name}
-                      className="group p-4 sm:p-5 rounded-2xl border border-border bg-background hover:border-gold/60 hover:shadow-sm transition-all duration-300"
-                    >
-                      <MapPin className="w-4 h-4 text-gold mb-3 group-hover:scale-110 transition-transform" />
-                      <div className="flex items-start justify-between gap-2">
-                        <span className="font-sans text-sm sm:text-base font-bold text-foreground leading-tight block">
-                          {city.name}
-                        </span>
-                        {"flagship" in city && city.flagship && (
-                          <span className="font-sans text-[9px] uppercase tracking-wider text-gold shrink-0">
-                            ★
+                <div className="border-t border-l border-border">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+                    {region.cities.map((city) => (
+                      <div
+                        key={city.name}
+                        className="group p-4 sm:p-5 md:p-6 border-r border-b border-border hover:bg-[#f5f0e8]/60 transition-colors duration-300"
+                      >
+                        <MapPin className="w-4 h-4 text-gold mb-3 group-hover:scale-110 transition-transform" />
+                        <div className="flex items-start justify-between gap-2">
+                          <span className="font-sans text-sm sm:text-base font-bold text-foreground leading-tight block">
+                            {city.name}
                           </span>
-                        )}
+                          {"flagship" in city && city.flagship && (
+                            <span className="font-sans text-[9px] uppercase tracking-wider text-gold shrink-0">
+                              ★
+                            </span>
+                          )}
+                        </div>
+                        <span className="font-sans text-xs text-muted-foreground mt-1 block">
+                          {city.outlets} outlets
+                        </span>
                       </div>
-                      <span className="font-sans text-xs text-muted-foreground mt-1 block">
-                        {city.outlets} outlets
-                      </span>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -158,39 +160,39 @@ export default function LocatePage() {
         </div>
       </section>
 
-      {/* Also Available On — boxed grid */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-10 lg:px-16 bg-[#f5f0e8]/60">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-          <div className="p-6 sm:p-7 rounded-2xl border border-border bg-background">
+      {/* Also Available On — edge-to-edge touching grid */}
+      <section className="bg-[#f5f0e8]/60 border-t border-l border-border">
+        <div className="grid grid-cols-2 md:grid-cols-3">
+          <div className="p-5 sm:p-7 md:p-10 border-r border-b border-border">
             <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4">
               Order Online
             </span>
-            <span className="font-sans text-xl sm:text-2xl font-black text-foreground block leading-tight">
+            <span className="font-sans text-base sm:text-xl md:text-2xl font-black text-foreground block leading-tight">
               Zomato
             </span>
-            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+            <span className="font-sans text-[11px] sm:text-xs text-muted-foreground mt-2 block">
               Doorstep delivery
             </span>
           </div>
-          <div className="p-6 sm:p-7 rounded-2xl border border-border bg-background">
+          <div className="p-5 sm:p-7 md:p-10 border-r border-b border-border">
             <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4">
               Retail Chains
             </span>
-            <span className="font-sans text-xl sm:text-2xl font-black text-foreground block leading-tight">
+            <span className="font-sans text-base sm:text-xl md:text-2xl font-black text-foreground block leading-tight">
               15,000+ Stores
             </span>
-            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+            <span className="font-sans text-[11px] sm:text-xs text-muted-foreground mt-2 block">
               Across 4 states
             </span>
           </div>
-          <div className="p-6 sm:p-7 rounded-2xl border border-border bg-background">
+          <div className="col-span-2 md:col-span-1 p-5 sm:p-7 md:p-10 border-r border-b border-border">
             <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4">
               King Parlours
             </span>
-            <span className="font-sans text-xl sm:text-2xl font-black text-foreground block leading-tight">
+            <span className="font-sans text-base sm:text-xl md:text-2xl font-black text-foreground block leading-tight">
               Exclusive Outlets
             </span>
-            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+            <span className="font-sans text-[11px] sm:text-xs text-muted-foreground mt-2 block">
               Full menu experience
             </span>
           </div>
@@ -198,36 +200,37 @@ export default function LocatePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-foreground text-background">
-        <div className="max-w-3xl">
+      <section className="relative py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-gradient-to-br from-[#F5C542] via-gold to-[#B8860B] text-foreground overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+        <div className="relative max-w-3xl">
           <div className="flex items-center gap-4 mb-6">
-            <span className="h-[1px] w-8 bg-gold" />
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
+            <span className="h-[1px] w-8 bg-foreground/70" />
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-foreground font-semibold">
               Not Nearby Yet?
             </span>
           </div>
-          <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05]">
+          <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05] text-foreground">
             Can&apos;t find
-            <span className="font-serif italic font-normal text-gold"> us?</span>
+            <span className="font-serif italic font-normal"> us?</span>
           </h2>
-          <p className="font-serif text-base sm:text-lg text-background/80 mb-10 leading-relaxed max-w-lg">
+          <p className="font-serif text-base sm:text-lg text-foreground/80 mb-10 leading-relaxed max-w-lg">
             We&apos;re expanding every day. If King Ice Cream isn&apos;t in your
             neighbourhood yet, let us know — or consider opening a franchise.
           </p>
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-4">
             <a
               href="/franchise"
-              className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] px-8 py-4 border border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300"
+              className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] px-8 py-4 bg-foreground text-background hover:bg-background hover:text-foreground border border-foreground transition-all duration-300"
             >
               Open a Franchise
               <span className="h-[1px] w-6 bg-current" />
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] text-background hover:text-background transition-colors"
+              className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] px-8 py-4 border border-foreground/40 text-foreground hover:border-foreground transition-all"
             >
-              <span className="h-[1px] w-6 bg-background/30" />
               Contact Us
+              <span className="h-[1px] w-6 bg-current" />
             </a>
           </div>
         </div>

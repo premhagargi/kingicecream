@@ -69,29 +69,27 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Stats strip — boxed grid */}
-      <section className="py-10 sm:py-14 px-4 sm:px-6 md:px-10 lg:px-16 bg-[#f5f0e8]/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-            {[
-              { num: "2L+", label: "Litres procured daily" },
-              { num: "1,500+", label: "Villages in network" },
-              { num: "40K+", label: "Farmer families" },
-              { num: "15K+", label: "Retail outlets" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="p-5 sm:p-7 rounded-2xl border border-border bg-background hover:border-gold/60 transition-colors"
-              >
-                <div className="font-sans text-3xl sm:text-4xl md:text-5xl font-black text-foreground leading-none">
-                  {stat.num}
-                </div>
-                <p className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.15em] text-muted-foreground mt-3 sm:mt-4">
-                  {stat.label}
-                </p>
+      {/* Stats strip — edge-to-edge touching grid */}
+      <section className="bg-[#f5f0e8]/50 border-t border-l border-border">
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {[
+            { num: "2L+", label: "Litres procured daily" },
+            { num: "1,500+", label: "Villages in network" },
+            { num: "40K+", label: "Farmer families" },
+            { num: "15K+", label: "Retail outlets" },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="p-5 sm:p-7 md:p-10 border-r border-b border-border hover:bg-background transition-colors"
+            >
+              <div className="font-sans text-2xl sm:text-3xl md:text-5xl font-black text-foreground leading-none">
+                {stat.num}
               </div>
-            ))}
-          </div>
+              <p className="font-sans text-[10px] sm:text-xs uppercase tracking-[0.15em] text-muted-foreground mt-3 sm:mt-4">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -130,9 +128,10 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Promise — dark section with boxed 4-col grid */}
-      <section className="bg-foreground text-background py-16 sm:py-24 px-4 sm:px-6 md:px-10 lg:px-16">
-        <div className="max-w-7xl mx-auto">
+      {/* Promise — brand navy gradient with boxed 4-col grid */}
+      <section className="relative bg-gradient-to-br from-[#1B4D89] via-[#163E6F] to-[#0E2A4D] text-background py-16 sm:py-24 px-4 sm:px-6 md:px-10 lg:px-16 overflow-hidden">
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-gold/10 blur-[120px] pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto">
           <div className="max-w-3xl mb-12 sm:mb-16 px-2 sm:px-4">
             <div className="flex items-center gap-4 mb-5">
               <span className="h-[1px] w-8 bg-gold" />
@@ -147,44 +146,46 @@ export default function AboutUsPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-            {[
-              {
-                num: "01",
-                title: "Pure Milk, No Compromise",
-                desc: "Fresh milk from 1,500+ villages. No palm oil. No vegetable fat.",
-              },
-              {
-                num: "02",
-                title: "HUL-Grade Manufacturing",
-                desc: "World-class cold chain, FSSAI compliance, 1 lakh L/day capacity.",
-              },
-              {
-                num: "03",
-                title: "Farmer-First Philosophy",
-                desc: "40,000+ families supported. Fair prices. Six chilling centres.",
-              },
-              {
-                num: "04",
-                title: "Tradition Meets Today",
-                desc: "From matka kulfi to Gudbud — delivered across 15,000+ stores.",
-              },
-            ].map((item) => (
-              <div
-                key={item.num}
-                className="group p-6 sm:p-7 rounded-2xl border border-background/10 bg-background/[0.04] hover:bg-background/[0.07] hover:border-gold/50 transition-all duration-300"
-              >
-                <span className="font-display text-3xl sm:text-4xl text-gold block mb-5 leading-none">
-                  {item.num}
-                </span>
-                <h3 className="font-sans font-bold text-base sm:text-lg text-background mb-2.5 leading-snug">
-                  {item.title}
-                </h3>
-                <p className="font-serif text-sm text-background/70 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div className="border-t border-l border-background/15">
+            <div className="grid grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  num: "01",
+                  title: "Pure Milk, No Compromise",
+                  desc: "Fresh milk from 1,500+ villages. No palm oil. No vegetable fat.",
+                },
+                {
+                  num: "02",
+                  title: "HUL-Grade Manufacturing",
+                  desc: "World-class cold chain, FSSAI compliance, 1 lakh L/day capacity.",
+                },
+                {
+                  num: "03",
+                  title: "Farmer-First Philosophy",
+                  desc: "40,000+ families supported. Fair prices. Six chilling centres.",
+                },
+                {
+                  num: "04",
+                  title: "Tradition Meets Today",
+                  desc: "From matka kulfi to Gudbud — delivered across 15,000+ stores.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.num}
+                  className="group p-5 sm:p-7 md:p-8 border-r border-b border-background/15 hover:bg-background/[0.05] transition-colors duration-300"
+                >
+                  <span className="font-display text-2xl sm:text-3xl md:text-4xl text-gold block mb-4 sm:mb-5 leading-none">
+                    {item.num}
+                  </span>
+                  <h3 className="font-sans font-bold text-sm sm:text-base md:text-lg text-background mb-2 sm:mb-2.5 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="font-serif text-xs sm:text-sm text-background/75 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

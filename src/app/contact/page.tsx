@@ -54,70 +54,70 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact details — boxed cards */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-10 lg:px-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+      {/* Contact details — edge-to-edge touching grid */}
+      <section className="border-t border-l border-border">
+        <div className="grid grid-cols-2 md:grid-cols-3">
           <a
             href="tel:9900255556"
-            className="group p-6 sm:p-8 rounded-2xl border border-border bg-[#f5f0e8]/50 hover:bg-[#f5f0e8] hover:border-gold/60 hover:shadow-sm transition-all duration-300"
+            className="group p-5 sm:p-7 md:p-10 border-r border-b border-border hover:bg-[#f5f0e8]/60 transition-colors duration-300"
           >
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-5">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4 sm:mb-5">
               Call
             </span>
-            <span className="font-sans text-xl sm:text-2xl font-black text-foreground group-hover:text-gold transition-colors block leading-tight">
+            <span className="font-sans text-base sm:text-xl md:text-2xl font-black text-foreground group-hover:text-gold transition-colors block leading-tight">
               99002 55556
             </span>
-            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+            <span className="font-sans text-[11px] sm:text-xs text-muted-foreground mt-2 block">
               Tap to dial
             </span>
           </a>
           <a
             href="mailto:info@kingicecream.com"
-            className="group p-6 sm:p-8 rounded-2xl border border-border bg-[#f5f0e8]/50 hover:bg-[#f5f0e8] hover:border-gold/60 hover:shadow-sm transition-all duration-300"
+            className="group p-5 sm:p-7 md:p-10 border-r border-b border-border hover:bg-[#f5f0e8]/60 transition-colors duration-300"
           >
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-5">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4 sm:mb-5">
               Email
             </span>
-            <span className="font-sans text-base sm:text-lg font-black text-foreground group-hover:text-gold transition-colors block leading-tight break-all">
+            <span className="font-sans text-sm sm:text-base md:text-lg font-black text-foreground group-hover:text-gold transition-colors block leading-tight break-all">
               info@kingicecream.com
             </span>
-            <span className="font-sans text-xs text-muted-foreground mt-2 block">
-              We reply within 48 hours
+            <span className="font-sans text-[11px] sm:text-xs text-muted-foreground mt-2 block">
+              Reply within 48 hrs
             </span>
           </a>
           <a
             href="https://www.instagram.com/kingicecream.india/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-6 sm:p-8 rounded-2xl border border-border bg-[#f5f0e8]/50 hover:bg-[#f5f0e8] hover:border-gold/60 hover:shadow-sm transition-all duration-300"
+            className="group col-span-2 md:col-span-1 p-5 sm:p-7 md:p-10 border-r border-b border-border hover:bg-[#f5f0e8]/60 transition-colors duration-300"
           >
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-5">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4 sm:mb-5">
               Instagram
             </span>
-            <span className="font-sans text-xl sm:text-2xl font-black text-foreground group-hover:text-gold transition-colors block leading-tight">
+            <span className="font-sans text-base sm:text-xl md:text-2xl font-black text-foreground group-hover:text-gold transition-colors block leading-tight">
               @kingicecream.india
             </span>
-            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+            <span className="font-sans text-[11px] sm:text-xs text-muted-foreground mt-2 block">
               Behind the scenes
             </span>
           </a>
         </div>
       </section>
 
-      {/* Address + Hours — two column boxes */}
-      <section className="pb-12 sm:pb-16 px-4 sm:px-6 md:px-10 lg:px-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-          <div className="p-6 sm:p-8 rounded-2xl border border-border bg-background">
+      {/* Address + Hours — edge-to-edge touching */}
+      <section className="border-l border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="p-5 sm:p-7 md:p-10 border-r border-b border-border">
             <div className="flex items-center gap-4 mb-5">
               <span className="h-[1px] w-8 bg-gold" />
               <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
                 Head Office
               </span>
             </div>
-            <h2 className="font-sans font-black text-lg sm:text-xl text-foreground mb-3 leading-tight">
+            <h2 className="font-sans font-black text-base sm:text-lg md:text-xl text-foreground mb-3 leading-tight">
               Vijaykant Dairy &amp; Food Products Ltd.
             </h2>
-            <p className="font-serif text-base text-muted-foreground leading-[1.7]">
+            <p className="font-serif text-sm sm:text-base text-muted-foreground leading-[1.7]">
               Neginhal Village, Bailhongal Taluka,
               <br />
               Dist. Belagavi, Karnataka 591102
@@ -127,7 +127,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-2xl border border-border bg-background">
+          <div className="p-5 sm:p-7 md:p-10 border-r border-b border-border">
             <div className="flex items-center gap-4 mb-5">
               <span className="h-[1px] w-8 bg-gold" />
               <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
@@ -136,13 +136,13 @@ export default function ContactPage() {
             </div>
             <div className="space-y-4">
               <div className="flex justify-between items-baseline">
-                <span className="font-sans text-base font-bold text-foreground">Mon — Sat</span>
-                <span className="font-sans text-base text-muted-foreground">9 AM — 7 PM</span>
+                <span className="font-sans text-sm sm:text-base font-bold text-foreground">Mon — Sat</span>
+                <span className="font-sans text-sm sm:text-base text-muted-foreground">9 AM — 7 PM</span>
               </div>
               <div className="h-[1px] bg-border" />
               <div className="flex justify-between items-baseline">
-                <span className="font-sans text-base font-bold text-foreground">Sunday</span>
-                <span className="font-sans text-base text-muted-foreground">Closed</span>
+                <span className="font-sans text-sm sm:text-base font-bold text-foreground">Sunday</span>
+                <span className="font-sans text-sm sm:text-base text-muted-foreground">Closed</span>
               </div>
             </div>
           </div>

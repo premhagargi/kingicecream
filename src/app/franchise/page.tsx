@@ -88,9 +88,9 @@ export default function FranchisePage() {
       </section>
 
       {/* Why Franchise with King */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-10 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-2xl mb-10 sm:mb-14">
+      <section className="py-14 sm:py-20 bg-[#f5f0e8]/40">
+        <div className="px-4 sm:px-6 md:px-10 lg:px-16 mb-10 sm:mb-14">
+          <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-5">
               <span className="h-[1px] w-8 bg-gold" />
               <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
@@ -103,20 +103,22 @@ export default function FranchisePage() {
               <span className="font-serif italic font-normal text-foreground">dairy mastery.</span>
             </h2>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="border-t border-l border-border">
+          <div className="grid grid-cols-2 lg:grid-cols-4">
             {benefits.map((b) => (
               <div
                 key={b.title}
-                className="group p-6 sm:p-7 rounded-2xl border border-border bg-[#f5f0e8]/50 hover:bg-[#f5f0e8] hover:border-gold/60 hover:shadow-sm transition-all duration-300"
+                className="group p-5 sm:p-7 md:p-8 border-r border-b border-border hover:bg-background transition-colors duration-300"
               >
-                <div className="w-11 h-11 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-                  <b.icon className="w-5 h-5 text-gold" />
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gold/10 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-gold/20 transition-colors">
+                  <b.icon className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
                 </div>
-                <h3 className="font-sans text-base sm:text-lg font-bold text-foreground mb-2 leading-snug">
+                <h3 className="font-sans text-sm sm:text-base md:text-lg font-bold text-foreground mb-2 leading-snug">
                   {b.title}
                 </h3>
-                <p className="font-serif text-sm text-muted-foreground leading-relaxed">
+                <p className="font-serif text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   {b.desc}
                 </p>
               </div>
@@ -126,9 +128,9 @@ export default function FranchisePage() {
       </section>
 
       {/* How it works */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-10 lg:px-16 bg-[#f5f0e8]/60">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-2xl mb-10 sm:mb-14">
+      <section className="py-14 sm:py-20 bg-background">
+        <div className="px-4 sm:px-6 md:px-10 lg:px-16 mb-10 sm:mb-14">
+          <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-5">
               <span className="h-[1px] w-8 bg-gold" />
               <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
@@ -141,8 +143,10 @@ export default function FranchisePage() {
               <span className="font-serif italic font-normal text-foreground">opening day.</span>
             </h2>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="border-t border-l border-border">
+          <div className="grid grid-cols-2 lg:grid-cols-4">
             {[
               {
                 step: "01",
@@ -167,18 +171,18 @@ export default function FranchisePage() {
             ].map((s) => (
               <div
                 key={s.step}
-                className="group p-6 sm:p-7 rounded-2xl border border-border bg-background hover:border-gold/60 hover:shadow-sm transition-all duration-300"
+                className="group p-5 sm:p-7 md:p-8 border-r border-b border-border hover:bg-[#f5f0e8]/60 transition-colors duration-300"
               >
-                <div className="flex items-baseline justify-between mb-5">
-                  <span className="font-display text-3xl sm:text-4xl text-gold leading-none">
+                <div className="flex items-baseline justify-between mb-4 sm:mb-5">
+                  <span className="font-display text-2xl sm:text-3xl md:text-4xl text-gold leading-none">
                     {s.step}
                   </span>
-                  <span className="h-[1px] w-10 bg-border group-hover:bg-gold transition-colors" />
+                  <span className="h-[1px] w-8 sm:w-10 bg-border group-hover:bg-gold transition-colors" />
                 </div>
-                <h3 className="font-sans text-base sm:text-lg font-bold text-foreground mb-2 leading-snug">
+                <h3 className="font-sans text-sm sm:text-base md:text-lg font-bold text-foreground mb-2 leading-snug">
                   {s.title}
                 </h3>
-                <p className="font-serif text-sm text-muted-foreground leading-relaxed">
+                <p className="font-serif text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   {s.desc}
                 </p>
               </div>
@@ -188,8 +192,9 @@ export default function FranchisePage() {
       </section>
 
       {/* Enquiry Form */}
-      <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-foreground text-background">
-        <div className="max-w-2xl">
+      <section className="relative py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-gradient-to-br from-[#1B4D89] via-[#163E6F] to-[#0E2A4D] text-background overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-gold/10 blur-[120px] pointer-events-none" />
+        <div className="relative max-w-2xl">
           <div className="flex items-center gap-4 mb-6">
             <span className="h-[1px] w-8 bg-gold" />
             <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
@@ -199,7 +204,7 @@ export default function FranchisePage() {
 
           <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05]">
             Get
-            <span className="font-serif italic font-normal"> started.</span>
+            <span className="font-serif italic font-normal text-gold"> started.</span>
           </h2>
           <p className="font-serif text-base sm:text-lg text-background/80 mb-10 leading-relaxed max-w-lg">
             Fill in your details and our franchise team will get back to you
