@@ -31,6 +31,10 @@ export const metadata: Metadata = {
   },
   description: 'Premium ice cream from Vijaykant Dairy, Belagavi. Pure milk, no palm oil. Cones, Cups, Kulfi, and Family Packs across Karnataka, Goa, Maharashtra & Kerala.',
   keywords: ['King Ice Cream', 'Belagavi', 'premium ice cream', 'Vijaykant Dairy', 'Karnataka ice cream'],
+  icons: {
+    icon: '/images/logos/king logo.png',
+    apple: '/images/logos/king logo.png',
+  },
 };
 
 export default function RootLayout({
