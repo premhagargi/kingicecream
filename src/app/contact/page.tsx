@@ -188,26 +188,27 @@ export default function ContactPage() {
       </section>
 
       {/* WhatsApp CTA */}
-      <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-foreground text-background">
-        <div className="max-w-3xl">
+      <section className="relative py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-gradient-to-br from-[#F5C542] via-gold to-[#B8860B] text-foreground overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+        <div className="relative max-w-3xl">
           <div className="flex items-center gap-4 mb-6">
-            <span className="h-[1px] w-8 bg-gold" />
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
+            <span className="h-[1px] w-8 bg-foreground/70" />
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-foreground font-semibold">
               Quick Connect
             </span>
           </div>
-          <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05]">
+          <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05] text-foreground">
             Prefer
-            <span className="font-serif italic font-normal text-gold"> WhatsApp?</span>
+            <span className="font-serif italic font-normal"> WhatsApp?</span>
           </h2>
-          <p className="font-serif text-base sm:text-lg text-background/80 mb-10 leading-relaxed max-w-lg">
+          <p className="font-serif text-base sm:text-lg text-foreground/80 mb-10 leading-relaxed max-w-lg">
             Drop us a message for franchise enquiries, bulk orders, or just to say hello.
           </p>
           <a
             href="https://wa.me/919900255556"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] px-8 py-4 border border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300"
+            className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] px-8 py-4 bg-foreground text-background hover:bg-background hover:text-foreground border border-foreground transition-all duration-300"
           >
             Message us on WhatsApp
             <span className="h-[1px] w-6 bg-current" />

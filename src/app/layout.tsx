@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google';
+import { Geist, Geist_Mono, Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import LenisProvider from '@/components/LenisProvider';
@@ -21,6 +21,12 @@ const geistMono = Geist_Mono({
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
   display: 'swap',
 });
 
@@ -94,7 +100,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${playfair.variable} ${inter.variable}`}>
       <head>
         {/* Preload key Nohemi font weights for performance */}
         <link rel="preload" href="/fonts/Nohemi-Font/Nohemi-Bold-BF6438cc577b524.woff" as="font" type="font/woff" crossOrigin="anonymous" />

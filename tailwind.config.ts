@@ -25,6 +25,7 @@ export default {
         display: ['var(--font-geist)', 'system-ui', 'sans-serif'],
         headline: ['var(--font-geist)', 'system-ui', 'sans-serif'],
         serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        inter: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         sans: ['var(--font-geist)', 'system-ui', 'sans-serif'],
         body: ['var(--font-geist)', 'system-ui', 'sans-serif'],
         code: ['var(--font-geist-mono)', 'monospace'],

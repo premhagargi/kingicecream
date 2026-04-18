@@ -63,15 +63,15 @@ export function StorySection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="md:col-span-5 flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-16 py-10 md:py-0"
         >
-          <p className="font-serif text-lg sm:text-xl text-muted-foreground leading-relaxed">
+          <p className="font-inter text-base sm:text-lg text-muted-foreground leading-relaxed tracking-tight">
             From 2,00,000 litres of milk procured daily across 1,500+ villages
             to our 12-acre facility in Belagavi — every scoop of King Ice Cream
             carries the legacy of 40,000+ farmer families.
           </p>
-          <p className="font-serif text-lg sm:text-xl text-muted-foreground leading-relaxed mt-6">
+          <p className="font-inter text-base sm:text-lg text-muted-foreground leading-relaxed tracking-tight mt-6">
             No shortcuts. No palm oil.
             <br />
-            <span className="text-foreground font-medium not-italic">
+            <span className="text-foreground font-semibold">
               Just pure, honest indulgence.
             </span>
           </p>
