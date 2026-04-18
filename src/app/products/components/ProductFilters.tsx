@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 const categories = ['CONES', 'CUPS', 'KULFI', 'STICKS', 'FAMILY PACKS', 'SUNDAES', 'SIP UPS', 'ALL'];
-const filters = ['CHOCOLATE', 'FRUIT', 'TRADITIONAL', 'PREMIUM', 'NUTTY', 'CLASSIC'];
+const filters: string[] = [];
 
 type ProductFiltersProps = {
   activeCategory: string;
@@ -49,7 +49,7 @@ export function ProductFilters({ activeCategory, setActiveCategory, activeFilter
                   "font-serif italic text-xs sm:text-sm md:text-lg whitespace-nowrap transition-all duration-300 py-2",
                   activeCategory === category
                     ? 'text-foreground font-semibold not-italic font-sans'
-                    : 'text-muted-foreground/40 hover:text-muted-foreground'
+                    : 'text-muted-foreground hover:text-muted-foreground'
                 )}
               >
                 {category}
@@ -68,7 +68,7 @@ export function ProductFilters({ activeCategory, setActiveCategory, activeFilter
                 "px-3 py-1 text-[9px] sm:text-[10px] font-sans uppercase tracking-[0.1em] border rounded-full transition-all duration-200",
                 activeFilters.includes(filter)
                   ? 'border-foreground bg-foreground text-background'
-                  : 'border-foreground/15 text-muted-foreground/50 hover:border-foreground/40 hover:text-foreground'
+                  : 'border-foreground/15 text-muted-foreground hover:border-foreground/40 hover:text-foreground'
               )}
             >
               {filter}

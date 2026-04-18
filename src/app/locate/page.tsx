@@ -54,27 +54,27 @@ export default function LocatePage() {
       <Header />
 
       {/* Hero — minimal, map-focused */}
-      <section className="bg-black pt-32 sm:pt-40 pb-8 sm:pb-10 px-6 sm:px-10 md:px-16 lg:px-24">
+      <section className="bg-[#2596be] pt-32 sm:pt-40 pb-8 sm:pb-10 px-6 sm:px-10 md:px-16 lg:px-24">
         <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-4 block">
           15,000+ Outlets
         </span>
         <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl text-white leading-[0.95]">
           Find Us
           <br />
-          <span className="font-serif italic font-normal text-white/50">
+          <span className="font-serif italic font-normal text-white">
             Near You
           </span>
         </h1>
       </section>
 
       {/* Map */}
-      <section className="bg-black">
+      <section className="bg-[#f3eee8]">
         <div className="aspect-[21/9] sm:aspect-[21/7] w-full">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245615.67498339!2d74.4!3d15.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65f1e1c0a7e5%3A0x4b1e3e1c2e3f2b2!2sBelagavi%2C+Karnataka!5e0!3m2!1sen!2sin!4v1700000000000"
             width="100%"
             height="100%"
-            style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) grayscale(20%)" }}
+            style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -157,7 +157,7 @@ export default function LocatePage() {
           <h2 className="font-sans font-bold text-xl sm:text-2xl mb-4">
             Can&apos;t Find Us?
           </h2>
-          <p className="font-serif italic text-background/50 mb-8">
+          <p className="font-serif italic text-background mb-8">
             We&apos;re expanding every day. If King Ice Cream isn&apos;t in your
             neighbourhood yet, let us know — or consider opening a franchise.
           </p>
@@ -171,7 +171,7 @@ export default function LocatePage() {
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] text-background/50 hover:text-background transition-colors"
+              className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.3em] text-background hover:text-background transition-colors"
             >
               <span className="h-[1px] w-6 bg-background/30" />
               Contact Us

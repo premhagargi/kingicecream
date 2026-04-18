@@ -38,7 +38,7 @@ export function ProductShowcase() {
               transition={{ duration: 0.8 }}
               className="mt-2"
             >
-              <span className="font-serif italic font-normal text-2xl sm:text-4xl md:text-5xl text-foreground/70">Royal Creations</span>
+              <span className="font-serif italic font-normal text-2xl sm:text-4xl md:text-5xl text-foreground">Royal Creations</span>
             </motion.h2>
           </div>
 
@@ -95,7 +95,7 @@ export function ProductShowcase() {
                 <h3 className="font-sans text-white text-sm sm:text-base md:text-lg font-bold leading-tight">
                   {product.name}
                 </h3>
-                <p className="font-serif italic text-white/60 text-xs sm:text-sm mt-1 line-clamp-1 hidden sm:block">
+                <p className="font-serif italic text-white text-xs sm:text-sm mt-1 line-clamp-1 hidden sm:block">
                   {product.description}
                 </p>
               </div>

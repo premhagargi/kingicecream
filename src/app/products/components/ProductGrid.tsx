@@ -18,7 +18,7 @@ export function ProductGrid({ products }: { products: ImagePlaceholder[] }) {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
         {/* Product count */}
         <div className="flex items-center justify-between mb-6 sm:mb-8">
-          <span className="font-sans text-[10px] text-muted-foreground/50 uppercase tracking-[0.2em]">
+          <span className="font-sans text-[10px] text-muted-foreground uppercase tracking-[0.2em]">
             {products.length} {products.length === 1 ? 'product' : 'products'}
           </span>
         </div>

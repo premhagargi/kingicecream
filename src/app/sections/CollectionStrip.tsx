@@ -30,7 +30,7 @@ export function CollectionStrip() {
                 className="group block py-6 sm:py-8 pr-4 sm:pr-6 border-r border-border last:border-r-0"
                 data-cursor-text="View"
               >
-                <span className="font-sans text-[10px] text-muted-foreground/50 block mb-2">
+                <span className="font-sans text-[10px] text-muted-foreground block mb-2">
                   {collection.count} products
                 </span>
                 <span className="font-sans text-sm sm:text-base md:text-xl font-semibold text-foreground group-hover:text-gold transition-colors duration-300 block leading-tight">

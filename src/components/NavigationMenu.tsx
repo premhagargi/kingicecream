@@ -58,14 +58,14 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                   className="group flex items-center justify-between py-5 sm:py-6"
                 >
                   <div className="flex items-baseline gap-4 sm:gap-6">
-                    <span className="font-sans text-[10px] text-white/20 tabular-nums">
+                    <span className="font-sans text-[10px] text-white/70 tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span
                       className={`font-sans text-lg sm:text-xl md:text-3xl font-bold uppercase tracking-normal transition-colors duration-300 ${
                         hovered === null || hovered === i
                           ? "text-white"
-                          : "text-white/20"
+                          : "text-white/70"
                       }`}
                     >
                       {item.text}
@@ -73,7 +73,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <span className="hidden sm:block font-serif italic text-sm text-white/30 group-hover:text-white/50 transition-colors">
+                    <span className="hidden sm:block font-serif italic text-sm text-white group-hover:text-white transition-colors">
                       {item.desc}
                     </span>
                     <span className="w-0 group-hover:w-8 h-[1px] bg-gold transition-all duration-400 overflow-hidden" />
@@ -99,7 +99,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans text-[11px] uppercase tracking-[0.15em] text-white/30 hover:text-gold transition-colors duration-300"
+                className="font-sans text-[11px] uppercase tracking-[0.15em] text-white hover:text-gold transition-colors duration-300"
               >
                 {link.text}
               </a>

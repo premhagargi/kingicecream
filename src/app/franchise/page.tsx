@@ -44,7 +44,7 @@ export default function FranchisePage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-black">
+      <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-[#2596be]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
           style={{
@@ -53,7 +53,7 @@ export default function FranchisePage() {
           }}
           data-ai-hint="ice cream parlour storefront"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2596be] via-[#2596be]/50 to-transparent" />
 
         <div className="relative z-10 px-6 sm:px-10 md:px-16 lg:px-24 pb-16 sm:pb-20 pt-32">
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-4 block">
@@ -62,11 +62,11 @@ export default function FranchisePage() {
           <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl text-white leading-[0.95]">
             Own a King
             <br />
-            <span className="font-serif italic font-normal text-white/60">
+            <span className="font-serif italic font-normal text-white">
               Ice Cream Parlour
             </span>
           </h1>
-          <p className="font-serif text-white/40 text-base sm:text-lg mt-6 max-w-lg leading-relaxed">
+          <p className="font-serif text-white text-base sm:text-lg mt-6 max-w-lg leading-relaxed">
             Join India&apos;s fastest-growing premium ice cream brand — backed
             by 20 years of Vijaykant Dairy&apos;s manufacturing excellence.
           </p>
@@ -157,7 +157,7 @@ export default function FranchisePage() {
           <h2 className="font-sans font-bold text-xl sm:text-2xl md:text-3xl mb-4">
             Get Started
           </h2>
-          <p className="font-serif italic text-background/50 mb-10">
+          <p className="font-serif italic text-background mb-10">
             Fill in your details and our franchise team will get back to you
             within 48 hours.
           </p>

@@ -15,7 +15,7 @@ export default function AboutUsPage() {
       <Header />
 
       {/* Hero — full height, just text, no image */}
-      <section className="min-h-screen flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-24 bg-black relative">
+      <section className="min-h-screen flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-24 bg-[#2596be] relative">
         <div className="max-w-5xl">
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-6">
             Our Story
@@ -23,7 +23,7 @@ export default function AboutUsPage() {
           <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05]">
             Two decades of
             <br />
-            <span className="font-serif italic font-normal text-white/50">dairy mastery.</span>
+            <span className="font-serif italic font-normal text-white">dairy mastery.</span>
             <br />
             One crown to
             <br />
@@ -38,7 +38,7 @@ export default function AboutUsPage() {
       {/* Opening statement */}
       <section className="py-20 sm:py-28 px-6 sm:px-10 md:px-16 lg:px-24">
         <div className="max-w-3xl">
-          <p className="font-serif text-xl sm:text-2xl md:text-3xl leading-relaxed text-foreground/70">
+          <p className="font-serif text-xl sm:text-2xl md:text-3xl leading-relaxed text-foreground">
             Before King Ice Cream ever reached your hands, we spent years perfecting
             the craft for someone else — producing millions of litres to the exacting
             standards of India&apos;s largest FMCG company. When we launched our own
@@ -83,7 +83,7 @@ export default function AboutUsPage() {
             <h2 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl leading-tight">
               Rooted in
               <br />
-              <span className="font-serif italic font-normal text-foreground/50">Belagavi</span>
+              <span className="font-serif italic font-normal text-foreground">Belagavi</span>
             </h2>
           </div>
 
@@ -110,7 +110,7 @@ export default function AboutUsPage() {
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-6">
             Our Promise
           </span>
-          <h2 className="font-serif italic text-xl sm:text-2xl md:text-3xl text-background/60 leading-relaxed max-w-3xl mb-16">
+          <h2 className="font-serif italic text-xl sm:text-2xl md:text-3xl text-background leading-relaxed max-w-3xl mb-16">
             The same discipline that satisfied Hindustan Unilever now goes
             exclusively into King Ice Cream.
           </h2>
@@ -149,7 +149,7 @@ export default function AboutUsPage() {
               <h3 className="font-sans font-semibold text-sm sm:text-base text-background mb-3">
                 {item.title}
               </h3>
-              <p className="font-serif text-sm text-background/40 leading-relaxed">
+              <p className="font-serif text-sm text-background leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -166,7 +166,7 @@ export default function AboutUsPage() {
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-6">
             Reach
           </span>
-          <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-foreground/70 leading-relaxed">
+          <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-foreground leading-relaxed">
             Karnataka. Maharashtra. Goa. Kerala.
             <br />
             <span className="text-foreground not-italic font-sans font-black">
@@ -185,7 +185,7 @@ export default function AboutUsPage() {
           <h2 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl leading-tight mb-8">
             More than
             <br />
-            <span className="font-serif italic font-normal text-foreground/50">just ice cream.</span>
+            <span className="font-serif italic font-normal text-foreground">just ice cream.</span>
           </h2>
           <p className="font-serif text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
             Every King Ice Cream you enjoy supports 40,000+ farming families. Our daily

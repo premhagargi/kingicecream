@@ -22,7 +22,7 @@ export function WhyKingSection() {
         >
           <span className="h-[1px] w-8 bg-gold" />
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
-            Why choose King
+            The King Difference
           </span>
         </motion.div>
       </div>
@@ -34,7 +34,7 @@ export function WhyKingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif italic text-lg sm:text-xl md:text-3xl lg:text-4xl leading-snug max-w-3xl text-foreground/70"
+          className="font-serif italic text-lg sm:text-xl md:text-3xl lg:text-4xl leading-snug max-w-3xl text-foreground"
         >
           Two decades of dairy mastery.
           <br className="hidden sm:block" />
@@ -61,10 +61,10 @@ export function WhyKingSection() {
               <div className="font-sans text-lg sm:text-xl md:text-2xl lg:text-5xl xl:text-6xl font-black text-black leading-none">
                 {stat.number}
               </div>
-              <div className="font-sans text-[9px] sm:text-[10px] lg:text-sm xl:text-base uppercase tracking-normal mt-1.5 lg:mt-3 text-black/70">
+              <div className="font-sans text-[9px] sm:text-[10px] lg:text-sm xl:text-base uppercase tracking-normal mt-1.5 lg:mt-3 text-black">
                 {stat.label}
               </div>
-              <p className="font-serif italic text-black/40 text-[9px] sm:text-[10px] mt-1 hidden sm:block">
+              <p className="font-serif italic text-black text-[9px] sm:text-[10px] mt-1 hidden sm:block">
                 {stat.detail}
               </p>
             </motion.div>

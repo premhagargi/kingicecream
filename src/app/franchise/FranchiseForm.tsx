@@ -17,7 +17,7 @@ export function FranchiseForm() {
         <h3 className="font-sans text-base font-semibold uppercase tracking-normal mb-2">
           Thank You
         </h3>
-        <p className="font-serif italic text-background/50">
+        <p className="font-serif italic text-background">
           Our franchise team will reach out within 48 hours.
         </p>
       </div>
@@ -28,7 +28,7 @@ export function FranchiseForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background/50 block mb-2">
+          <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background block mb-2">
             Full Name *
           </label>
           <input
@@ -39,7 +39,7 @@ export function FranchiseForm() {
           />
         </div>
         <div>
-          <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background/50 block mb-2">
+          <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background block mb-2">
             Phone *
           </label>
           <input
@@ -52,7 +52,7 @@ export function FranchiseForm() {
       </div>
 
       <div>
-        <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background/50 block mb-2">
+        <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background block mb-2">
           Email *
         </label>
         <input
@@ -64,7 +64,7 @@ export function FranchiseForm() {
       </div>
 
       <div>
-        <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background/50 block mb-2">
+        <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background block mb-2">
           Preferred City / Location *
         </label>
         <input
@@ -76,7 +76,7 @@ export function FranchiseForm() {
       </div>
 
       <div>
-        <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background/50 block mb-2">
+        <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background block mb-2">
           Investment Budget
         </label>
         <select className="w-full bg-transparent border-b border-background/20 focus:border-gold py-3 text-background font-serif outline-none transition-colors appearance-none">
@@ -89,7 +89,7 @@ export function FranchiseForm() {
       </div>
 
       <div>
-        <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background/50 block mb-2">
+        <label className="font-sans text-[10px] uppercase tracking-[0.3em] text-background block mb-2">
           Message (optional)
         </label>
         <textarea
