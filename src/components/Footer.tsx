@@ -99,14 +99,25 @@ export function Footer() {
       </div>
 
       {/* Manufacturer & legal details — navy ↔ gold gradient, unique 210° angle, full-bleed with upward feather */}
-      <div className="relative mt-10 -mx-4 sm:-mx-6 lg:-mx-8">
-        {/* Upward bleed — gradient fades to transparent above the block */}
+      <div className="relative mt-16 sm:mt-20 -mx-4 sm:-mx-6 lg:-mx-8">
+        {/* Upward bleed — gradient fades to transparent above the block with eased curve */}
         <div
           aria-hidden
-          className="absolute -top-8 left-0 right-0 h-8 bg-[linear-gradient(210deg,#1B4D89_0%,#26609E_35%,#D4A017_100%)] pointer-events-none"
+          className="absolute -top-24 sm:-top-28 left-0 right-0 h-24 sm:h-28 bg-[linear-gradient(210deg,#1B4D89_0%,#26609E_35%,#D4A017_100%)] pointer-events-none"
           style={{
-            maskImage: "linear-gradient(to top, black, transparent)",
-            WebkitMaskImage: "linear-gradient(to top, black, transparent)",
+            maskImage:
+              "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 75%, rgba(0,0,0,0) 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 75%, rgba(0,0,0,0) 100%)",
+          }}
+        />
+        {/* Soft ambient hue — a whisper of gold/navy glow tying the transition */}
+        <div
+          aria-hidden
+          className="absolute -top-40 sm:-top-48 left-0 right-0 h-40 sm:h-48 pointer-events-none opacity-30"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 60% at 30% 100%, rgba(212,160,23,0.35), transparent 70%), radial-gradient(ellipse 70% 50% at 80% 100%, rgba(27,77,137,0.3), transparent 70%)",
           }}
         />
 
