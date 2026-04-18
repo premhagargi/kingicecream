@@ -7,7 +7,7 @@ const milestones = [
     year: "2004",
     title: "Vijaykant Dairy Founded",
     description:
-      "Incorporated in Belagavi, Karnataka. Started with 5,000 litres of milk per day from a modest facility in Neginhal village.",
+      "Founded by Late Shri Shivkant Sidnal in Belagavi, Karnataka. Started with 5,000 litres of milk per day from a modest facility in Neginhal village — a vision that would grow into one of India's most respected regional dairies.",
   },
   {
     year: "2010s",

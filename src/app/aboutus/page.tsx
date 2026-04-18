@@ -140,9 +140,8 @@ export default function AboutUsPage() {
               </span>
             </div>
             <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl text-background leading-[1.05]">
-              The discipline that built
-              <br />
-              <span className="font-serif italic font-normal text-gold">a nation&apos;s favourite.</span>
+              What we
+              <span className="font-serif italic font-normal text-gold"> stand for.</span>
             </h2>
           </div>
 

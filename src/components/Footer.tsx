@@ -14,7 +14,7 @@ export function Footer() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="bg-background text-foreground py-12 px-4 sm:px-6 lg:px-8"
+      className="bg-background text-foreground pt-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start">
@@ -98,32 +98,44 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Manufacturer & legal details — navy ↔ gold gradient, unique 210° angle */}
-      <div className="mt-10 relative overflow-hidden bg-[linear-gradient(210deg,#1B4D89_0%,#26609E_35%,#D4A017_100%)] text-background">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
-        <div className="relative px-4 sm:px-6 pt-10 pb-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-3 font-semibold">
-              Manufactured &amp; Marketed By
-            </p>
-            <p className="font-sans text-base sm:text-lg font-black text-background">
-              Vijaykant Dairy &amp; Food Products Ltd.
-            </p>
-            <p className="font-serif text-xs sm:text-sm text-background/85 mt-2 leading-relaxed">
-              Neginhal Village, Bailhongal Taluka, Dist. Belagavi (Karnataka) 591102
-            </p>
-            <p className="font-sans text-xs sm:text-sm text-background/85 mt-3">
-              Customer Care:{" "}
-              <a href="tel:9900255556" className="text-background font-bold hover:text-gold transition-colors">
-                99002 55556
-              </a>
+      {/* Manufacturer & legal details — navy ↔ gold gradient, unique 210° angle, full-bleed with upward feather */}
+      <div className="relative mt-10 -mx-4 sm:-mx-6 lg:-mx-8">
+        {/* Upward bleed — gradient fades to transparent above the block */}
+        <div
+          aria-hidden
+          className="absolute -top-8 left-0 right-0 h-8 bg-[linear-gradient(210deg,#1B4D89_0%,#26609E_35%,#D4A017_100%)] pointer-events-none"
+          style={{
+            maskImage: "linear-gradient(to top, black, transparent)",
+            WebkitMaskImage: "linear-gradient(to top, black, transparent)",
+          }}
+        />
+
+        <div className="relative overflow-hidden bg-[linear-gradient(210deg,#1B4D89_0%,#26609E_35%,#D4A017_100%)] text-background">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+          <div className="relative px-4 sm:px-6 pt-10 pb-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-3 font-semibold">
+                Manufactured &amp; Marketed By
+              </p>
+              <p className="font-sans text-base sm:text-lg font-black text-background">
+                Vijaykant Dairy &amp; Food Products Ltd.
+              </p>
+              <p className="font-serif text-xs sm:text-sm text-background/85 mt-2 leading-relaxed">
+                Neginhal Village, Bailhongal Taluka, Dist. Belagavi (Karnataka) 591102
+              </p>
+              <p className="font-sans text-xs sm:text-sm text-background/85 mt-3">
+                Customer Care:{" "}
+                <a href="tel:9900255556" className="text-background font-bold hover:text-gold transition-colors">
+                  99002 55556
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="relative border-t border-background/15 px-4 py-5 text-center">
+            <p className="font-sans text-xs text-background/80">
+              &copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.
             </p>
           </div>
-        </div>
-        <div className="relative border-t border-background/15 px-4 py-5 text-center">
-          <p className="font-sans text-xs text-background/80">
-            &copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.
-          </p>
         </div>
       </div>
     </motion.footer>
