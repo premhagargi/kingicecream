@@ -10,9 +10,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Franchise — King Ice Cream",
+  title: "Franchise Opportunities — Own a King Ice Cream Parlour",
   description:
-    "Partner with King Ice Cream. Open a franchise backed by Vijaykant Dairy — 20 years of dairy mastery, HUL-grade manufacturing, and 15,000+ outlets.",
+    "Open a King Ice Cream franchise. Backed by Vijaykant Dairy's 20 years of dairy expertise, HUL-grade manufacturing, end-to-end supply chain, and a brand already in 15,000+ outlets across 4 states. Apply today.",
+  openGraph: {
+    title: "Own a King Ice Cream Franchise",
+    description: "Partner with India's fastest-growing premium ice cream brand. HUL-grade quality, proven demand across 15,000+ outlets, full training & supply chain support.",
+    url: "https://www.kingicecream.com/franchise",
+    images: [{ url: "/images/logos/king logo.png", width: 1200, height: 630, alt: "King Ice Cream Franchise" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Own a King Ice Cream Franchise",
+    description: "Partner with India's fastest-growing premium ice cream brand. HUL-grade quality, 15,000+ outlets, full support.",
+  },
+  alternates: {
+    canonical: "https://www.kingicecream.com/franchise",
+  },
 };
 
 const benefits = [
@@ -44,7 +58,7 @@ export default function FranchisePage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-[#2596be]">
+      <section className="relative min-h-[50vh] sm:min-h-[55vh] flex items-end overflow-hidden bg-gradient-to-r from-[#1B4D89] to-[#D4A017]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
           style={{
@@ -53,10 +67,10 @@ export default function FranchisePage() {
           }}
           data-ai-hint="ice cream parlour storefront"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2596be] via-[#2596be]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D89] via-[#1B4D89]/50 to-transparent" />
 
-        <div className="relative z-10 px-6 sm:px-10 md:px-16 lg:px-24 pb-16 sm:pb-20 pt-32">
-          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-4 block">
+        <div className="relative z-10 px-6 sm:px-10 md:px-16 lg:px-24 pb-12 sm:pb-16 pt-28">
+          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-3 block">
             Partner With Us
           </span>
           <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl text-white leading-[0.95]">
@@ -66,7 +80,7 @@ export default function FranchisePage() {
               Ice Cream Parlour
             </span>
           </h1>
-          <p className="font-serif text-white text-base sm:text-lg mt-6 max-w-lg leading-relaxed">
+          <p className="font-serif text-white text-sm sm:text-base mt-4 max-w-lg leading-relaxed">
             Join India&apos;s fastest-growing premium ice cream brand — backed
             by 20 years of Vijaykant Dairy&apos;s manufacturing excellence.
           </p>
@@ -74,70 +88,99 @@ export default function FranchisePage() {
       </section>
 
       {/* Why Franchise with King */}
-      <section className="border-b border-border">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {benefits.map((b, i) => (
-            <div
-              key={b.title}
-              className="p-6 sm:p-8 md:p-10 border-b sm:border-b-0 sm:border-r border-border last:border-r-0 [&:nth-child(2)]:border-r-0 sm:[&:nth-child(2)]:border-r lg:[&:nth-child(2)]:border-r"
-            >
-              <b.icon className="w-5 h-5 text-gold mb-5" />
-              <h3 className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal mb-2">
-                {b.title}
-              </h3>
-              <p className="font-serif text-sm text-muted-foreground leading-relaxed">
-                {b.desc}
-              </p>
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mb-10 sm:mb-14">
+            <div className="flex items-center gap-4 mb-5">
+              <span className="h-[1px] w-8 bg-gold" />
+              <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
+                Why Partner With Us
+              </span>
             </div>
-          ))}
+            <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl leading-[1.05] text-foreground">
+              Built on twenty years of
+              <br />
+              <span className="font-serif italic font-normal text-foreground">dairy mastery.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {benefits.map((b) => (
+              <div
+                key={b.title}
+                className="group p-6 sm:p-7 rounded-2xl border border-border bg-[#f5f0e8]/50 hover:bg-[#f5f0e8] hover:border-gold/60 hover:shadow-sm transition-all duration-300"
+              >
+                <div className="w-11 h-11 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
+                  <b.icon className="w-5 h-5 text-gold" />
+                </div>
+                <h3 className="font-sans text-base sm:text-lg font-bold text-foreground mb-2 leading-snug">
+                  {b.title}
+                </h3>
+                <p className="font-serif text-sm text-muted-foreground leading-relaxed">
+                  {b.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-4 mb-8">
-            <span className="h-[1px] w-8 bg-gold" />
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
-              How it works
-            </span>
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-10 lg:px-16 bg-[#f5f0e8]/60">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mb-10 sm:mb-14">
+            <div className="flex items-center gap-4 mb-5">
+              <span className="h-[1px] w-8 bg-gold" />
+              <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
+                The Journey
+              </span>
+            </div>
+            <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl leading-[1.05] text-foreground">
+              From enquiry to
+              <br />
+              <span className="font-serif italic font-normal text-foreground">opening day.</span>
+            </h2>
           </div>
 
-          <div className="space-y-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {[
               {
                 step: "01",
-                title: "Submit Your Interest",
-                desc: "Fill out the form below with your details and preferred location. Our franchise team reviews every application.",
+                title: "Submit Interest",
+                desc: "Fill the form with your details and preferred location.",
               },
               {
                 step: "02",
                 title: "Discovery Call",
-                desc: "We'll schedule a call to discuss investment details, location requirements, and answer all your questions.",
+                desc: "We discuss investment, location needs and your questions.",
               },
               {
                 step: "03",
                 title: "Site & Agreement",
-                desc: "Once approved, we help you find the right location, finalise the agreement, and begin store design.",
+                desc: "We help finalise location, agreement and store design.",
               },
               {
                 step: "04",
                 title: "Launch",
-                desc: "Full training, stock delivery, marketing launch support — your King Ice Cream parlour opens its doors.",
+                desc: "Training, stock delivery and launch marketing support.",
               },
             ].map((s) => (
-              <div key={s.step} className="flex gap-6">
-                <span className="font-display text-2xl sm:text-3xl text-gold/30 shrink-0 leading-none">
-                  {s.step}
-                </span>
-                <div>
-                  <h3 className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal mb-2">
-                    {s.title}
-                  </h3>
-                  <p className="font-serif text-muted-foreground leading-relaxed">
-                    {s.desc}
-                  </p>
+              <div
+                key={s.step}
+                className="group p-6 sm:p-7 rounded-2xl border border-border bg-background hover:border-gold/60 hover:shadow-sm transition-all duration-300"
+              >
+                <div className="flex items-baseline justify-between mb-5">
+                  <span className="font-display text-3xl sm:text-4xl text-gold leading-none">
+                    {s.step}
+                  </span>
+                  <span className="h-[1px] w-10 bg-border group-hover:bg-gold transition-colors" />
                 </div>
+                <h3 className="font-sans text-base sm:text-lg font-bold text-foreground mb-2 leading-snug">
+                  {s.title}
+                </h3>
+                <p className="font-serif text-sm text-muted-foreground leading-relaxed">
+                  {s.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -147,17 +190,18 @@ export default function FranchisePage() {
       {/* Enquiry Form */}
       <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-foreground text-background">
         <div className="max-w-2xl">
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-6">
             <span className="h-[1px] w-8 bg-gold" />
             <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
               Franchise Enquiry
             </span>
           </div>
 
-          <h2 className="font-sans font-bold text-xl sm:text-2xl md:text-3xl mb-4">
-            Get Started
+          <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05]">
+            Get
+            <span className="font-serif italic font-normal"> started.</span>
           </h2>
-          <p className="font-serif italic text-background mb-10">
+          <p className="font-serif text-base sm:text-lg text-background/80 mb-10 leading-relaxed max-w-lg">
             Fill in your details and our franchise team will get back to you
             within 48 hours.
           </p>

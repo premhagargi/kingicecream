@@ -22,7 +22,7 @@ export function WhyKingSection() {
         >
           <span className="h-[1px] w-8 bg-gold" />
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
-            The King Difference
+            By the Numbers
           </span>
         </motion.div>
       </div>

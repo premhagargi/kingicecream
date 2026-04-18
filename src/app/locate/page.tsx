@@ -4,9 +4,23 @@ import { Footer } from "@/components/Footer";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Find a Parlour — King Ice Cream",
+  title: "Find a Parlour Near You — 15,000+ Outlets",
   description:
-    "Find a King Ice Cream parlour or retail outlet near you. Available across Karnataka, Maharashtra, Goa & Kerala.",
+    "Find a King Ice Cream parlour or retail outlet near you. Available across 15,000+ stores in Karnataka (Belagavi, Hubli, Mangaluru, Bengaluru), Goa (Panaji, Margao), Maharashtra (Kolhapur, Pune), and Kerala. Order on Zomato & Swiggy.",
+  openGraph: {
+    title: "Find King Ice Cream Near You",
+    description: "15,000+ outlets across Karnataka, Goa, Maharashtra & Kerala. Find your nearest King Ice Cream parlour or order online via Zomato & Swiggy.",
+    url: "https://www.kingicecream.com/locate",
+    images: [{ url: "/images/logos/king logo.png", width: 1200, height: 630, alt: "Find King Ice Cream" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Find King Ice Cream Near You — 15,000+ Outlets",
+    description: "Find your nearest King Ice Cream parlour across 4 states.",
+  },
+  alternates: {
+    canonical: "https://www.kingicecream.com/locate",
+  },
 };
 
 const regions = [
@@ -54,15 +68,18 @@ export default function LocatePage() {
       <Header />
 
       {/* Hero — minimal, map-focused */}
-      <section className="bg-[#2596be] pt-32 sm:pt-40 pb-8 sm:pb-10 px-6 sm:px-10 md:px-16 lg:px-24">
-        <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-4 block">
-          15,000+ Outlets
-        </span>
-        <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl text-white leading-[0.95]">
+      <section className="bg-gradient-to-r from-[#1B4D89] to-[#D4A017] pt-28 sm:pt-32 pb-10 sm:pb-14 px-6 sm:px-10 md:px-16 lg:px-24">
+        <div className="flex items-center gap-4 mb-5">
+          <span className="h-[1px] w-8 bg-gold" />
+          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
+            15,000+ Outlets across 4 states
+          </span>
+        </div>
+        <h1 className="font-sans font-black text-4xl sm:text-6xl md:text-7xl text-white leading-[0.95]">
           Find Us
           <br />
           <span className="font-serif italic font-normal text-white">
-            Near You
+            near you.
           </span>
         </h1>
       </section>
@@ -84,80 +101,116 @@ export default function LocatePage() {
       </section>
 
       {/* Regions */}
-      <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24">
-        <div className="flex items-center gap-4 mb-12">
-          <span className="h-[1px] w-8 bg-gold" />
-          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
-            Available in 4 states
-          </span>
-        </div>
+      <section className="py-14 sm:py-20 px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mb-10 sm:mb-14">
+            <div className="flex items-center gap-4 mb-5">
+              <span className="h-[1px] w-8 bg-gold" />
+              <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
+                Coverage
+              </span>
+            </div>
+            <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl leading-[1.05] text-foreground">
+              Available across
+              <br />
+              <span className="font-serif italic font-normal">four states.</span>
+            </h2>
+          </div>
 
-        <div className="space-y-16">
-          {regions.map((region) => (
-            <div key={region.state}>
-              <h2 className="font-sans text-base sm:text-lg md:text-xl font-bold uppercase tracking-normal mb-4">
-                {region.state}
-              </h2>
+          <div className="space-y-10 sm:space-y-12">
+            {regions.map((region) => (
+              <div key={region.state}>
+                <div className="flex items-baseline justify-between mb-5 pb-4 border-b border-border">
+                  <h3 className="font-sans text-xl sm:text-2xl md:text-3xl font-black text-foreground">
+                    {region.state}
+                  </h3>
+                  <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                    {region.cities.length} cities
+                  </span>
+                </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0 border-t border-border">
-                {region.cities.map((city) => (
-                  <div
-                    key={city.name}
-                    className="flex items-start gap-3 py-5 pr-6 border-b border-border"
-                  >
-                    <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-sans text-xs sm:text-sm uppercase tracking-wider block">
-                        {city.name}
-                      </span>
-                      <span className="font-sans text-xs text-muted-foreground">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                  {region.cities.map((city) => (
+                    <div
+                      key={city.name}
+                      className="group p-4 sm:p-5 rounded-2xl border border-border bg-background hover:border-gold/60 hover:shadow-sm transition-all duration-300"
+                    >
+                      <MapPin className="w-4 h-4 text-gold mb-3 group-hover:scale-110 transition-transform" />
+                      <div className="flex items-start justify-between gap-2">
+                        <span className="font-sans text-sm sm:text-base font-bold text-foreground leading-tight block">
+                          {city.name}
+                        </span>
+                        {"flagship" in city && city.flagship && (
+                          <span className="font-sans text-[9px] uppercase tracking-wider text-gold shrink-0">
+                            ★
+                          </span>
+                        )}
+                      </div>
+                      <span className="font-sans text-xs text-muted-foreground mt-1 block">
                         {city.outlets} outlets
                       </span>
-                      {"flagship" in city && city.flagship && (
-                        <span className="font-sans text-[9px] uppercase tracking-wider text-gold ml-2">
-                          Flagship
-                        </span>
-                      )}
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Also Available On */}
-      <section className="border-t border-border">
-        <div className="grid grid-cols-1 sm:grid-cols-3">
-          <div className="p-6 sm:p-10 border-b sm:border-b-0 sm:border-r border-border">
-            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-2">
+      {/* Also Available On — boxed grid */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-10 lg:px-16 bg-[#f5f0e8]/60">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+          <div className="p-6 sm:p-7 rounded-2xl border border-border bg-background">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4">
               Order Online
             </span>
-            <span className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal">Zomato</span>
+            <span className="font-sans text-xl sm:text-2xl font-black text-foreground block leading-tight">
+              Zomato
+            </span>
+            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+              Doorstep delivery
+            </span>
           </div>
-          <div className="p-6 sm:p-10 border-b sm:border-b-0 sm:border-r border-border">
-            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-2">
+          <div className="p-6 sm:p-7 rounded-2xl border border-border bg-background">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4">
               Retail Chains
             </span>
-            <span className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal">15,000+ Stores</span>
+            <span className="font-sans text-xl sm:text-2xl font-black text-foreground block leading-tight">
+              15,000+ Stores
+            </span>
+            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+              Across 4 states
+            </span>
           </div>
-          <div className="p-6 sm:p-10">
-            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-2">
+          <div className="p-6 sm:p-7 rounded-2xl border border-border bg-background">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4">
               King Parlours
             </span>
-            <span className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-normal">Exclusive Outlets</span>
+            <span className="font-sans text-xl sm:text-2xl font-black text-foreground block leading-tight">
+              Exclusive Outlets
+            </span>
+            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+              Full menu experience
+            </span>
           </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-foreground text-background">
-        <div className="max-w-2xl">
-          <h2 className="font-sans font-bold text-xl sm:text-2xl mb-4">
-            Can&apos;t Find Us?
+        <div className="max-w-3xl">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="h-[1px] w-8 bg-gold" />
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
+              Not Nearby Yet?
+            </span>
+          </div>
+          <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05]">
+            Can&apos;t find
+            <span className="font-serif italic font-normal text-gold"> us?</span>
           </h2>
-          <p className="font-serif italic text-background mb-8">
+          <p className="font-serif text-base sm:text-lg text-background/80 mb-10 leading-relaxed max-w-lg">
             We&apos;re expanding every day. If King Ice Cream isn&apos;t in your
             neighbourhood yet, let us know — or consider opening a franchise.
           </p>

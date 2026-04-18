@@ -97,6 +97,27 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Manufacturer & legal details */}
+      <div className="border-t border-border pt-8 pb-6 px-2">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground mb-3">
+            Manufactured &amp; Marketed By
+          </p>
+          <p className="font-sans text-sm sm:text-base font-bold text-foreground">
+            Vijaykant Dairy &amp; Food Products Ltd.
+          </p>
+          <p className="font-serif text-xs sm:text-sm text-muted-foreground mt-2 leading-relaxed">
+            Neginhal Village, Bailhongal Taluka, Dist. Belagavi (Karnataka) 591102
+          </p>
+          <p className="font-sans text-xs sm:text-sm text-muted-foreground mt-3">
+            Customer Care:{" "}
+            <a href="tel:9900255556" className="text-foreground font-semibold hover:text-gold transition-colors">
+              99002 55556
+            </a>
+          </p>
+        </div>
+      </div>
+
       <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
         <p>&copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.</p>
       </div>

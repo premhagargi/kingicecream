@@ -4,9 +4,23 @@ import { Footer } from "@/components/Footer";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us - King Ice Cream",
+  title: "Contact Us — Get in Touch with King Ice Cream",
   description:
-    "Contact King Ice Cream for queries, feedback, franchise enquiries, or wholesale opportunities.",
+    "Reach out to King Ice Cream for queries, feedback, franchise enquiries, wholesale partnerships, or bulk orders. Call 99002 55556 or email info@kingicecream.com. Vijaykant Dairy, Belagavi.",
+  openGraph: {
+    title: "Contact Us — King Ice Cream",
+    description: "Get in touch with King Ice Cream. Call 99002 55556, email info@kingicecream.com, or message us on WhatsApp for franchise enquiries, bulk orders, and more.",
+    url: "https://www.kingicecream.com/contact",
+    images: [{ url: "/images/logos/king logo.png", width: 1200, height: 630, alt: "Contact King Ice Cream" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact Us — King Ice Cream",
+    description: "Get in touch with King Ice Cream. Call 99002 55556 or email info@kingicecream.com.",
+  },
+  alternates: {
+    canonical: "https://www.kingicecream.com/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -15,20 +29,23 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero — split layout: left heading, right intro */}
-      <section className="min-h-[70vh] sm:min-h-[80vh] flex items-end bg-[#f5f0e8] px-6 sm:px-10 md:px-16 lg:px-24 pb-12 sm:pb-16 pt-32 sm:pt-40">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 w-full max-w-7xl">
+      <section className="min-h-[60vh] sm:min-h-[65vh] flex items-end bg-[#f5f0e8] px-6 sm:px-10 md:px-16 lg:px-24 pb-12 sm:pb-16 pt-28 sm:pt-32">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 w-full max-w-7xl">
           <div className="md:col-span-7">
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-foreground block mb-4">
-              Get in Touch
-            </span>
-            <h1 className="font-sans font-black text-3xl sm:text-5xl md:text-6xl leading-[1.05]">
+            <div className="flex items-center gap-4 mb-5">
+              <span className="h-[1px] w-8 bg-gold" />
+              <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-foreground">
+                Get in Touch
+              </span>
+            </div>
+            <h1 className="font-sans font-black text-4xl sm:text-6xl md:text-7xl leading-[0.95] text-foreground">
               Let&apos;s
               <br />
-              <span className="font-serif italic font-normal text-foreground">talk.</span>
+              <span className="font-serif italic font-normal">talk.</span>
             </h1>
           </div>
           <div className="md:col-span-5 flex items-end">
-            <p className="font-serif text-base sm:text-lg text-foreground leading-relaxed">
+            <p className="font-serif text-base sm:text-lg text-foreground leading-[1.7]">
               Whether it&apos;s a flavour suggestion, franchise enquiry, wholesale
               partnership, or just a compliment about your favourite scoop —
               we&apos;re all ears.
@@ -37,82 +54,95 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact details — horizontal strip */}
-      <section className="border-b border-border">
-        <div className="grid grid-cols-1 sm:grid-cols-3">
+      {/* Contact details — boxed cards */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
           <a
             href="tel:9900255556"
-            className="group p-6 sm:p-8 md:p-10 border-b sm:border-b-0 sm:border-r border-border hover:bg-foreground/[0.02] transition-colors"
+            className="group p-6 sm:p-8 rounded-2xl border border-border bg-[#f5f0e8]/50 hover:bg-[#f5f0e8] hover:border-gold/60 hover:shadow-sm transition-all duration-300"
           >
-            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-3">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-5">
               Call
             </span>
-            <span className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground group-hover:text-gold transition-colors">
+            <span className="font-sans text-xl sm:text-2xl font-black text-foreground group-hover:text-gold transition-colors block leading-tight">
               99002 55556
+            </span>
+            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+              Tap to dial
             </span>
           </a>
           <a
             href="mailto:info@kingicecream.com"
-            className="group p-6 sm:p-8 md:p-10 border-b sm:border-b-0 sm:border-r border-border hover:bg-foreground/[0.02] transition-colors"
+            className="group p-6 sm:p-8 rounded-2xl border border-border bg-[#f5f0e8]/50 hover:bg-[#f5f0e8] hover:border-gold/60 hover:shadow-sm transition-all duration-300"
           >
-            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-3">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-5">
               Email
             </span>
-            <span className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground group-hover:text-gold transition-colors">
+            <span className="font-sans text-base sm:text-lg font-black text-foreground group-hover:text-gold transition-colors block leading-tight break-all">
               info@kingicecream.com
+            </span>
+            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+              We reply within 48 hours
             </span>
           </a>
           <a
             href="https://www.instagram.com/kingicecream.india/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-6 sm:p-8 md:p-10 hover:bg-foreground/[0.02] transition-colors"
+            className="group p-6 sm:p-8 rounded-2xl border border-border bg-[#f5f0e8]/50 hover:bg-[#f5f0e8] hover:border-gold/60 hover:shadow-sm transition-all duration-300"
           >
-            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground block mb-3">
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-5">
               Instagram
             </span>
-            <span className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground group-hover:text-gold transition-colors">
+            <span className="font-sans text-xl sm:text-2xl font-black text-foreground group-hover:text-gold transition-colors block leading-tight">
               @kingicecream.india
+            </span>
+            <span className="font-sans text-xs text-muted-foreground mt-2 block">
+              Behind the scenes
             </span>
           </a>
         </div>
       </section>
 
-      {/* Address + Hours — two column */}
-      <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 max-w-7xl">
-          {/* Address */}
-          <div className="md:col-span-7">
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-4">
-              Manufactured &amp; Marketed By
-            </span>
-            <h2 className="font-sans font-bold text-base sm:text-lg text-foreground mb-3">
+      {/* Address + Hours — two column boxes */}
+      <section className="pb-12 sm:pb-16 px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+          <div className="p-6 sm:p-8 rounded-2xl border border-border bg-background">
+            <div className="flex items-center gap-4 mb-5">
+              <span className="h-[1px] w-8 bg-gold" />
+              <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
+                Head Office
+              </span>
+            </div>
+            <h2 className="font-sans font-black text-lg sm:text-xl text-foreground mb-3 leading-tight">
               Vijaykant Dairy &amp; Food Products Ltd.
             </h2>
-            <p className="font-serif text-muted-foreground leading-relaxed">
+            <p className="font-serif text-base text-muted-foreground leading-[1.7]">
               Neginhal Village, Bailhongal Taluka,
               <br />
               Dist. Belagavi, Karnataka 591102
             </p>
-            <p className="font-serif text-muted-foreground mt-4 text-sm">
-              Proudly made in Belagavi. Expanding across four states.
+            <p className="font-serif italic text-sm text-foreground mt-4">
+              Proudly made in Belagavi since 2004.
             </p>
           </div>
 
-          {/* Hours */}
-          <div className="md:col-span-4 md:col-start-9">
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground block mb-4">
-              Business Hours
-            </span>
-            <div className="space-y-3">
+          <div className="p-6 sm:p-8 rounded-2xl border border-border bg-background">
+            <div className="flex items-center gap-4 mb-5">
+              <span className="h-[1px] w-8 bg-gold" />
+              <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
+                Business Hours
+              </span>
+            </div>
+            <div className="space-y-4">
               <div className="flex justify-between items-baseline">
-                <span className="font-sans text-sm text-foreground">Monday — Saturday</span>
-                <span className="font-sans text-sm text-muted-foreground">9:00 AM — 7:00 PM</span>
+                <span className="font-sans text-base font-bold text-foreground">Mon — Sat</span>
+                <span className="font-sans text-base text-muted-foreground">9 AM — 7 PM</span>
               </div>
               <div className="h-[1px] bg-border" />
               <div className="flex justify-between items-baseline">
-                <span className="font-sans text-sm text-foreground">Sunday</span>
-                <span className="font-sans text-sm text-muted-foreground">Closed</span>
+                <span className="font-sans text-base font-bold text-foreground">Sunday</span>
+                <span className="font-sans text-base text-muted-foreground">Closed</span>
               </div>
             </div>
           </div>
@@ -122,17 +152,18 @@ export default function ContactPage() {
       {/* Contact Form */}
       <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-[#f5f0e8]">
         <div className="max-w-2xl">
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-6">
             <span className="h-[1px] w-8 bg-gold" />
             <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
               Send Us a Message
             </span>
           </div>
 
-          <h2 className="font-sans font-bold text-xl sm:text-2xl md:text-3xl mb-4">
-            Write to Us
+          <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05] text-foreground">
+            Write to
+            <span className="font-serif italic font-normal"> us.</span>
           </h2>
-          <p className="font-serif italic text-foreground mb-10">
+          <p className="font-serif text-base sm:text-lg text-muted-foreground mb-10 leading-relaxed max-w-lg">
             Fill in your details and we&apos;ll open your email client with everything ready to send.
           </p>
 
@@ -159,13 +190,17 @@ export default function ContactPage() {
       {/* WhatsApp CTA */}
       <section className="py-16 sm:py-24 px-6 sm:px-10 md:px-16 lg:px-24 bg-foreground text-background">
         <div className="max-w-3xl">
-          <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-6">
-            Quick Connect
-          </span>
-          <h2 className="font-sans font-black text-2xl sm:text-3xl md:text-4xl mb-4">
-            Prefer WhatsApp?
+          <div className="flex items-center gap-4 mb-6">
+            <span className="h-[1px] w-8 bg-gold" />
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">
+              Quick Connect
+            </span>
+          </div>
+          <h2 className="font-sans font-black text-3xl sm:text-4xl md:text-5xl mb-5 leading-[1.05]">
+            Prefer
+            <span className="font-serif italic font-normal text-gold"> WhatsApp?</span>
           </h2>
-          <p className="font-serif text-background mb-8">
+          <p className="font-serif text-base sm:text-lg text-background/80 mb-10 leading-relaxed max-w-lg">
             Drop us a message for franchise enquiries, bulk orders, or just to say hello.
           </p>
           <a
