@@ -58,7 +58,7 @@ export default function FranchisePage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] sm:min-h-[55vh] flex items-end overflow-hidden bg-[linear-gradient(135deg,#1B4D89_0%,#26609E_50%,#D4A017_100%)]">
+      <section className="relative min-h-[65vh] sm:min-h-[70vh] flex items-end overflow-hidden bg-[linear-gradient(135deg,#1B4D89_0%,#26609E_50%,#D4A017_100%)]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
           style={{
@@ -69,7 +69,7 @@ export default function FranchisePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D89] via-[#1B4D89]/50 to-transparent" />
 
-        <div className="relative z-10 px-6 sm:px-10 md:px-16 lg:px-24 pb-12 sm:pb-16 pt-28">
+        <div className="relative z-10 px-6 sm:px-10 md:px-16 lg:px-24 pb-12 sm:pb-16 pt-36 sm:pt-44 md:pt-48">
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-3 block">
             Partner With Us
           </span>
