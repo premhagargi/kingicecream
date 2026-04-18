@@ -36,20 +36,20 @@ export function ProductFilters({ activeCategory, setActiveCategory, activeFilter
       className="pb-10 sm:pb-14"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-        {/* Category tabs — centered with dividers */}
-        <nav className="flex items-center sm:justify-center gap-0 overflow-x-auto no-scrollbar px-1 -mx-1">
+        {/* Category tabs — wrap on mobile, single row with dividers on desktop */}
+        <nav className="flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-0 gap-y-1">
           {categories.map((category, i) => (
             <div key={category} className="flex items-center">
               {i > 0 && (
-                <span className="w-[1px] h-4 bg-foreground/15 mx-3 sm:mx-5 shrink-0" />
+                <span className="hidden sm:block w-[1px] h-4 bg-foreground/15 mx-3 sm:mx-5 shrink-0" />
               )}
               <button
                 onClick={() => handleSetCategory(category)}
                 className={cn(
-                  "font-serif italic text-xs sm:text-sm md:text-lg whitespace-nowrap transition-all duration-300 py-2",
+                  "font-serif italic text-xs sm:text-sm md:text-lg whitespace-nowrap transition-all duration-300 py-2 px-1",
                   activeCategory === category
                     ? 'text-foreground font-semibold not-italic font-sans'
-                    : 'text-muted-foreground hover:text-muted-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
                 )}
               >
                 {category}

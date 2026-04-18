@@ -8,6 +8,7 @@ import { TransitionLink } from "./TransitionLink";
 const menuItems = [
   { text: "Products", href: "/products", desc: "Browse our royal collection" },
   { text: "Our Story", href: "/aboutus", desc: "The makers behind the crown" },
+  { text: "Journal", href: "/blog", desc: "News, stories and events" },
   { text: "Franchise", href: "/franchise", desc: "Own a King Ice Cream parlour" },
   { text: "Find Us", href: "/locate", desc: "15,000+ outlets across 4 states" },
   { text: "Contact", href: "/contact", desc: "Get in touch with us" },
@@ -29,7 +30,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
       animate={{ clipPath: "inset(0 0 0% 0)" }}
       exit={{ clipPath: "inset(0 0 100% 0)" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-0 bg-[#0a0a0a] z-40 flex flex-col overflow-hidden"
+      className="fixed inset-0 bg-[#f5f0e8] z-40 flex flex-col overflow-hidden"
     >
       {/* Top spacer for header */}
       <div className="h-16 sm:h-20 shrink-0" />
@@ -38,7 +39,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
       <div className="flex-1 flex flex-col justify-between px-6 sm:px-10 md:px-16 lg:px-24 pb-8">
         {/* Navigation links */}
         <nav className="flex-1 flex flex-col justify-center">
-          <ul className="space-y-0 divide-y divide-white/[0.06]">
+          <ul className="space-y-0 divide-y divide-foreground/10">
             {menuItems.map((item, i) => (
               <motion.li
                 key={item.href}
@@ -58,14 +59,14 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                   className="group flex items-center justify-between py-5 sm:py-6"
                 >
                   <div className="flex items-baseline gap-4 sm:gap-6">
-                    <span className="font-sans text-[10px] text-white/70 tabular-nums">
+                    <span className="font-sans text-[10px] text-muted-foreground tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span
                       className={`font-sans text-lg sm:text-xl md:text-3xl font-bold uppercase tracking-normal transition-colors duration-300 ${
                         hovered === null || hovered === i
-                          ? "text-white"
-                          : "text-white/70"
+                          ? "text-foreground"
+                          : "text-foreground/50"
                       }`}
                     >
                       {item.text}
@@ -73,7 +74,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <span className="hidden sm:block font-serif italic text-sm text-white group-hover:text-white transition-colors">
+                    <span className="hidden sm:block font-serif italic text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                       {item.desc}
                     </span>
                     <span className="w-0 group-hover:w-8 h-[1px] bg-gold transition-all duration-400 overflow-hidden" />
@@ -89,7 +90,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pt-6 border-t border-white/[0.06]"
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pt-6 border-t border-foreground/10"
         >
           {/* Social links */}
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
@@ -99,7 +100,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans text-[11px] uppercase tracking-[0.15em] text-white hover:text-gold transition-colors duration-300"
+                className="font-sans text-[11px] uppercase tracking-[0.15em] text-foreground hover:text-gold transition-colors duration-300"
               >
                 {link.text}
               </a>
@@ -115,7 +116,7 @@ export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
               height={80}
               className="h-14 w-auto object-contain"
             />
-            <span className="font-serif italic text-[11px] text-white">
+            <span className="font-serif italic text-[11px] text-muted-foreground">
               Belagavi, Karnataka
             </span>
           </div>

@@ -29,7 +29,7 @@ export default function AboutUsPage() {
       <Header />
 
       {/* Hero — compact */}
-      <section className="min-h-[70vh] sm:min-h-[75vh] flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-24 bg-gradient-to-r from-[#1B4D89] to-[#D4A017] relative pt-28">
+      <section className="min-h-[70vh] sm:min-h-[75vh] flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-24 bg-[linear-gradient(45deg,#1B4D89_0%,#26609E_50%,#D4A017_100%)] relative pt-28">
         <div className="max-w-5xl">
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold block mb-4">
             Our Story

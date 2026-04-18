@@ -65,7 +65,7 @@ export function Header() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <motion.span
-              className="block h-[2px] bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)] origin-left"
+              className={`block h-[2px] origin-left transition-colors duration-300 ${isMenuOpen ? "bg-foreground shadow-none" : "bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)]"}`}
               animate={{
                 width: isMenuOpen ? "100%" : "100%",
                 rotate: isMenuOpen ? 45 : 0,
@@ -74,7 +74,7 @@ export function Header() {
               transition={{ duration: 0.3 }}
             />
             <motion.span
-              className="block h-[2px] bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)]"
+              className={`block h-[2px] transition-colors duration-300 ${isMenuOpen ? "bg-foreground shadow-none" : "bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)]"}`}
               animate={{
                 width: isMenuOpen ? 0 : "60%",
                 opacity: isMenuOpen ? 0 : 1,
@@ -82,7 +82,7 @@ export function Header() {
               transition={{ duration: 0.2 }}
             />
             <motion.span
-              className="block h-[2px] bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)] origin-left"
+              className={`block h-[2px] origin-left transition-colors duration-300 ${isMenuOpen ? "bg-foreground shadow-none" : "bg-white shadow-[0_0_4px_rgba(0,0,0,0.6)]"}`}
               animate={{
                 width: isMenuOpen ? "100%" : "80%",
                 rotate: isMenuOpen ? -45 : 0,

@@ -68,7 +68,7 @@ export default function LocatePage() {
       <Header />
 
       {/* Hero — minimal, map-focused */}
-      <section className="bg-gradient-to-r from-[#1B4D89] to-[#D4A017] pt-36 sm:pt-44 md:pt-48 pb-10 sm:pb-14 px-6 sm:px-10 md:px-16 lg:px-24">
+      <section className="bg-[linear-gradient(75deg,#1B4D89_0%,#26609E_55%,#D4A017_100%)] pt-36 sm:pt-44 md:pt-48 pb-10 sm:pb-14 px-6 sm:px-10 md:px-16 lg:px-24">
         <div className="flex items-center gap-4 mb-5">
           <span className="h-[1px] w-8 bg-gold" />
           <span className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold">

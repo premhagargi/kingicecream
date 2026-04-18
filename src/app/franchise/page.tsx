@@ -58,7 +58,7 @@ export default function FranchisePage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] sm:min-h-[55vh] flex items-end overflow-hidden bg-gradient-to-r from-[#1B4D89] to-[#D4A017]">
+      <section className="relative min-h-[50vh] sm:min-h-[55vh] flex items-end overflow-hidden bg-[linear-gradient(135deg,#1B4D89_0%,#26609E_50%,#D4A017_100%)]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
           style={{

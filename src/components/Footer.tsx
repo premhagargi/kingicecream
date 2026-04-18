@@ -38,6 +38,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             <li><TransitionLink href="/products" className="hover:text-gold transition-colors">Products</TransitionLink></li>
             <li><TransitionLink href="/aboutus" className="hover:text-gold transition-colors">Our Story</TransitionLink></li>
+            <li><TransitionLink href="/blog" className="hover:text-gold transition-colors">The Journal</TransitionLink></li>
             <li><TransitionLink href="/franchise" className="hover:text-gold transition-colors">Franchise</TransitionLink></li>
             <li><TransitionLink href="/locate" className="hover:text-gold transition-colors">Find a Parlour</TransitionLink></li>
             <li><TransitionLink href="/contact" className="hover:text-gold transition-colors">Contact Us</TransitionLink></li>
@@ -97,29 +98,33 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Manufacturer & legal details */}
-      <div className="border-t border-border pt-8 pb-6 px-2">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-muted-foreground mb-3">
-            Manufactured &amp; Marketed By
-          </p>
-          <p className="font-sans text-sm sm:text-base font-bold text-foreground">
-            Vijaykant Dairy &amp; Food Products Ltd.
-          </p>
-          <p className="font-serif text-xs sm:text-sm text-muted-foreground mt-2 leading-relaxed">
-            Neginhal Village, Bailhongal Taluka, Dist. Belagavi (Karnataka) 591102
-          </p>
-          <p className="font-sans text-xs sm:text-sm text-muted-foreground mt-3">
-            Customer Care:{" "}
-            <a href="tel:9900255556" className="text-foreground font-semibold hover:text-gold transition-colors">
-              99002 55556
-            </a>
+      {/* Manufacturer & legal details — navy ↔ gold gradient, unique 210° angle */}
+      <div className="mt-10 relative overflow-hidden bg-[linear-gradient(210deg,#1B4D89_0%,#26609E_35%,#D4A017_100%)] text-background">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+        <div className="relative px-4 sm:px-6 pt-10 pb-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-3 font-semibold">
+              Manufactured &amp; Marketed By
+            </p>
+            <p className="font-sans text-base sm:text-lg font-black text-background">
+              Vijaykant Dairy &amp; Food Products Ltd.
+            </p>
+            <p className="font-serif text-xs sm:text-sm text-background/85 mt-2 leading-relaxed">
+              Neginhal Village, Bailhongal Taluka, Dist. Belagavi (Karnataka) 591102
+            </p>
+            <p className="font-sans text-xs sm:text-sm text-background/85 mt-3">
+              Customer Care:{" "}
+              <a href="tel:9900255556" className="text-background font-bold hover:text-gold transition-colors">
+                99002 55556
+              </a>
+            </p>
+          </div>
+        </div>
+        <div className="relative border-t border-background/15 px-4 py-5 text-center">
+          <p className="font-sans text-xs text-background/80">
+            &copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.
           </p>
         </div>
-      </div>
-
-      <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.</p>
       </div>
     </motion.footer>
   )
