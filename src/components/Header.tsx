@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
 import { NavigationMenu } from "./NavigationMenu";
@@ -8,29 +8,14 @@ import { TransitionLink } from "./TransitionLink";
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [ready, setReady] = useState(() => {
-    if (typeof window !== "undefined") {
-      return sessionStorage.getItem("header-logo-ready") === "true";
-    }
-    return false;
-  });
   const [scrolledDown, setScrolledDown] = useState(false);
   const { scrollY } = useScroll();
-
-  useEffect(() => {
-    if (ready) return;
-    const timer = setTimeout(() => {
-      setReady(true);
-      sessionStorage.setItem("header-logo-ready", "true");
-    }, 6000);
-    return () => clearTimeout(timer);
-  }, [ready]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolledDown(latest > 50);
   });
 
-  const showLogo = ready && !scrolledDown && !isMenuOpen;
+  const showLogo = !scrolledDown && !isMenuOpen;
 
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
@@ -40,8 +25,9 @@ export function Header() {
         <div className="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-24 py-5 sm:py-6">
           <TransitionLink href="/" className="relative z-10">
             <motion.div
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: showLogo ? 1 : 0, y: showLogo ? 0 : -10 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="cursor-pointer drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]"
               style={{ pointerEvents: showLogo ? "auto" : "none" }}
             >

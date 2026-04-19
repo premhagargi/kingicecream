@@ -51,11 +51,11 @@ export function HeroSection() {
             transition={{ duration: 0.6 }}
             className="absolute inset-0 flex items-center justify-center bg-black/40 px-6 text-center"
           >
-            <div className="max-w-3xl">
-              <h1 className="font-headline text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
-                A Scoop of Happiness
+            <div className="max-w-6xl">
+              <h1 className="font-headline text-6xl md:text-8xl lg:text-[9rem] font-semibold tracking-tight leading-[0.95] text-white drop-shadow-2xl">
+                A Scoop of <span className="italic font-light">Happiness</span>
               </h1>
-              <p className="mt-4 text-base md:text-lg text-white/85">
+              <p className="mt-6 text-lg md:text-2xl font-light tracking-wide text-white/80">
                 Crafted with love. Served with joy.
               </p>
             </div>
