@@ -73,7 +73,7 @@ export function HeroSection() {
             transition={{ duration: 0.3 }}
             onClick={replay}
             aria-label="Replay video"
-            className="absolute bottom-6 right-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-md border border-white/25 hover:bg-white/25 transition-colors"
+            className="absolute bottom-20 right-6 sm:bottom-24 sm:right-10 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-md border border-white/25 hover:bg-white/25 transition-colors"
           >
             <Play className="h-5 w-5 fill-white" />
           </motion.button>
