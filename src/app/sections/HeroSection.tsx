@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { Play } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -16,11 +16,24 @@ export function HeroSection() {
 
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const tryPlay = () => {
+      const p = v.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    };
+    tryPlay();
+    v.addEventListener("canplay", tryPlay);
+    return () => v.removeEventListener("canplay", tryPlay);
+  }, []);
+
   const replay = () => {
     const v = videoRef.current;
     if (!v) return;
     v.currentTime = 0;
-    v.play();
+    const p = v.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
     setEnded(false);
   };
 
@@ -34,11 +47,13 @@ export function HeroSection() {
         ref={videoRef}
         autoPlay
         muted
+        loop={false}
         playsInline
+        preload="auto"
         onEnded={() => setEnded(true)}
         className="absolute inset-0 w-full h-full object-cover object-[center_60%]"
       >
-        <source src="/videos/video.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dx0ao0rmq/video/upload/v1776674646/video_pbpy79.mp4" type="video/mp4" />
       </video>
 
       {/* End-of-video overlay */}
