@@ -53,7 +53,7 @@ export function HeroSection() {
         onEnded={() => setEnded(true)}
         className="absolute inset-0 w-full h-full object-cover object-[center_60%]"
       >
-        <source src="https://res.cloudinary.com/dx0ao0rmq/video/upload/v1776674646/video_pbpy79.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dx0ao0rmq/video/upload/f_auto,q_auto:best/v1776674646/video_pbpy79.mp4" type="video/mp4" />
       </video>
 
       {/* End-of-video overlay */}
