@@ -1,127 +1,140 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Instagram, Youtube } from "lucide-react";
 import { TransitionLink } from "./TransitionLink";
 
 const menuItems = [
-  { text: "Products", href: "/products", desc: "Browse our royal collection" },
-  { text: "Our Story", href: "/aboutus", desc: "The makers behind the crown" },
-  { text: "Journal", href: "/blog", desc: "News, stories and events" },
-  { text: "Franchise", href: "/franchise", desc: "Own a King Ice Cream parlour" },
-  { text: "Find Us", href: "/locate", desc: "15,000+ outlets across 4 states" },
-  { text: "Contact", href: "/contact", desc: "Get in touch with us" },
+  { text: "Our Story", href: "/aboutus" },
+  { text: "Our Products", href: "/products" },
+  { text: "Contact Us", href: "/contact" },
+  { text: "Store Locator", href: "/locate" },
+  { text: "Nutritional Info", href: "/products" },
+  { text: "Order Online", href: "/locate" },
 ];
 
 const socialLinks = [
-  { text: "Instagram", href: "https://www.instagram.com/kingicecream.india/" },
-  { text: "WhatsApp", href: "https://wa.me/919900255556" },
-  { text: "Zomato", href: "https://www.zomato.com/belgaum/king-ice-cream-25-belgaum-locality/order" },
-  { text: "Email", href: "mailto:info@kingicecream.com" },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/kingicecream.india/",
+    label: "Instagram",
+  },
+  {
+    icon: Youtube,
+    href: "https://www.youtube.com/",
+    label: "YouTube",
+  },
 ];
 
-export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
-  const [hovered, setHovered] = useState<number | null>(null);
+const RISE = {
+  initial: { opacity: 0, y: 60 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 60 },
+};
 
+const RISE_BASE_DELAY = 0.55;
+const RISE_STAGGER = 0.09;
+const RISE_DURATION = 0.95;
+const RISE_EASE = [0.16, 1, 0.3, 1] as const;
+
+export function NavigationMenu({ closeMenu }: { closeMenu: () => void }) {
   return (
     <motion.div
-      initial={{ clipPath: "inset(0 0 100% 0)" }}
-      animate={{ clipPath: "inset(0 0 0% 0)" }}
-      exit={{ clipPath: "inset(0 0 100% 0)" }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-0 bg-[#f5f0e8] z-40 flex flex-col overflow-hidden"
+      initial={{ clipPath: "inset(0 0 100% 0)", opacity: 0.35 }}
+      animate={{ clipPath: "inset(0 0 0% 0)", opacity: 1 }}
+      exit={{ clipPath: "inset(0 0 100% 0)", opacity: 0.35 }}
+      transition={{
+        clipPath: { duration: 0.55, ease: "linear" },
+        opacity: { duration: 0.55, ease: "linear" },
+      }}
+      className="fixed inset-0 z-40 flex flex-col overflow-hidden"
+      style={{
+        backgroundColor: "#fbf4e6",
+        backgroundImage: [
+          // soft scoops of pastel "flavours"
+          "radial-gradient(ellipse 70% 55% at 12% 18%, rgba(248, 209, 209, 0.55) 0%, transparent 65%)",
+          "radial-gradient(ellipse 60% 50% at 88% 28%, rgba(252, 220, 188, 0.55) 0%, transparent 65%)",
+          "radial-gradient(ellipse 75% 55% at 25% 88%, rgba(216, 232, 211, 0.5) 0%, transparent 70%)",
+          "radial-gradient(ellipse 55% 45% at 80% 85%, rgba(241, 200, 215, 0.5) 0%, transparent 65%)",
+          "radial-gradient(ellipse 55% 45% at 60% 50%, rgba(255, 248, 230, 0.7) 0%, transparent 75%)",
+          // creamy base
+          "linear-gradient(135deg, #fdf7e9 0%, #f3e8d2 100%)",
+        ].join(", "),
+      }}
     >
-      {/* Top spacer for header */}
-      <div className="h-16 sm:h-20 shrink-0" />
+      {/* Header sits over this; reserve space at top */}
+      <div className="h-20 sm:h-24 shrink-0" />
 
-      {/* Main content */}
-      <div className="flex-1 flex flex-col justify-between px-6 sm:px-10 md:px-16 lg:px-24 pb-8">
-        {/* Navigation links */}
-        <nav className="flex-1 flex flex-col justify-center">
-          <ul className="space-y-0 divide-y divide-foreground/10">
-            {menuItems.map((item, i) => (
-              <motion.li
-                key={item.href}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.2 + i * 0.06,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                onMouseEnter={() => setHovered(i)}
-                onMouseLeave={() => setHovered(null)}
-              >
-                <TransitionLink
-                  href={item.href}
-                  onBeforeNavigate={closeMenu}
-                  className="group flex items-center justify-between py-5 sm:py-6"
-                >
-                  <div className="flex items-baseline gap-4 sm:gap-6">
-                    <span className="font-sans text-[10px] text-muted-foreground tabular-nums">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span
-                      className={`font-sans text-lg sm:text-xl md:text-3xl font-bold uppercase tracking-normal transition-colors duration-300 ${
-                        hovered === null || hovered === i
-                          ? "text-foreground"
-                          : "text-foreground/50"
-                      }`}
-                    >
-                      {item.text}
-                    </span>
-                  </div>
+      {/* Centered menu list */}
+      <nav className="flex-1 flex flex-col items-center justify-center gap-5 sm:gap-7 px-6">
+        {menuItems.map((item, i) => (
+          <motion.div
+            key={item.href + item.text}
+            initial={RISE.initial}
+            animate={RISE.animate}
+            exit={RISE.exit}
+            transition={{
+              duration: RISE_DURATION,
+              delay: RISE_BASE_DELAY + i * RISE_STAGGER,
+              ease: RISE_EASE,
+            }}
+          >
+            <TransitionLink
+              href={item.href}
+              onBeforeNavigate={closeMenu}
+              className="font-gill font-medium text-base sm:text-lg md:text-xl uppercase tracking-[0.18em] text-neutral-800 hover:text-black transition-colors"
+            >
+              {item.text}
+            </TransitionLink>
+          </motion.div>
+        ))}
 
-                  <div className="flex items-center gap-4">
-                    <span className="hidden sm:block font-serif italic text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                      {item.desc}
-                    </span>
-                    <span className="w-0 group-hover:w-8 h-[1px] bg-gold transition-all duration-400 overflow-hidden" />
-                  </div>
-                </TransitionLink>
-              </motion.li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Bottom section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pt-6 border-t border-foreground/10"
+          initial={RISE.initial}
+          animate={RISE.animate}
+          exit={RISE.exit}
+          transition={{
+            duration: RISE_DURATION,
+            delay: RISE_BASE_DELAY + menuItems.length * RISE_STAGGER,
+            ease: RISE_EASE,
+          }}
+          className="mt-3 sm:mt-5"
         >
-          {/* Social links */}
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            {socialLinks.map((link) => (
-              <a
-                key={link.text}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-sans text-[11px] uppercase tracking-[0.15em] text-foreground hover:text-gold transition-colors duration-300"
-              >
-                {link.text}
-              </a>
-            ))}
-          </div>
-
-          {/* Brand mark */}
-          <div className="flex flex-col items-end gap-1">
-            <Image
-              src="/images/logos/king logo.png"
-              alt="King Ice Cream"
-              width={250}
-              height={80}
-              className="h-14 w-auto object-contain"
-            />
-            <span className="font-serif italic text-[11px] text-muted-foreground">
-              Belagavi, Karnataka
-            </span>
-          </div>
+          <TransitionLink
+            href="/products"
+            onBeforeNavigate={closeMenu}
+            className="inline-block px-6 py-2 rounded-full bg-neutral-300/60 hover:bg-neutral-300 font-gill font-medium text-xs sm:text-sm uppercase tracking-[0.18em] text-neutral-800 transition-colors"
+          >
+            What's New
+          </TransitionLink>
         </motion.div>
-      </div>
+      </nav>
+
+      {/* Social icons */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 40 }}
+        transition={{
+          duration: RISE_DURATION,
+          delay: RISE_BASE_DELAY + (menuItems.length + 1) * RISE_STAGGER,
+          ease: RISE_EASE,
+        }}
+        className="flex items-center justify-center gap-3 pb-12 sm:pb-16"
+      >
+        {socialLinks.map(({ icon: Icon, href, label }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-300/50 hover:bg-neutral-300 transition-colors"
+          >
+            <Icon className="h-4 w-4 text-neutral-700" strokeWidth={1.5} />
+          </a>
+        ))}
+      </motion.div>
     </motion.div>
   );
 }

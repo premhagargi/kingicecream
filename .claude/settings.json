@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem c:\\\\Users\\\\premh\\\\Documents\\\\Prem\\\\prem\\\\kingicecream\\\\src -Recurse | Where-Object { -not $_.PSIsContainer } | Select-Object FullName)",
+      "PowerShell($p = 'c:\\\\Users\\\\premh\\\\Documents\\\\Prem\\\\prem\\\\kingicecream\\\\public\\\\images'; Get-ChildItem -LiteralPath $p -Force | ForEach-Object { $_.Name })",
+      "PowerShell($p = 'c:\\\\Users\\\\premh\\\\Documents\\\\Prem\\\\prem\\\\kingicecream\\\\public\\\\images\\\\logos'; Get-ChildItem -LiteralPath $p -Force | ForEach-Object { $_.Name }; Write-Output '---'; $p = 'c:\\\\Users\\\\premh\\\\Documents\\\\Prem\\\\prem\\\\kingicecream\\\\public\\\\videos'; Get-ChildItem -LiteralPath $p -Force | ForEach-Object { $_.Name })"
+    ]
+  }
+}

@@ -15,7 +15,7 @@ export function Header() {
     setScrolledDown(latest > 50);
   });
 
-  const showLogo = !scrolledDown && !isMenuOpen;
+  const showLogo = isMenuOpen || !scrolledDown;
 
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 

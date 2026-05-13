@@ -1,15 +1,9 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { HeroSection } from '@/app/sections/HeroSection';
-import { ProductShowcase } from '@/app/sections/ProductShowcase';
-import { StorySection } from '@/app/sections/StorySection';
-import { BrandExperienceSection } from '@/app/sections/BrandExperienceSection';
-import { NewsTicker } from '@/app/sections/NewsTicker';
-import { TestimonialsSection } from '@/app/sections/TestimonialsSection';
-import { WhyKingSection } from '@/app/sections/WhyKingSection';
 import { SplashScreen } from '@/components/SplashScreen';
 import { CustomCursor } from '@/components/CustomCursor';
+import { HomeStack } from '@/components/home/HomeStack';
 
 export const metadata: Metadata = {
   title: 'King Ice Cream | Premium Ice Cream from Belagavi — Taste of Royalty',
@@ -106,17 +100,11 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="bg-background overflow-x-hidden">
+      <div className="bg-background">
         <CustomCursor />
         <Header />
         <main>
-          <HeroSection />
-          <ProductShowcase />
-          <WhyKingSection />
-          <StorySection />
-          <TestimonialsSection />
-          <BrandExperienceSection />
-          <NewsTicker />
+          <HomeStack />
         </main>
         <Footer />
       </div>
