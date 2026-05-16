@@ -98,52 +98,36 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Manufacturer & legal details — one continuous navy↔gold gradient with a feathered upward bleed */}
-      <div className="relative mt-16 sm:mt-20 -mx-4 sm:-mx-6 lg:-mx-8">
-        {/* Single gradient layer spans the bleed area + the full block so colors stay continuous */}
+      {/* Manufacturer & legal details — continuous navy → gold gradient with a soft top fade */}
+      <div className="relative mt-16 sm:mt-20 -mx-4 sm:-mx-6 lg:-mx-8 pt-32 sm:pt-40 bg-[linear-gradient(180deg,#0F3A6E_0%,#1B4D89_45%,#B8860B_100%)]">
+        {/* Soft fade-in from page background at the top so the gradient doesn't start abruptly */}
         <div
           aria-hidden
-          className="absolute -top-28 sm:-top-32 left-0 right-0 bottom-0 bg-[linear-gradient(210deg,#1B4D89_0%,#26609E_35%,#D4A017_100%)] pointer-events-none"
-          style={{
-            maskImage:
-              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.85) 80%, #000 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.85) 80%, #000 100%)",
-          }}
-        />
-        {/* Soft ambient glow — whisper of gold/navy to tie the transition */}
-        <div
-          aria-hidden
-          className="absolute -top-40 sm:-top-48 left-0 right-0 h-40 sm:h-48 pointer-events-none opacity-25"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 30% 100%, rgba(212,160,23,0.35), transparent 70%), radial-gradient(ellipse 70% 50% at 80% 100%, rgba(27,77,137,0.3), transparent 70%)",
-          }}
+          className="absolute top-0 left-0 right-0 h-32 sm:h-40 pointer-events-none bg-gradient-to-b from-background to-transparent"
         />
 
-        <div className="relative text-background">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
-          <div className="relative px-4 sm:px-6 pt-10 pb-8">
+        <div className="relative">
+          <div className="relative px-4 sm:px-6 pb-8">
             <div className="max-w-4xl mx-auto text-center">
-              <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-3 font-semibold">
+              <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-[#FFD86B] mb-3 font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                 Manufactured &amp; Marketed By
               </p>
-              <p className="font-sans text-base sm:text-lg font-black text-background">
+              <p className="font-sans text-base sm:text-lg font-black text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)]">
                 Vijaykant Dairy &amp; Food Products Ltd.
               </p>
-              <p className="font-serif text-xs sm:text-sm text-background/85 mt-2 leading-relaxed">
+              <p className="font-serif text-xs sm:text-sm text-white mt-2 leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                 Neginhal Village, Bailhongal Taluka, Dist. Belagavi (Karnataka) 591102
               </p>
-              <p className="font-sans text-xs sm:text-sm text-background/85 mt-3">
+              <p className="font-sans text-xs sm:text-sm text-white mt-3 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                 Customer Care:{" "}
-                <a href="tel:9900255556" className="text-background font-bold hover:text-gold transition-colors">
+                <a href="tel:9900255556" className="text-white font-bold underline-offset-2 hover:text-[#FFD86B] transition-colors">
                   99002 55556
                 </a>
               </p>
             </div>
           </div>
-          <div className="relative border-t border-background/15 px-4 py-5 text-center">
-            <p className="font-sans text-xs text-background/80">
+          <div className="relative border-t border-white/25 px-4 py-5 text-center">
+            <p className="font-sans text-xs text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
               &copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.
             </p>
           </div>
