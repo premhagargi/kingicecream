@@ -8,7 +8,7 @@ const UNSPLASH = (id: string) =>
 
 const homeSlides: StackedSlide[] = [
   {
-    image: "/images/hero_banner.png",
+    image: "/images/Product Images copy/hero_banner.png",
     alt: "Discover your ice cream destination",
     priority: true,
     content: (p) => <HeroOverlay progress={p.progress} />,
