@@ -51,7 +51,7 @@ const categories: Category[] = [
   },
   {
     name: "Sip Ups",
-    image: "/images/Product Images copy/Mango Sip Up_Mockup.png",
+    image: "/images/Product Images copy/mango_sip_up_mockup.png",
     alt: "Sip up",
     bgClass: "bg-white",
   },
@@ -140,7 +140,7 @@ function CategorySection({
       <div className="absolute inset-x-0 top-[10%] sm:top-[12%] z-10 flex justify-center px-6 text-center">
         <motion.h2
           style={nameStyle}
-          className="font-gill text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-neutral-500 tracking-normal leading-tight inline-block border-b border-neutral-400 pb-2"
+          className="font-gill text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-neutral-500 tracking-normal leading-tight inline-block border-b border-neutral-400"
         >
           {category.name}
         </motion.h2>
