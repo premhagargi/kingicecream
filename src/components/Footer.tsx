@@ -98,39 +98,31 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Manufacturer & legal details — continuous navy → gold gradient with a soft top fade */}
-      <div className="relative mt-16 sm:mt-20 -mx-4 sm:-mx-6 lg:-mx-8 pt-32 sm:pt-40 bg-[linear-gradient(180deg,#0F3A6E_0%,#1B4D89_45%,#B8860B_100%)]">
-        {/* Soft fade-in from page background at the top so the gradient doesn't start abruptly */}
-        <div
-          aria-hidden
-          className="absolute top-0 left-0 right-0 h-32 sm:h-40 pointer-events-none bg-gradient-to-b from-background to-transparent"
-        />
-
-        <div className="relative">
-          <div className="relative px-4 sm:px-6 pb-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-[#FFD86B] mb-3 font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                Manufactured &amp; Marketed By
-              </p>
-              <p className="font-sans text-base sm:text-lg font-black text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)]">
-                Vijaykant Dairy &amp; Food Products Ltd.
-              </p>
-              <p className="font-serif text-xs sm:text-sm text-white mt-2 leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                Neginhal Village, Bailhongal Taluka, Dist. Belagavi (Karnataka) 591102
-              </p>
-              <p className="font-sans text-xs sm:text-sm text-white mt-3 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                Customer Care:{" "}
-                <a href="tel:9900255556" className="text-white font-bold underline-offset-2 hover:text-[#FFD86B] transition-colors">
-                  99002 55556
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="relative border-t border-white/25 px-4 py-5 text-center">
-            <p className="font-sans text-xs text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-              &copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.
+      {/* Manufacturer & legal details — flat warm cream hue, no gradient */}
+      <div className="relative mt-16 sm:mt-20 -mx-4 sm:-mx-6 lg:-mx-8 pt-12 sm:pt-14 bg-[#F7F1E5]">
+        <div className="relative px-4 sm:px-6 pb-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold mb-3 font-semibold">
+              Manufactured &amp; Marketed By
+            </p>
+            <p className="font-sans text-base sm:text-lg font-bold text-foreground">
+              Vijaykant Dairy &amp; Food Products Ltd.
+            </p>
+            <p className="font-serif text-xs sm:text-sm text-muted-foreground mt-2 leading-relaxed">
+              Neginhal Village, Bailhongal Taluka, Dist. Belagavi (Karnataka) 591102
+            </p>
+            <p className="font-sans text-xs sm:text-sm text-muted-foreground mt-3">
+              Customer Care:{" "}
+              <a href="tel:9900255556" className="text-foreground font-semibold underline-offset-2 hover:text-gold transition-colors">
+                99002 55556
+              </a>
             </p>
           </div>
+        </div>
+        <div className="border-t border-foreground/10 px-4 py-5 text-center">
+          <p className="font-sans text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} King Ice Cream. All Rights Reserved.
+          </p>
         </div>
       </div>
     </motion.footer>
