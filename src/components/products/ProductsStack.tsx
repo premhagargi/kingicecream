@@ -15,7 +15,7 @@ type Category = {
 const categories: Category[] = [
   {
     name: "Cones",
-    image: "/images/Product Images copy/TiramisuCone.png",
+    image: "/images/Product Images copy/tiramisu_cone_white_bg.png",
     alt: "Cone ice cream",
     bgClass: "bg-white",
     // bgClass: "bg-gradient-to-b from-[#F5E6C8] to-[#E8CFA0]",
@@ -153,7 +153,7 @@ function CategorySection({
             fill
             priority={index === 0}
             sizes="(max-width: 640px) 85vw, (max-width: 1024px) 60vw, 48vw"
-            className="object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.18)]"
+            className="object-contain"
           />
         </div>
       </motion.div>
