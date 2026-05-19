@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir \"c:\\\\Users\\\\premh\\\\Documents\\\\Prem\\\\prem\\\\kingicecream\\\\src\\\\app\\\\products\\\\[category]\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\premh\\Documents\\Prem\\prem\\kingicecream\\src\\app\\products"
+    ]
+  }
+}

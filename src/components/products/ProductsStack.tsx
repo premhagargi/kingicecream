@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
+import { TransitionLink } from "@/components/TransitionLink";
+import { categorySlug } from "@/lib/categories";
 
 type Category = {
   name: string;
@@ -146,8 +148,13 @@ function CategorySection({
         </motion.h2>
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative h-[68vh] w-[92vw] sm:h-[74vh] sm:w-[72vw] md:h-[78vh] md:w-[65vw] lg:w-[58vw]">
+      <TransitionLink
+        href={`/products/${categorySlug(category.name)}`}
+        aria-label={`View all ${category.name}`}
+        data-cursor-text="View"
+        className="absolute inset-0 flex items-center justify-center group"
+      >
+        <div className="relative h-[68vh] w-[92vw] sm:h-[74vh] sm:w-[72vw] md:h-[78vh] md:w-[65vw] lg:w-[58vw] transition-transform duration-500 ease-out group-hover:scale-[1.03]">
           <Image
             src={category.image}
             alt={category.alt}
@@ -157,7 +164,7 @@ function CategorySection({
             className="object-contain"
           />
         </div>
-      </div>
+      </TransitionLink>
 
       {!isLast && <ScrollDownIndicator delay={0.6} />}
     </motion.section>
