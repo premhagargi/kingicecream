@@ -33,7 +33,7 @@ const categories: Category[] = [
   },
   {
     name: "Sticks",
-    image: "/images/Product Images copy/Chocobar 65ml_311224.png",
+    image: "/images/Product Images copy/belgian_chocolate.png",
     alt: "Ice cream stick",
     bgClass: "bg-white",
   },
@@ -45,7 +45,7 @@ const categories: Category[] = [
   },
   {
     name: "Sundaes",
-    image: "/images/Product Images copy/Royal Sundae_180 ml.png",
+    image: "/images/Product Images copy/royal_sundae.png",
     alt: "Sundae",
     bgClass: "bg-white",
   },
