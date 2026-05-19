@@ -39,7 +39,7 @@ const categories: Category[] = [
   },
   {
     name: "Family Packs",
-    image: "/images/Product Images copy/Dulce De Leche_700ml Square Tub_Mockup_240125.png",
+    image: "/images/Product Images copy/dulce_de_lece.png",
     alt: "Family pack",
     bgClass: "bg-white",
   },
