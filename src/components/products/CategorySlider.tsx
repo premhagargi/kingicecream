@@ -142,11 +142,11 @@ export function CategorySlider({ categoryName, products }: Props) {
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25 }}
           >
-            <h2 className="font-gill font-thin uppercase tracking-[0.2em] text-base sm:text-lg text-neutral-700">
+            <h2 className="font-gill uppercase tracking-[0.2em] text-lg sm:text-xl text-neutral-900">
               {product.name}
             </h2>
             {product.description && (
-              <p className="mt-2 font-gill font-thin text-xs sm:text-sm text-neutral-500 leading-relaxed">
+              <p className="mt-2 font-gill text-sm sm:text-base text-neutral-700 leading-relaxed">
                 {product.description}
               </p>
             )}
@@ -156,7 +156,7 @@ export function CategorySlider({ categoryName, products }: Props) {
 
       {/* Index indicator */}
       <div className="mt-6 flex justify-center">
-        <span className="font-gill font-thin text-[10px] sm:text-xs tracking-[0.25em] uppercase text-neutral-400">
+        <span className="font-gill text-xs sm:text-sm tracking-[0.25em] uppercase text-neutral-600">
           {String(activeIndex + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
         </span>
       </div>
