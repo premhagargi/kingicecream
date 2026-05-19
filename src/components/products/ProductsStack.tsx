@@ -21,13 +21,13 @@ const categories: Category[] = [
   },
   {
     name: "Cups",
-    image: "/images/Product Images copy/Chocolate Brownie.png",
+    image: "/images/Product Images copy/chocolate_brownie.png",
     alt: "Cup ice cream",
     bgClass: "bg-white",
   },
   {
     name: "Kulfi",
-    image: "/images/Product Images copy/Mawa_Kulfi_35ml_311224.png",
+    image: "/images/Product Images copy/mawa_kulfi_35ml.png",
     alt: "Kulfi",
     bgClass: "bg-white",
   },
