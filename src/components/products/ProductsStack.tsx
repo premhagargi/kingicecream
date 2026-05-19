@@ -18,49 +18,42 @@ const categories: Category[] = [
     image: "/images/Product Images copy/tiramisu_cone_white_bg.png",
     alt: "Cone ice cream",
     bgClass: "bg-white",
-    // bgClass: "bg-gradient-to-b from-[#F5E6C8] to-[#E8CFA0]",
   },
   {
     name: "Cups",
     image: "/images/Product Images copy/Chocolate Brownie.png",
     alt: "Cup ice cream",
     bgClass: "bg-white",
-    // bgClass: "bg-gradient-to-b from-[#FDE7C3] to-[#F4C887]",
   },
   {
     name: "Kulfi",
     image: "/images/Product Images copy/Mawa_Kulfi_35ml_311224.png",
     alt: "Kulfi",
     bgClass: "bg-white",
-    // bgClass: "bg-gradient-to-b from-[#F8E0D8] to-[#E8B8AC]",
   },
   {
     name: "Sticks",
     image: "/images/Product Images copy/Chocobar 65ml_311224.png",
     alt: "Ice cream stick",
     bgClass: "bg-white",
-    // bgClass: "bg-gradient-to-b from-[#E8D4BE] to-[#C9A988]",
   },
   {
     name: "Family Packs",
     image: "/images/Product Images copy/Dulce De Leche_700ml Square Tub_Mockup_240125.png",
     alt: "Family pack",
     bgClass: "bg-white",
-    // bgClass: "bg-gradient-to-b from-[#FCE6BD] to-[#F0C677]",
   },
   {
     name: "Sundaes",
     image: "/images/Product Images copy/Royal Sundae_180 ml.png",
     alt: "Sundae",
     bgClass: "bg-white",
-    // bgClass: "bg-gradient-to-b from-[#FAD5DA] to-[#F0A8B2]",
   },
   {
     name: "Sip Ups",
     image: "/images/Product Images copy/Mango Sip Up_Mockup.png",
     alt: "Sip up",
     bgClass: "bg-white",
-    // bgClass: "bg-gradient-to-b from-[#FFE3B8] to-[#FFB870]",
   },
 ];
 
@@ -102,50 +95,58 @@ function CategorySection({
   category,
   index,
   total,
+  scrollYProgress,
 }: {
   category: Category;
   index: number;
   total: number;
+  scrollYProgress: MotionValue<number>;
 }) {
-  const ref = useRef<HTMLElement>(null);
+  const transitions = Math.max(1, total - 1);
+  const isLast = index === total - 1;
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "start start"],
-  });
+  // Horizontal wipe — clip-path inset grows from the bottom upward, so an
+  // invisible divider line sweeps up the viewport. Above the line: this
+  // category. Below the line: the next category, already in place.
+  const wipeStart = index / transitions;
+  const wipeEnd = (index + 1) / transitions;
 
-  // First slide is already in place on load — keep its progress at 1.
+  const clipPath = useTransform(
+    scrollYProgress,
+    [wipeStart, wipeEnd],
+    isLast
+      ? ["inset(0% 0% 0% 0%)", "inset(0% 0% 0% 0%)"]
+      : ["inset(0% 0% 0% 0%)", "inset(0% 0% 100% 0%)"],
+  );
+
+  // Heading reveal progress — 0 → 1 as the previous wipe finishes on this
+  // section. First section is fully revealed from load.
+  const revealStart = Math.max(0, (index - 1) / transitions);
+  const revealEnd = index / transitions;
+
   const progress = useTransform(
     scrollYProgress,
-    [0, 1],
+    [revealStart, revealEnd],
     index === 0 ? [1, 1] : [0, 1],
   );
 
   const nameStyle = useRise(progress, [0.3, 0.85]);
-  const imageStyle = useRise(progress, [0.2, 0.75]);
 
   return (
     <motion.section
-      ref={ref}
-      style={{ zIndex: index + 1 }}
-      className={`sticky top-0 h-screen w-full overflow-hidden ${category.bgClass}`}
+      style={{ clipPath, zIndex: total - index }}
+      className={`absolute inset-0 overflow-hidden will-change-[clip-path] ${category.bgClass}`}
     >
-      {/* Category name — positioned higher than the home heading so it
-          doesn't overlap the centered product image. */}
       <div className="absolute inset-x-0 top-[10%] sm:top-[12%] z-10 flex justify-center px-6 text-center">
         <motion.h2
           style={nameStyle}
-          className="font-gill text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-foreground tracking-normal leading-tight"
+          className="font-gill text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-neutral-500 tracking-normal leading-tight inline-block border-b border-neutral-400 pb-2"
         >
           {category.name}
         </motion.h2>
       </div>
 
-      {/* Big centered product image */}
-      <motion.div
-        style={imageStyle}
-        className="absolute inset-0 flex items-center justify-center"
-      >
+      <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative h-[68vh] w-[92vw] sm:h-[74vh] sm:w-[72vw] md:h-[78vh] md:w-[65vw] lg:w-[58vw]">
           <Image
             src={category.image}
@@ -156,24 +157,39 @@ function CategorySection({
             className="object-contain"
           />
         </div>
-      </motion.div>
+      </div>
 
-      {index < total - 1 && <ScrollDownIndicator delay={0.6} />}
+      {!isLast && <ScrollDownIndicator delay={0.6} />}
     </motion.section>
   );
 }
 
 export function ProductsStack() {
+  const ref = useRef<HTMLDivElement>(null);
+  const total = categories.length;
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end end"],
+  });
+
   return (
-    <div className="relative">
-      {categories.map((c, i) => (
-        <CategorySection
-          key={c.name}
-          category={c}
-          index={i}
-          total={categories.length}
-        />
-      ))}
+    <div
+      ref={ref}
+      className="relative"
+      style={{ height: `${total * 100}vh` }}
+    >
+      <div className="sticky top-0 h-screen w-full overflow-hidden">
+        {categories.map((c, i) => (
+          <CategorySection
+            key={c.name}
+            category={c}
+            index={i}
+            total={total}
+            scrollYProgress={scrollYProgress}
+          />
+        ))}
+      </div>
     </div>
   );
 }

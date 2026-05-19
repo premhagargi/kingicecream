@@ -1,21 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { NavigationMenu } from "./NavigationMenu";
 import { TransitionLink } from "./TransitionLink";
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [scrolledDown, setScrolledDown] = useState(false);
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolledDown(latest > 50);
-  });
-
-  const showLogo = isMenuOpen || !scrolledDown;
 
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
@@ -26,10 +18,9 @@ export function Header() {
           <TransitionLink href="/" className="relative z-10">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: showLogo ? 1 : 0, y: showLogo ? 0 : -10 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="cursor-pointer drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]"
-              style={{ pointerEvents: showLogo ? "auto" : "none" }}
             >
               <Image
                 src="/images/logos/king logo.png"

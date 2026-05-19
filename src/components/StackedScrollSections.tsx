@@ -17,39 +17,76 @@ export type StackedSlide = {
 };
 
 /**
- * Stacked scroll sections.
+ * Layered sticky reveal stack.
  *
- * Each slide is its own `sticky top-0 h-screen` section inside one shared
- * `relative` parent. Slides are layered by z-index in source order, so as you
- * scroll, the next slide naturally rises from below the viewport and covers
- * the previous one (which stays pinned at top: 0 until the parent's bottom
- * runs out). The last slide releases at the end and the page continues into
- * whatever follows (e.g. the footer).
+ * Every slide is stacked absolutely inside a sticky viewport-sized container.
+ * Lower indices sit on top. Nothing translates — instead, the current slide's
+ * clip-path is wiped from the bottom up (inset bottom 0% → 100%), so a single
+ * horizontal divider line moves up the viewport: above the line is the current
+ * scene, below the line is the next scene already in place. Image and overlay
+ * are clipped together so the heading never drifts onto the wrong image.
  */
 export function StackedScrollSections({ slides }: { slides: StackedSlide[] }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const total = slides.length;
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end end"],
+  });
+
   return (
-    <div className="relative">
-      {slides.map((slide, i) => (
-        <SectionSlide key={i} slide={slide} index={i} />
-      ))}
+    <div
+      ref={ref}
+      className="relative"
+      style={{ height: `${total * 100}vh` }}
+    >
+      <div className="sticky top-0 h-screen w-full overflow-hidden">
+        {slides.map((slide, i) => (
+          <SectionSlide
+            key={i}
+            slide={slide}
+            index={i}
+            total={total}
+            scrollYProgress={scrollYProgress}
+          />
+        ))}
+      </div>
     </div>
   );
 }
 
-function SectionSlide({ slide, index }: { slide: StackedSlide; index: number }) {
-  const ref = useRef<HTMLElement>(null);
+function SectionSlide({
+  slide,
+  index,
+  total,
+  scrollYProgress,
+}: {
+  slide: StackedSlide;
+  index: number;
+  total: number;
+  scrollYProgress: MotionValue<number>;
+}) {
+  const transitions = Math.max(1, total - 1);
+  const isLast = index === total - 1;
 
-  // Progress 0 → 1 as this slide wipes up from below the viewport into the
-  // pinned position. After sticking, progress stays clamped at 1.
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "start start"],
-  });
+  const wipeStart = index / transitions;
+  const wipeEnd = (index + 1) / transitions;
 
-  // Hero is already in place on load — keep its progress at 1 throughout.
+  const clipPath = useTransform(
+    scrollYProgress,
+    [wipeStart, wipeEnd],
+    isLast
+      ? ["inset(0% 0% 0% 0%)", "inset(0% 0% 0% 0%)"]
+      : ["inset(0% 0% 0% 0%)", "inset(0% 0% 100% 0%)"],
+  );
+
+  const revealStart = Math.max(0, (index - 1) / transitions);
+  const revealEnd = index / transitions;
+
   const localProgress = useTransform(
     scrollYProgress,
-    [0, 1],
+    [revealStart, revealEnd],
     index === 0 ? [1, 1] : [0, 1],
   );
 
@@ -60,9 +97,8 @@ function SectionSlide({ slide, index }: { slide: StackedSlide; index: number }) 
 
   return (
     <motion.section
-      ref={ref}
-      style={{ zIndex: index + 1 }}
-      className="sticky top-0 h-screen w-full overflow-hidden"
+      style={{ clipPath, zIndex: total - index }}
+      className="absolute inset-0 overflow-hidden will-change-[clip-path]"
     >
       <Image
         src={slide.image}
