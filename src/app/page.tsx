@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { SplashScreen } from '@/components/SplashScreen';
 import { CustomCursor } from '@/components/CustomCursor';
 import { HomeStack } from '@/components/home/HomeStack';
 
@@ -95,7 +94,7 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <SplashScreen>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -108,6 +107,6 @@ export default function Home() {
         </main>
         <Footer />
       </div>
-    </SplashScreen>
+    </>
   );
 }
