@@ -74,7 +74,7 @@ export function CategorySlider({ categoryName, products }: Props) {
     <section className="relative min-h-screen bg-white pt-28 sm:pt-32 pb-16 px-4 select-none overflow-hidden">
       {/* Category label */}
       <div className="flex justify-center px-6 mb-4 sm:mb-6">
-        <h1 className="font-gill font-thin text-2xl sm:text-3xl md:text-4xl text-neutral-500 tracking-normal leading-tight inline-block border-b border-neutral-400 pb-1">
+        <h1 className="font-gill text-2xl sm:text-3xl md:text-4xl text-neutral-800 tracking-normal leading-tight inline-block border-b border-neutral-500 pb-1">
           {categoryName}
         </h1>
       </div>
